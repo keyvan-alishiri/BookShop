@@ -1,0 +1,370 @@
+C:\Users\sisto\source\repos\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.deps.json
+C:\Users\sisto\source\repos\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
+C:\Users\sisto\source\repos\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
+C:\Users\sisto\source\repos\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\sisto\source\repos\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\sisto\source\repos\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.dll
+C:\Users\sisto\source\repos\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.pdb
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfoInputs.cache
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfo.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.input.cache
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.output.cache
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorCoreGenerate.cache
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cache
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cs
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.Views.pdb
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\sisto\source\repos\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+E:\ASP.NET Core Training\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.deps.json
+E:\ASP.NET Core Training\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
+E:\ASP.NET Core Training\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
+E:\ASP.NET Core Training\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
+E:\ASP.NET Core Training\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.pdb
+E:\ASP.NET Core Training\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.dll
+E:\ASP.NET Core Training\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.pdb
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfoInputs.cache
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfo.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.input.cache
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.output.cache
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorCoreGenerate.cache
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cache
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.Views.pdb
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Create.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Delete.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Details.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Edit.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Index.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Index.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Create.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Edit.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Delete.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Index.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Admin.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Create.g.cshtml.cs
+E:\ASP.NET Core Training\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\_SubCategories.g.cshtml.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.json
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\package-lock.json
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\package.json
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.deps.json
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.pdb
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.dll
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.pdb
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfoInputs.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfo.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.input.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.output.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorCoreGenerate.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Create.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Index.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\_SubCategories.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Create.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Delete.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Details.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Edit.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Index.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Create.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Delete.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Edit.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Index.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Admin.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cs
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.Views.pdb
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.genruntimeconfig.cache
+D:\Mizfa Learning\Mizfa-Academy-Core-C10-Part2\mizfa-71-C10-S13-InsertBookToDB-4909081843\C10-S13-InsertBookToDB\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\package-lock.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\package.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.deps.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.dll
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.pdb
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfoInputs.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfo.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.input.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.output.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorCoreGenerate.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Create.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\_SubCategories.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Create.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Delete.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Details.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Edit.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Create.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Delete.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Edit.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Admin.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.Views.pdb
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.genruntimeconfig.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\AdvancedSearch.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v4\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Details.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\package-lock.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\package.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.deps.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.dll
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.pdb
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfoInputs.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfo.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.input.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.output.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorCoreGenerate.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\AdvancedSearch.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Create.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Details.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\_SubCategories.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Create.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Delete.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Details.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Edit.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Create.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Delete.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Edit.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Admin.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.Views.pdb
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.genruntimeconfig.cache
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Edit.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Create.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Delete.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Details.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Edit.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Index.cshtml.g.cs
+C:\Users\keyvan\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.Development.json
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.json
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\package-lock.json
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\package.json
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.deps.json
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.pdb
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.dll
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.pdb
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfoInputs.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfo.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.input.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.output.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorCoreGenerate.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Create.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Delete.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Details.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Edit.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Index.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\AdvancedSearch.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Create.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Details.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Edit.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Index.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\_SubCategories.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Create.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Delete.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Details.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Edit.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Index.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Provinces\Index.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Create.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Delete.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Edit.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Index.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Admin.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cs
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.Views.pdb
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.genruntimeconfig.cache
+G:\Desktop\Desktop 99\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\package-lock.json
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\package.json
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.deps.json
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.dll
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.Views.pdb
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfoInputs.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfo.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.input.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.TagHelpers.output.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorCoreGenerate.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Create.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Delete.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Details.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Edit.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\Index.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\AdvancedSearch.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Create.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Details.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Edit.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\Index.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\_SubCategories.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Create.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Delete.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Details.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Edit.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Languages\Index.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Provinces\Index.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Create.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Delete.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Edit.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Translators\Index.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Admin.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.Views.pdb
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.genruntimeconfig.cache
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Cities\Index.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\SearchByISBN.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Sample\Index.cshtml.g.cs
+C:\Users\Keyvan\OneDrive\Desktop\Practice\BookShop-v5\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\AuthorBooks.cshtml.g.cs
