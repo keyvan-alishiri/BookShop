@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BookShop.Classes;
 using BookShop.Models;
 using BookShop.Models.Repository;
+using BookShop.Models.UnitOfWork;
 using BookShop.Models.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -45,6 +46,7 @@ namespace BookShop
                 options.HtmlIndicatorDown = "<i class='fa fa-sort-amount-down'></i>";
                 options.HtmlIndicatorUp = "<i class='fa fa-sort-amount-up'></i>";
             });
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ConvertDate>();
             services.AddTransient<BooksRepository>();
             services.AddTransient<BookShopContext>();

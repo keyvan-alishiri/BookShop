@@ -13,6 +13,7 @@ namespace BookShop.Areas.Admin.Controllers
     [Area("Admin")]
     public class AuthorsController : Controller
     {
+        private readonly    IUnitOfWor unitOfWor;
         private readonly BookShopContext _context;
 
         public AuthorsController(BookShopContext context)
