@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookShop.Models;
+using BookShop.Models.UnitOfWork;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace BookShop.Areas.Admin.Controllers
@@ -13,10 +14,10 @@ namespace BookShop.Areas.Admin.Controllers
     [Area("Admin")]
     public class AuthorsController : Controller
     {
-        private readonly    IUnitOfWor _unitOfWork;
-        private readonly BookShopContext _context;
+        private readonly    IUnitOfWork _unitOfWork;
+      private readonly BookShopContext _context;
 
-        public AuthorsController(IUnitOfWor unitOfWork)
+        public AuthorsController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
@@ -26,7 +27,7 @@ namespace BookShop.Areas.Admin.Controllers
         {
             var Authors = _unitOfWork.BaseRepository<Author>().FindAllAsync();
 
-          //  ViewBag.EntityStates = DisplayState(_context.ChangeTracker.Entries());
+          // ViewBag.EntityStates = DisplayState(_context.ChangeTracker.Entries());
             return View(await Authors);
         }
 

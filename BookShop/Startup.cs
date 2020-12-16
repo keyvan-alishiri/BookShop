@@ -46,8 +46,7 @@ namespace BookShop
                 options.HtmlIndicatorDown = "<i class='fa fa-sort-amount-down'></i>";
                 options.HtmlIndicatorUp = "<i class='fa fa-sort-amount-up'></i>";
             });
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            
+         
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ConvertDate>();
             services.AddTransient<BooksRepository>();

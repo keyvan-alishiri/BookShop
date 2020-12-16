@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sS8RD6LF9uNprBhavRKWYylwZ5s4Q5OKZxPGYi6byFe5IRcd7LQlI/0RiS3FIko6imcfH4Lmh3meCZww5YJTxQ==",
+  "dgSpecHash": "mFT2qkIlr/kUtokfgJhKDYfaAb9qanQpSwSyswmoxjeqgtICE+B+hcoNuUyAdvZ9GpTVhU8P1F6omRibDHwq9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop\\BookShop.csproj",
+  "projectFilePath": "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Keyvan\\.nuget\\packages\\castle.core\\4.2.1\\castle.core.4.2.1.nupkg.sha512",
     "C:\\Users\\Keyvan\\.nuget\\packages\\md.persiandatetime.core\\2.3.5\\md.persiandatetime.core.2.3.5.nupkg.sha512",

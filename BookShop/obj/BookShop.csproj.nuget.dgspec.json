@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop\\BookShop.csproj": {}
+    "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop\\BookShop.csproj": {
+    "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop\\BookShop.csproj",
+        "projectUniqueName": "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop.csproj",
         "projectName": "BookShop",
-        "projectPath": "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop\\BookShop.csproj",
+        "projectPath": "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop.csproj",
         "packagesPath": "C:\\Users\\Keyvan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\BookShop\\obj\\",
+        "outputPath": "C:\\Users\\Keyvan\\Documents\\GitHub\\BookShop\\BookShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Keyvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
