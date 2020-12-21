@@ -59,7 +59,7 @@ namespace BookShop
                 options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
                  (x) => L["انتخاب یکی از موارد لیست الزامی است."]);
 
-            });
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

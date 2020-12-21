@@ -427,7 +427,6 @@ C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcore
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cs
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.Views.pdb
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
-C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
 C:\Users\Keyvan\Documents\GitHub\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Users\Keyvan\Documents\GitHub\BookShop\BookShop\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Users\Keyvan\Documents\GitHub\BookShop\BookShop\bin\Debug\netcoreapp2.1\package-lock.json
@@ -493,3 +492,15 @@ C:\Users\Keyvan\Documents\GitHub\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookS
 C:\Users\Keyvan\Documents\GitHub\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
 C:\Users\Keyvan\Documents\GitHub\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.genruntimeconfig.cache
 C:\Users\Keyvan\Documents\GitHub\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Cities\Create.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Cities\Edit.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Cities\Delete.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Provinces\Create.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Provinces\Edit.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Provinces\Delete.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Publishers\Index.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\_ViewImports.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Publishers\Create.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Publishers\Edit.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache

@@ -7,66 +7,51 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookShop.Models;
 using System.Data.SqlClient;
+using BookShop.Models.UnitOfWork;
+using ReflectionIT.Mvc.Paging;
+using Microsoft.AspNetCore.Routing;
 
 namespace BookShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class LanguagesController : Controller
     {
-        private readonly BookShopContext _context;
+        private readonly IUnitOfWork _UW;
 
-        public LanguagesController(BookShopContext context)
+        public LanguagesController(IUnitOfWork UW)
         {
-            _context = context;
+            _UW = UW;
         }
 
-        // GET: Admin/Languages
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int row = 10)
         {
-            return View(await _context.Languages.ToListAsync());
-        }
-
-        // GET: Admin/Languages/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
+            var Languages = _UW.BaseRepository<Language>().FindAllAsync();
+            var PagingModel = PagingList.Create(await Languages, row, page);
+            PagingModel.RouteValue = new RouteValueDictionary
             {
-                return NotFound();
-            }
-
-            var language = await _context.Languages
-                .FirstOrDefaultAsync(m => m.LanguageID == id);
-            if (language == null)
-            {
-                return NotFound();
-            }
-
-            return View(language);
+                {"row",row},
+            };
+            return View(PagingModel);
         }
 
-        // GET: Admin/Languages/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Languages/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("LanguageID,LanguageName")] Language language)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(language);
-                await _context.SaveChangesAsync();
+                await _UW.BaseRepository<Language>().CreateAsync(language);
+                await _UW.Commit();
                 return RedirectToAction(nameof(Index));
             }
             return View(language);
         }
 
-        // GET: Admin/Languages/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,7 +59,7 @@ namespace BookShop.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var language = await _context.Languages.FindAsync(id);
+            var language = await _UW.BaseRepository<Language>().FindByIDAsync(id);
             if (language == null)
             {
                 return NotFound();
@@ -82,9 +67,6 @@ namespace BookShop.Areas.Admin.Controllers
             return View(language);
         }
 
-        // POST: Admin/Languages/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("LanguageID,LanguageName")] Language language)
@@ -98,8 +80,8 @@ namespace BookShop.Areas.Admin.Controllers
             {
                 try
                 {
-                    _context.Update(language);
-                    await _context.SaveChangesAsync();
+                    _UW.BaseRepository<Language>().Update(language);
+                    await _UW.Commit();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -117,7 +99,6 @@ namespace BookShop.Areas.Admin.Controllers
             return View(language);
         }
 
-        // GET: Admin/Languages/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,8 +106,7 @@ namespace BookShop.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var language = await _context.Languages
-                .FirstOrDefaultAsync(m => m.LanguageID == id);
+            var language = await _UW.BaseRepository<Language>().FindByIDAsync(id);
             if (language == null)
             {
                 return NotFound();
@@ -135,23 +115,34 @@ namespace BookShop.Areas.Admin.Controllers
             return View(language);
         }
 
-        // POST: Admin/Languages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int? id)
         {
-            //var language = await _context.Languages.FindAsync(id);
-            //_context.Languages.Remove(language);
-            //await _context.SaveChangesAsync();
-           
-            object[] parameters = { new SqlParameter("@id", id) };
-            await _context.Database.ExecuteSqlCommandAsync("Delete from dbo.Languages where (LanguageID = @id)", parameters);
-            return RedirectToAction(nameof(Index));
+            if (id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var Language = _UW.BaseRepository<Language>().FindByIDAsync(id);
+                if (Language == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    object[] Parameters = { new SqlParameter("@id", id) };
+                    await _UW._Context.Database.ExecuteSqlCommandAsync("delete from dbo.Languages where(LanguageID=@id)", Parameters);
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+
         }
 
         private bool LanguageExists(int id)
         {
-            return _context.Languages.Any(e => e.LanguageID == id);
+            return _UW._Context.Languages.Any(e => e.LanguageID == id);
         }
     }
 }

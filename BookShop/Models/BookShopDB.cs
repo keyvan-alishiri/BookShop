@@ -98,6 +98,8 @@ namespace BookShop.Models
     {
         [Key]
         public int PublisherID { get; set; }
+        [Display(Name ="ناشر")]
+        [Required(ErrorMessage ="وارد نمودن نام {0} الزامی است")]
         public string PublisherName { get; set; }
 
         public virtual List<Book> Books { get; set; }
@@ -116,7 +118,9 @@ namespace BookShop.Models
     {
         [Key]
         public int TranslatorID { get; set; }
+        [Display(Name = "نام")]
         public string Name { get; set; }
+        [Display(Name = "نام خانوادگی")]
         public string Family { get; set; }
 
         public virtual List<Book_Translator> book_Tranlators { get; set; }
@@ -189,6 +193,7 @@ namespace BookShop.Models
     public class Language
     {
         public int LanguageID { get; set; }
+        [Display(Name = "زبان")]
         public string LanguageName { get; set; }
 
         public virtual  List<Book> Books { get; set; }

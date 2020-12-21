@@ -11,6 +11,25 @@ namespace BookShop.Models.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         public BookShopContext  _Context { get; }
+        private IBookRepository _IBookRepository;
+
+        public IBookRepository bookRepository
+        {
+
+            get
+            {
+                if(_IBookRepository==null)
+                {
+                    _IBookRepository = new BooksRepository(_Context);
+                }
+
+                return _IBookRepository;
+            }
+
+        }
+
+
+
         public UnitOfWork(BookShopContext context)
 
         {

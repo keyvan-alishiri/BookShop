@@ -20,18 +20,20 @@ namespace BookShop.Models.Repository
 
         public async Task<IEnumerable<TEntity>> FindAllAsync()
         {
-            return await dbSet.ToListAsync();
+            return await dbSet.AsNoTracking().ToListAsync();
         }
 
-        public IEnumerable<TEntity> FindAll()
+        public  IEnumerable<TEntity> FindAll()
         {
-            return dbSet.ToList();
+            return dbSet.AsNoTracking().ToList();
         }
 
-        public async Task<TEntity> FindByID(Object id)
+
+        public async Task<TEntity> FindByIDAsync(Object id)
         {
             return await dbSet.FindAsync(id);
         }
+     
 
         public async Task<IEnumerable<TEntity>> FindByConditionAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
         {
@@ -54,7 +56,9 @@ namespace BookShop.Models.Repository
             return await query.ToListAsync();
         }
 
-        public async Task Create(TEntity entity)
+     
+
+        public async Task CreateAsync(TEntity entity)
         {
             await dbSet.AddAsync(entity);
         }
@@ -63,11 +67,26 @@ namespace BookShop.Models.Repository
 
         public void Delete(TEntity entity) => dbSet.Remove(entity);
 
-        public async Task CreateRange(IEnumerable<TEntity> entities) => await dbSet.AddRangeAsync(entities);
-
+       
+        public async Task CreateRangeAsync(IEnumerable<TEntity> entities) => await dbSet.AddRangeAsync(entities);
         public void UpdateRange(IEnumerable<TEntity> entities) => dbSet.UpdateRange(entities);
 
         public void DeleteRange(IEnumerable<TEntity> entities) => dbSet.RemoveRange(entities);
+
+        public async Task<List<TEntity>> GetPaginateResultAsync(int CurrentPage, int PageSize = 1)
+        {
+            var Entities = await FindAllAsync();
+            return Entities.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+        }
+
+        public int GetCount()
+        {
+            return dbSet.Count();
+        }
+
+
+
+
     }
 
     }

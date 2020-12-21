@@ -1,5 +1,6 @@
 ﻿using BookShop.Models;
 using BookShop.Models.Repository;
+using BookShop.Models.UnitOfWork;
 using BookShop.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -16,12 +17,26 @@ namespace BookShop.Areas.Admin.Controllers
     [Area("Admin")]
     public class BooksController : Controller
     {
-        private readonly BookShopContext _context;
-        private readonly BooksRepository _repository;
-        public BooksController(BookShopContext context, BooksRepository repository)
+        //private readonly BookShopContext _context;
+        private readonly IUnitOfWork _unitofwork;
+        //private readonly BooksRepository _repository;    Placed in INterface UnitOfWork
+
+
+
+
+
+
+
+        //public BooksController(BookShopContext context, BooksRepository repository)
+        //{
+        //    _context = context;
+        //    _repository = repository;
+        //}
+
+        public BooksController(IUnitOfWork unitOfWork)
         {
-            _context = context;
-            _repository = repository;
+            _unitofwork = unitOfWork;
+           
         }
         public IActionResult AdvancedSearch(BooksAdvancedSearch viewModel)
         {
@@ -32,7 +47,9 @@ namespace BookShop.Areas.Admin.Controllers
             viewModel.Author = string.IsNullOrEmpty(viewModel.Author) ? "" : viewModel.Author;
             viewModel.Translator = string.IsNullOrEmpty(viewModel.Translator) ? "" : viewModel.Translator;
             viewModel.Category = string.IsNullOrEmpty(viewModel.Category) ? "" : viewModel.Category;
-            var Books = _repository.GetAllBooks(viewModel.Title, viewModel.ISBN, viewModel.Language, viewModel.Publisher, viewModel.Author, viewModel.Translator, viewModel.Category);
+
+         //   var Books = _repository.GetAllBooks(viewModel.Title, viewModel.ISBN, viewModel.Language, viewModel.Publisher, viewModel.Author, viewModel.Translator, viewModel.Category);
+            var Books = _unitofwork.bookRepository.GetAllBooks(viewModel.Title, viewModel.ISBN, viewModel.Language, viewModel.Publisher, viewModel.Author, viewModel.Translator, viewModel.Category);
 
             return View(Books);
         }
@@ -52,31 +69,50 @@ namespace BookShop.Areas.Admin.Controllers
             ViewBag.RowID = new SelectList(Rows, row);
             ViewBag.Search = title;
 
-            var PagingModel = PagingList.Create(_repository.GetAllBooks(title, "", "", "", "", "", ""), row, page, SortExpression, "Title");
+            //var PagingModel = PagingList.Create(_repository.GetAllBooks(title, "", "", "", "", "", ""), row, page, SortExpression, "Title");
+            var PagingModel = PagingList.Create(_unitofwork.bookRepository.GetAllBooks(title, "", "", "", "", "", ""), row, page, SortExpression, "Title");
+
+
+
             PagingModel.RouteValue = new RouteValueDictionary
             {
                 { "row",row},
                 {"title",title }
             };
 
-            ViewBag.Categories = _repository.GetAllCategories();
-            ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageName", "LanguageName");
-            ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherName", "PublisherName");
-            ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "NameFamily", "NameFamily");
-            ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "NameFamily", "NameFamily");
+            //ViewBag.Categories = _repository.GetAllCategories();
+            //ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageName", "LanguageName");
+            //ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherName", "PublisherName");
+            //ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "NameFamily", "NameFamily");
+            //ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "NameFamily", "NameFamily");
 
+            ///////////////////////////UnitOfWork//////////////////////
+            //ViewBag.Categories = _repository.GetAllCategories();
+            ViewBag.Categories = _unitofwork.bookRepository.GetAllCategories();
+            ViewBag.LanguageID = new SelectList(_unitofwork.BaseRepository<Language>().FindAll(), "LanguageName", "LanguageName");
+            ViewBag.PublisherID = new SelectList(_unitofwork.BaseRepository<Publisher>().FindAll(), "PublisherName", "PublisherName");
+            ViewBag.AuthorID = new SelectList(_unitofwork.BaseRepository<Author>().FindAll().Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "NameFamily", "NameFamily");
+            ViewBag.TranslatorID = new SelectList(_unitofwork.BaseRepository<Translator>().FindAll().Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "NameFamily", "NameFamily");
             return View(PagingModel);
         }
 
 
         public IActionResult Create()
         {
-            ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
-            ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherID", "PublisherName");
-            ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
-            ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
+            //ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
+            //ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherID", "PublisherName");
+            //ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
+            //ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
 
-            BooksSubcategoriesViewModel SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), null);
+
+            /////////////////////////////////UnitOfWork///////////////////////////////   
+            ViewBag.LanguageID = new SelectList(_unitofwork.BaseRepository<Language>().FindAll(), "LanguageID", "LanguageName");
+            ViewBag.PublisherID = new SelectList(_unitofwork.BaseRepository<Publisher>().FindAll(), "PublisherID", "PublisherName");
+            ViewBag.AuthorID = new SelectList(_unitofwork.BaseRepository<Author>().FindAll().Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
+            ViewBag.TranslatorID = new SelectList(_unitofwork.BaseRepository<Translator>().FindAll().Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
+
+            //BooksSubcategoriesViewModel SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), null);
+            BooksSubcategoriesViewModel SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.bookRepository.GetAllCategories(), null);
             BooksCreateEditViewModel ViewModel = new BooksCreateEditViewModel(SubCategoriesVM);
             return View(ViewModel);
         }
@@ -139,12 +175,18 @@ namespace BookShop.Areas.Admin.Controllers
                         book_Categories = categories,
                     };
 
-                    await _context.Books.AddAsync(book);
-                    await _context.SaveChangesAsync();
+
+                    //await _context.Books.AddAsync(book);
+                    //await _context.SaveChangesAsync();
+                   // await _context.SaveChangesAsync();
+                    /////////////////////////////////UnitOfWork///////////////////////////////   
+
+                    await _unitofwork.BaseRepository<Book>().CreateAsync(book);
+                    await _unitofwork.Commit();
 
 
 
-                    await _context.SaveChangesAsync();
+                    
 
                     return RedirectToAction("Index");
                 }
@@ -157,11 +199,20 @@ namespace BookShop.Areas.Admin.Controllers
             }
             else
             {
-                ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
-                ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherID", "PublisherName");
-                ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
-                ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
-                ViewModel.Categories = _repository.GetAllCategories();
+                //ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
+                //ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherID", "PublisherName");
+                //ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
+                //ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
+
+                //////////////////////////////////////////////////////////UnitOfWork///////////////////////////////////////
+
+                ViewBag.LanguageID = new SelectList(_unitofwork.BaseRepository<Language>().FindAll(), "LanguageID", "LanguageName");
+                ViewBag.PublisherID = new SelectList(_unitofwork.BaseRepository<Publisher>().FindAll(), "PublisherID", "PublisherName");
+                ViewBag.AuthorID = new SelectList(_unitofwork.BaseRepository<Author>().FindAll().Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
+                ViewBag.TranslatorID = new SelectList(_unitofwork.BaseRepository<Translator>().FindAll().Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
+
+                //ViewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), ViewModel.CategoryID);
+                ViewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.bookRepository.GetAllCategories(), ViewModel.CategoryID);
                 return View(ViewModel);
             }
         }
@@ -171,24 +222,37 @@ namespace BookShop.Areas.Admin.Controllers
             //var BookInfo = _context.ReadAllBooks.Where(b => b.BookID == id).First();
 
             //استفاده به دو شکل query type و متدfromsql
-            var BookInfo = _context.ReadAllBooks.FromSql("SELECT b.BookID, b.ISBN, b.Image, b.IsPublish, b.NumOfPages, b.Price, b.PublishDate, b.PublishYear, b.Stock, b.Summary, b.Title, b.Weight, l.LanguageName, p.PublisherName, dbo.GetAllAuthor(b.BookID) AS Authors, dbo.GetAllTranslators(b.BookID) AS Translators, dbo.GetAllCategories(b.BookID) AS Categories FROM  dbo.BookInfo AS b INNER JOIN dbo.Languages AS l ON b.LanguageID = l.LanguageID INNER JOIN dbo.Publishers AS p ON b.PublisherID = p.PublisherID WHERE(b.[Delete] = 0)")
-                .Where(b => b.BookID == id).First();
+            //var BookInfo = _context.ReadAllBooks.FromSql("SELECT b.BookID, b.ISBN, b.Image, b.IsPublish, b.NumOfPages, b.Price, b.PublishDate, b.PublishYear, b.Stock, b.Summary, b.Title, b.Weight, l.LanguageName, p.PublisherName, dbo.GetAllAuthor(b.BookID) AS Authors, dbo.GetAllTranslators(b.BookID) AS Translators, dbo.GetAllCategories(b.BookID) AS Categories FROM  dbo.BookInfo AS b INNER JOIN dbo.Languages AS l ON b.LanguageID = l.LanguageID INNER JOIN dbo.Publishers AS p ON b.PublisherID = p.PublisherID WHERE(b.[Delete] = 0)")
+            //    .Where(b => b.BookID == id).First();
 
 
 
             //شکل دیگر استفاده از quey type ها  با استفاده از تعریف در متد OnModelCreate
             //var BookInfo = _context.Query<ReadAllBooks>().Where(b => b.BookID == id).First();
+
+
+
+            //////////////////////////////////////////////// استفاده از UnitOfWork /////////////////////////////////
+            var BookInfo = _unitofwork._Context.ReadAllBooks.Where(b => b.BookID == id).First();
             return View(BookInfo);
         }
 
         public async Task<IActionResult> Delete(int id)
         {
-            var Book = _context.Books.Find(id);
+            //var Book = _context.Books.Find(id);
+
+            /////////////////////////////////////UnitOfWork////////////////////////////
+            var Book = await _unitofwork.BaseRepository<Book>().FindByIDAsync(id);
             if (Book != null)
             {
                 Book.Delete = true;
                 //Book.Title = ""; //میتوان با این روش نیز اطلاعات دیتابیس را آپدیت نمود
-                await _context.SaveChangesAsync();
+                /*await _context.SaveChangesAsync();*/ //قبل از اضافه نمودن uNITpFwORK
+
+
+                ////////////////  UNIT OF WORK ///////////////
+              await  _unitofwork.Commit();
+
                 return RedirectToAction("Index");
             }
             else
@@ -210,14 +274,39 @@ namespace BookShop.Areas.Admin.Controllers
             }
             else
             {
-                var Book = _context.Books.FindAsync(id);
+                //var Book = _context.Books.FindAsync(id);
+
+                ///////////////////////    unit of work       ////////////////
+                var Book = _unitofwork.BaseRepository<Book>().FindByIDAsync(id);
                 if (Book == null)
                 {
                     return NotFound();
                 }
                 else
                 {
-                    var viewmodel = (from b in _context.Books.Include(l => l.Language).Include(p => p.Publisher)
+                    //var viewmodel = (from b in _context.Books.Include(l => l.Language).Include(p => p.Publisher)
+                    //                 where (b.BookID == id)
+                    //                 select new BooksCreateEditViewModel
+                    //                 {
+                    //                     BookID = b.BookID,
+                    //                     ISBN = b.ISBN,
+                    //                     Title = b.Title,
+                    //                     NumOfPages = b.NumOfPages,
+                    //                     Price = b.Price,
+                    //                     Stock = b.Stock,
+                    //                     IsPublish = (bool)b.IsPublish,
+                    //                     LanguageID = b.LanguageID,
+                    //                     PublisherID = b.PublisherID,
+                    //                     PublishYear = b.PublishYear,
+                    //                     Summary = b.Summary,
+                    //                     Weight = b.Weight,
+                    //                     RecentIsPublish = (bool)b.IsPublish,
+                    //                     PublishDate = b.PublishDate,
+
+                    //                 }).FirstAsync();
+
+                    //////////////////////////////// unit of work //////////////////////////////////////
+                    var viewmodel = (from b in _unitofwork._Context.Books.Include(l => l.Language).Include(p => p.Publisher)
                                      where (b.BookID == id)
                                      select new BooksCreateEditViewModel
                                      {
@@ -238,14 +327,17 @@ namespace BookShop.Areas.Admin.Controllers
 
                                      }).FirstAsync();
 
-                    int[] AuthorsArray = await (from a in _context.Author_Books
+
+
+
+                    int[] AuthorsArray = await (from a in _unitofwork._Context.Author_Books
                                                 where (a.BookID == id)
                                                 select a.AuthorID).ToArrayAsync();
 
-                    int[] TranslatorArray = await (from t in _context.Book_Translators
+                    int[] TranslatorArray = await (from t in _unitofwork._Context.Book_Translators
                                                    where (t.BookID == id)
                                                    select t.TranslatorID).ToArrayAsync();
-                    int[] CategoriesArray = await (from c in _context.Book_Categories
+                    int[] CategoriesArray = await (from c in _unitofwork._Context.Book_Categories
                                                    where (c.BookID == id)
                                                    select c.CategoryID).ToArrayAsync();
 
@@ -255,15 +347,23 @@ namespace BookShop.Areas.Admin.Controllers
 
 
 
-                    ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
-                    ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherID", "PublisherName");
-                    ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
-                    ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
+                    //ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
+                    //ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherID", "PublisherName");
+                    //ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
+                    //ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
                     //viewmodel.Result.Categories = _repository.GetAllCategories();  //remove after change BooksViewModel in video 83
 
-                    viewmodel.Result.SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), CategoriesArray);
 
 
+                    ////////////////////////////////// unit of work /////////////////////////////////////////
+                    ViewBag.LanguageID = new SelectList(_unitofwork.BaseRepository<Language>().FindAll()  , "LanguageID", "LanguageName");
+                    ViewBag.PublisherID = new SelectList(_unitofwork.BaseRepository<Publisher>().FindAll(), "PublisherID", "PublisherName");
+                    ViewBag.AuthorID = new SelectList(_unitofwork.BaseRepository<Author>().FindAll().Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
+                    ViewBag.TranslatorID = new SelectList(_unitofwork.BaseRepository<Translator>().FindAll().Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
+
+                    //viewmodel.Result.SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), CategoriesArray);
+
+                    viewmodel.Result.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.bookRepository.GetAllCategories(), CategoriesArray);
 
 
 
@@ -281,13 +381,18 @@ namespace BookShop.Areas.Admin.Controllers
         {
 
 
-            ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
-            ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherID", "PublisherName");
-            ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
-            ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
+            //ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
+            //ViewBag.PublisherID = new SelectList(_context.Publishers, "PublisherID", "PublisherName");
+            //ViewBag.AuthorID = new SelectList(_context.Authors.Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
+            //ViewBag.TranslatorID = new SelectList(_context.Translator.Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
 
+            ViewBag.LanguageID = new SelectList(_unitofwork.BaseRepository<Language>().FindAll(), "LanguageID", "LanguageName");
+            ViewBag.PublisherID = new SelectList(_unitofwork.BaseRepository<Publisher>().FindAll(), "PublisherID", "PublisherName");
+            ViewBag.AuthorID = new SelectList(_unitofwork.BaseRepository<Author>().FindAll().Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "AuthorID", "NameFamily");
+            ViewBag.TranslatorID = new SelectList(_unitofwork.BaseRepository<Translator>().FindAll().Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
 
-            viewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), viewModel.CategoryID);
+            //viewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), viewModel.CategoryID);
+            viewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.bookRepository.GetAllCategories(), viewModel.CategoryID);
 
 
 
@@ -335,22 +440,40 @@ namespace BookShop.Areas.Admin.Controllers
 
                     };
 
-                    _context.Update(book);
+                    //_context.Update(book);
 
-                    var RecentAuthors = (from a in _context.Author_Books
+                    //var RecentAuthors = (from a in _context.Author_Books
+                    //                     where (a.BookID == viewModel.BookID)
+                    //                     select a.AuthorID).ToArray();
+
+                    //var RecentTranslators = (from t in _context.Book_Translators
+                    //                         where (t.BookID == viewModel.BookID)
+                    //                         select t.TranslatorID).ToArray();
+
+
+                    //var RecentCategories = (from c in _context.Book_Categories
+                    //                        where (c.BookID == viewModel.BookID)
+                    //                        select c.CategoryID).ToArray();
+
+
+                    //////////////////////////////// UNIT OF WORK /////////////////////////////////
+                    /// 
+
+                    _unitofwork.BaseRepository<Book>().Update(book);
+
+
+                    var RecentAuthors = (from a in _unitofwork._Context.Author_Books
                                          where (a.BookID == viewModel.BookID)
                                          select a.AuthorID).ToArray();
 
-                    var RecentTranslators = (from t in _context.Book_Translators
+                    var RecentTranslators = (from t in _unitofwork._Context.Book_Translators
                                              where (t.BookID == viewModel.BookID)
                                              select t.TranslatorID).ToArray();
 
 
-                    var RecentCategories = (from c in _context.Book_Categories
+                    var RecentCategories = (from c in _unitofwork._Context.Book_Categories
                                             where (c.BookID == viewModel.BookID)
                                             select c.CategoryID).ToArray();
-
-
                     var DeletedAuthors = RecentAuthors.Except(viewModel.AuthorID);
 
                     var DeletedTranslators = RecentTranslators.Except(viewModel.TranslatorID);
@@ -367,28 +490,33 @@ namespace BookShop.Areas.Admin.Controllers
 
 
                     if (DeletedAuthors.Count() != 0)
-                        _context.RemoveRange(DeletedAuthors.Select(a => new Author_Book { AuthorID = a, BookID = viewModel.BookID }).ToList());
+                        //_context.RemoveRange(DeletedAuthors.Select(a => new Author_Book { AuthorID = a, BookID = viewModel.BookID }).ToList());
+                        _unitofwork.BaseRepository<Author_Book>().DeleteRange(DeletedAuthors.Select(a => new Author_Book { AuthorID = a, BookID = viewModel.BookID }).ToList());
 
                     if (DeletedTranslators.Count() != 0)
-                        _context.RemoveRange(DeletedTranslators.Select(a => new Book_Translator { TranslatorID = a, BookID = viewModel.BookID }).ToList());
-
+                        //_context.RemoveRange(DeletedTranslators.Select(a => new Book_Translator { TranslatorID = a, BookID = viewModel.BookID }).ToList());
+                        _unitofwork.BaseRepository<Book_Translator>().DeleteRange(DeletedTranslators.Select(a => new Book_Translator { TranslatorID = a, BookID = viewModel.BookID }).ToList());
 
                     if (DeletedCategories.Count() != 0)
-                        _context.RemoveRange(DeletedCategories.Select(a => new Book_Category { CategoryID = a, BookID = viewModel.BookID }).ToList());
-
+                        //_context.RemoveRange(DeletedCategories.Select(a => new Book_Category { CategoryID = a, BookID = viewModel.BookID }).ToList());
+                        _unitofwork.BaseRepository<Book_Category>().DeleteRange(DeletedCategories.Select(a => new Book_Category { CategoryID = a, BookID = viewModel.BookID }).ToList());
 
 
                     if (AddedAuthors.Count() != 0)
-                        _context.AddRange(AddedAuthors.Select(a => new Author_Book { AuthorID = a, BookID = viewModel.BookID }).ToList());
+                        //_context.AddRange(AddedAuthors.Select(a => new Author_Book { AuthorID = a, BookID = viewModel.BookID }).ToList());
+                      await  _unitofwork.BaseRepository<Author_Book>().CreateRangeAsync(AddedAuthors.Select(a => new Author_Book { AuthorID = a, BookID = viewModel.BookID }).ToList());
 
                     if (AddedTranslators.Count() != 0)
-                        _context.AddRange(AddedTranslators.Select(a => new Book_Translator { TranslatorID = a, BookID = viewModel.BookID }).ToList());
+                        //_context.AddRange(AddedTranslators.Select(a => new Book_Translator { TranslatorID = a, BookID = viewModel.BookID }).ToList());
+                     await   _unitofwork.BaseRepository<Book_Translator>().CreateRangeAsync(AddedTranslators.Select(a => new Book_Translator { TranslatorID = a, BookID = viewModel.BookID }).ToList());
 
                     if (AddedCategories.Count() != 0)
-                        _context.AddRange(AddedCategories.Select(a => new Book_Category { CategoryID = a, BookID = viewModel.BookID }).ToList());
+                        //_context.AddRange(AddedCategories.Select(a => new Book_Category { CategoryID = a, BookID = viewModel.BookID }).ToList());
+                        await _unitofwork.BaseRepository<Book_Category>().CreateRangeAsync(AddedCategories.Select(a => new Book_Category { CategoryID = a, BookID = viewModel.BookID }).ToList());
 
 
-                    await _context.SaveChangesAsync();
+                    //await _context.SaveChangesAsync();
+                    await   _unitofwork.Commit();
                     ViewBag.MsgSuccess = "دخیره تغییرات با موفقیت انجام شد";
 
                     return View(viewModel);
@@ -411,7 +539,8 @@ namespace BookShop.Areas.Admin.Controllers
         {
             if (ISBN != null)
             {
-                var Book = (from b in _context.Books
+                //////////////////////     In the unit of work it becomes _unitofwork._Context instead of context
+                var Book = (from b in _unitofwork._Context.Books
                     where (b.ISBN == ISBN)
                     select new BookIndexViewModel()
                     {

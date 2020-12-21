@@ -15,7 +15,7 @@ namespace BookShop.Areas.Admin.Controllers
     public class AuthorsController : Controller
     {
         private readonly    IUnitOfWork _unitOfWork;
-      private readonly BookShopContext _context;
+        //private readonly BookShopContext _context;
 
         public AuthorsController(IUnitOfWork unitOfWork)
         {
@@ -42,7 +42,7 @@ namespace BookShop.Areas.Admin.Controllers
             //var author = await _context.Authors
             //    .FirstOrDefaultAsync(m => m.AuthorID == id);
 
-            var author = await _unitOfWork.BaseRepository<Author>().FindByID(id);
+            var author = await _unitOfWork.BaseRepository<Author>().FindByIDAsync(id);
 
 
             if (author == null)
@@ -80,7 +80,7 @@ namespace BookShop.Areas.Admin.Controllers
                 //_context.Entry(author).State = Microsoft.EntityFrameworkCore.EntityState.Added;
                 //var EntityState = DisplayState(_context.ChangeTracker.Entries());
                 // await _context.SaveChangesAsync();
-                await  _unitOfWork.BaseRepository<Author>().Create(author);
+                await  _unitOfWork.BaseRepository<Author>().CreateAsync(author);
                 await _unitOfWork.Commit();
                
                 return RedirectToAction(nameof(Index));
@@ -98,7 +98,7 @@ namespace BookShop.Areas.Admin.Controllers
 
             //var author = await _context.Authors.FindAsync(id);
 
-            var author = await _unitOfWork.BaseRepository<Author>().FindByID(id);
+            var author = await _unitOfWork.BaseRepository<Author>().FindByIDAsync(id);
 
             if (author == null)
             {
@@ -149,7 +149,7 @@ namespace BookShop.Areas.Admin.Controllers
 
 
                     /////////////////UnitOfWork////////////////////////////////
-                    if (await _unitOfWork.BaseRepository<Author>().FindByID(author.AuthorID) == null)
+                    if (await _unitOfWork.BaseRepository<Author>().FindByIDAsync(author.AuthorID) == null)
                     {
                         return NotFound();
                     }
@@ -183,7 +183,7 @@ namespace BookShop.Areas.Admin.Controllers
             //    .FirstOrDefaultAsync(m => m.AuthorID == id);
 
 
-            var author = await _unitOfWork.BaseRepository<Author>().FindByID(id);
+            var author = await _unitOfWork.BaseRepository<Author>().FindByIDAsync(id);
 
 
             if (author == null)
@@ -207,7 +207,7 @@ namespace BookShop.Areas.Admin.Controllers
             //_context.Attach(author).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
             //var EntityState = DisplayState(_context.ChangeTracker.Entries());
             //await _context.SaveChangesAsync();
-            var author = await _unitOfWork.BaseRepository<Author>().FindByID(id);
+            var author = await _unitOfWork.BaseRepository<Author>().FindByIDAsync(id);
             if(author == null)
             {
                 return NotFound();
@@ -259,7 +259,7 @@ namespace BookShop.Areas.Admin.Controllers
 
 
             //UnitOfWork
-            var Author = _unitOfWork.BaseRepository<Author>().FindByID(id);
+            var Author = _unitOfWork.BaseRepository<Author>().FindByIDAsync(id);
 
             if (Author == null)
             {

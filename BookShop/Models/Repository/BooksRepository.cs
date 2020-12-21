@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BookShop.Models.Repository
 {
-    public class BooksRepository
+    public class BooksRepository :IBookRepository
     {
         private readonly BookShopContext _context;
         public BooksRepository(BookShopContext context)

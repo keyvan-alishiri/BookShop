@@ -8,6 +8,8 @@ namespace BookShop.Models.UnitOfWork
 {
   public interface IUnitOfWork
     {
+        BookShopContext _Context { get; }
+        IBookRepository bookRepository { get; }
         IRepositoryBase<TEntity> BaseRepository<TEntity>() where TEntity : class;
         Task Commit();
     }
