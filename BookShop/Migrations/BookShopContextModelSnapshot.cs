@@ -165,21 +165,15 @@ namespace BookShop.Migrations
 
                     b.Property<string>("Address2");
 
-                    b.Property<int>("Age");
-
-                    b.Property<DateTime>("BirthDate");
-
                     b.Property<int>("CityID1");
 
                     b.Property<int>("CityID2");
 
-                    b.Property<string>("FirstName");
-
                     b.Property<string>("Image");
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("PostalCode1");
 
-                    b.Property<string>("Mobile");
+                    b.Property<string>("PostalCode2");
 
                     b.Property<string>("Tell");
 
@@ -287,7 +281,8 @@ namespace BookShop.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("PublisherName");
+                    b.Property<string>("PublisherName")
+                        .IsRequired();
 
                     b.HasKey("PublisherID");
 

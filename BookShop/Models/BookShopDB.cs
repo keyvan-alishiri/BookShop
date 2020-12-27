@@ -247,16 +247,17 @@ namespace BookShop.Models
     public class Customer
     {
         public string CustomerID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime BirthDate { get; set; }
+        //public string FirstName { get; set; }  remove after add identity to project and add into asp.netUser Table
+        //public string LastName { get; set; }  remove after add identity to project and add into asp.netUser Table
+        //public DateTime BirthDate { get; set; }  remove after add identity to project and add into asp.netUser Table
         public string Address1 { get; set; }
         public string Address2 { get; set; }
-        public string Mobile { get; set; }
+      /*  public string Mobile { get; set; }*/   //remove after add identity to project becouse  asp.netUser Table have phonenumber field
         public string Tell { get; set; }
         public string Image { get; set; }
 
-        public int Age { get; set; }
+        public  string PostalCode1 { get; set; }
+        public string PostalCode2 { get; set; }
 
         public int CityID1 { get; set; }
         public int CityID2 { get; set; }

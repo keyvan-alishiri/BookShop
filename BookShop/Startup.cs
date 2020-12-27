@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using BookShop.Areas.Admin.Data;
 using BookShop.Classes;
 using BookShop.Models;
 using BookShop.Models.Repository;
@@ -51,6 +52,7 @@ namespace BookShop
             services.AddTransient<ConvertDate>();
             services.AddTransient<BooksRepository>();
             services.AddTransient<BookShopContext>();
+            services.AddScoped<IApplicationRoleManager, ApplicationRoleManager>();
             services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
             services.AddMvc(options =>
             {
