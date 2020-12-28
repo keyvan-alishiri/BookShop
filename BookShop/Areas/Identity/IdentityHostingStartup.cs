@@ -28,7 +28,31 @@ namespace BookShop.Areas.Identity
                 services.AddIdentity<ApplicationUser, ApplicationRole>()
                 .AddDefaultUI()
                  .AddEntityFrameworkStores<IdentityDBContext>()
+                 .AddErrorDescriber<ApplicationIdentityErrorDescriber>()
                 .AddDefaultTokenProviders();
+
+
+
+                services.Configure<IdentityOptions>(Options =>
+                {
+                    //Configure Password
+                    Options.Password.RequireDigit = false;
+                    Options.Password.RequiredLength = 7;
+                    Options.Password.RequiredUniqueChars = 1;
+                    Options.Password.RequireLowercase = false;
+                    Options.Password.RequireNonAlphanumeric = false;
+                    Options.Password.RequireUppercase = false;
+
+                    Options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                 
+                    Options.User.RequireUniqueEmail = true;
+
+
+                });
+
+
+
+
             });
         }
     }

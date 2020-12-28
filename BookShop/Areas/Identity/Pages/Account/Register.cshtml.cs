@@ -67,7 +67,7 @@ namespace BookShop.Areas.Identity.Pages.Account
 
             [DataType(DataType.Password)]
             [Display(Name = "تکرار کلمه عبور")]
-            [Compare("Password", ErrorMessage = "کلمه عبور وترد شده با تکرار کلمه عبور مطابقت ندارد.")]
+            [Compare("Password", ErrorMessage = "کلمه عبور وارد شده با تکرار کلمه عبور مطابقت ندارد.")]
             public string ConfirmPassword { get; set; }
             [Required(ErrorMessage = "وارد نمودن {0} الزامی است.")]
             [Display(Name = "نام")]
