@@ -25,7 +25,7 @@ namespace BookShop.Areas.Identity
                 //    .AddEntityFrameworkStores<IdentityDBContext>();
 
 
-                services.AddIdentity<BookShopUser, ApplicationRole>()
+                services.AddIdentity<ApplicationUser, ApplicationRole>()
                 .AddDefaultUI()
                  .AddEntityFrameworkStores<IdentityDBContext>()
                 .AddDefaultTokenProviders();
