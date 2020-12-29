@@ -102,7 +102,7 @@ using BookShop.Models;
             WriteLiteral("  را از لیست نقش ها حذف کنید ؟ </span> </p>\r\n            </div>\r\n            <div class=\"card-footer bg-light text-right clearfix\">\r\n                ");
             EndContext();
             BeginContext(971, 311, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a25924ec93204865aecd0bca2aaa8b69", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d674f82452924f80837598efbacd96a8", async() => {
                 BeginContext(1001, 42, true);
                 WriteLiteral("\r\n                    <input type=\"hidden\"");
                 EndContext();
@@ -117,7 +117,7 @@ WriteAttributeValue("", 1051, Model.RoleID, 1051, 13, false);
                 WriteLiteral(" name=\"id\" />\r\n                    <input type=\"submit\" value=\"بله\" class=\"btn btn-danger mr-2 float-left\" />\r\n                    ");
                 EndContext();
                 BeginContext(1196, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a45862984a22454c8445a385a7bacb80", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39d67704f3f34db2b258d137d507b395", async() => {
                     BeginContext(1250, 3, true);
                     WriteLiteral("خیر");
                     EndContext();
