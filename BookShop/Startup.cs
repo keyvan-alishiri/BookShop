@@ -57,6 +57,7 @@ namespace BookShop
             services.AddTransient<BookShopContext>();
             services.AddScoped<IApplicationRoleManager, ApplicationRoleManager>();
             services.AddScoped<IApplicationUserManager, ApplicationUserManager>();
+           
             services.AddScoped<ApplicationIdentityErrorDescriber>();
             services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
             services.AddMvc(options =>

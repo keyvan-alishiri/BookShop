@@ -83,7 +83,7 @@ namespace BookShop.Migrations.IdentityDB
 
                     b.Property<string>("LastName");
 
-                    b.Property<DateTime>("LastVisitDateTime");
+                    b.Property<DateTime?>("LastVisitDateTime");
 
                     b.Property<bool>("LockoutEnabled");
 

@@ -33,5 +33,18 @@ namespace BookShop.Areas.Admin.Controllers
 
             return View(PagingModel);
         }
+
+      [Area("Admin")]
+        public async Task<IActionResult> Details(string id)
+        {
+            return View(await _userManager.FindUserWithRolesByIdAsync(id));
+        }
+      
+        //[HttpGet]
+        //public IActionResult Details()
+        //{
+        //    return View();
+        //}
+
     }
 }

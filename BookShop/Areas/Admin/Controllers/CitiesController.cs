@@ -50,7 +50,7 @@ namespace BookShop.Areas.Admin.Controllers
           
         }
 
-        public async Task<IActionResult> Create(int id)
+        public  IActionResult Create(int id)
         {
             City city =  new City() { ProvinceID = id };
              return   View(city);
