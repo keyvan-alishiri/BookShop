@@ -23,6 +23,6 @@ namespace BookShop.Models.ViewModels
 
 
 
-        public string RecentRoleName { get; set; }
+       
     }
 }

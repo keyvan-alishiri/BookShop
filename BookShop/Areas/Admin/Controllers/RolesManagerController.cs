@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BookShop.Areas.Admin.Data;
+using BookShop.Areas.Identity.Data;
 using BookShop.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -55,20 +56,18 @@ namespace BookShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (await _roleManager.RoleExistsAsync(viewModel.RoleName))
-                {
-                    ViewBag.Error = "خطا!!! این نقش تکراری است";
-                }
-                else
-                {
+                
                     var result = await _roleManager.CreateAsync(new ApplicationRole(viewModel.RoleName, viewModel.Description));
                     if (result.Succeeded)
                     {
                         return RedirectToAction("Index");
                     }
-                    ViewBag.Error = "در ذخیره اطلاعات خطایی رخ داده است";
-                    //return View(viewModel);
+                  
+                   foreach(var item in result.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
                 }
+                   
             
             }
 
@@ -97,7 +96,7 @@ namespace BookShop.Areas.Admin.Controllers
                 RoleID = Role.Id,
                 RoleName = Role.Name,
                 Description = Role.Description,
-                RecentRoleName = Role.Name         //  save In Edit when  rOLE nAME Repeat but change Edit Descriptin.
+                //RecentRoleName = Role.Name         //  save In Edit when  rOLE nAME Repeat but change Edit Descriptin.
                 
 
 
@@ -108,54 +107,32 @@ namespace BookShop.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditRole(RolesViewModel viewModel)
+        public async Task<IActionResult> EditRole(RolesViewModel ViewModel)
         {
             if (ModelState.IsValid)
             {
-                var Role = await _roleManager.FindByIdAsync(viewModel.RoleID);
+                var Role = await _roleManager.FindByIdAsync(ViewModel.RoleID);
                 if (Role == null)
                 {
                     return NotFound();
                 }
 
-                if (await _roleManager.RoleExistsAsync(viewModel.RoleName) && viewModel.RecentRoleName != viewModel.RoleName)
+                Role.Name = ViewModel.RoleName;
+                Role.Description = ViewModel.Description;
+
+                var Result = await _roleManager.UpdateAsync(Role);
+                if (Result.Succeeded)
                 {
-                    ViewBag.Error = "خطا این نقش تکراری است";
-                }
-                else
-                {
-
-                    Role.Name = viewModel.RoleName;
-                    Role.Description = viewModel.Description;
-
-                    var result = await _roleManager.UpdateAsync(Role);
-                    if (result.Succeeded)
-                    {
-                        ////ViewBag.Message = "alert-success";
-                        //// return View(viewModel);
-                        //return RedirectToAction("Index");
-
-                        ViewBag.Success = "ذخیره تغییرات با موفقیت انجام شد";
-
-
-                    }
-                    else
-                    {
-                        ViewBag.Error = "خطا!!! در ذخیره تغییرات خطایی رخ داده است";
-                    }
-                    ViewBag.Message = "alert-danger";
-                    return View(viewModel);
+                    ViewBag.Success = "ذخیره تغییرات با موفقیت انجام شد.";
                 }
 
-
-
-
-
+                foreach (var item in Result.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
+                }
             }
 
-           
-           
-            return View(viewModel);
+            return View(ViewModel);
         }
 
         [HttpGet]

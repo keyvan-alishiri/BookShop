@@ -223,7 +223,7 @@ using ReflectionIT.Mvc.Paging;
             WriteLiteral("                                            ");
             EndContext();
             BeginContext(3190, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7108c1172db8455aa189c1abbce5f597", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "60c196150996415bb9a877d5f0df23bd", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -348,7 +348,7 @@ WriteAttributeValue(" ", 4856, item.IsActive==true?"badge-success":"badge-danger
             WriteLiteral("\r\n                                        </span>\r\n                                    </td>\r\n                                    <td class=\"text-center\">\r\n                                        ");
             EndContext();
             BeginContext(5199, 214, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "91f77b8176f14c079f5615acf6944156", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6d0a41d409a44be99619a1326a725ea7", async() => {
                 BeginContext(5280, 129, true);
                 WriteLiteral("\r\n                                            <i class=\"fa fa-user\"></i> | مدیریت کاربر\r\n                                        ");
                 EndContext();
@@ -384,7 +384,7 @@ WriteAttributeValue(" ", 4856, item.IsActive==true?"badge-success":"badge-danger
             WriteLiteral("\r\n\r\n                                        ");
             EndContext();
             BeginContext(5457, 196, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3570dc115884f6ea35125a57a49eccb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fb19d1cb9964cce89caf3c8867af903", async() => {
                 BeginContext(5535, 114, true);
                 WriteLiteral("\r\n                                            <i class=\"fa fa-edit\"></i>\r\n                                        ");
                 EndContext();
@@ -420,7 +420,7 @@ WriteAttributeValue(" ", 4856, item.IsActive==true?"badge-success":"badge-danger
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(5695, 198, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "048a2f6ece9c4b899c51b2438d16f745", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2912ec8e3c864a9a8474c50841f6e14a", async() => {
                 BeginContext(5774, 115, true);
                 WriteLiteral("\r\n                                            <i class=\"fa fa-trash\"></i>\r\n                                        ");
                 EndContext();

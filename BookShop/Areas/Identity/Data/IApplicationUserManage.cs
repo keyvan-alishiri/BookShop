@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace BookShop.Areas.Identity.Data
 {
@@ -117,11 +117,7 @@ namespace BookShop.Areas.Identity.Data
         #region CustomMethod
         Task<List<ApplicationUser>> GetAllUsersAsync();
         Task<List<UsersViewModel>> GetAllUsersWithRolesAsync();
-        
         Task<UsersViewModel> FindUserWithRolesByIdAsync(string UserID);
-
-
-
         #endregion
     }
 }

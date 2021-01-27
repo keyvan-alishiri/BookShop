@@ -1,17 +1,16 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
+﻿using BookShop.Models.ViewModels;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using BookShop.Models.ViewModels;
 
 namespace BookShop.Areas.Identity.Data
 {
-    public class ApplicationUserManager : UserManager<ApplicationUser> ,IApplicationUserManager
+    public class ApplicationUserManager : UserManager<ApplicationUser>, IApplicationUserManager
     {
         private readonly ApplicationIdentityErrorDescriber _errors;
         private readonly ILookupNormalizer _keyNormalizer;
@@ -22,8 +21,6 @@ namespace BookShop.Areas.Identity.Data
         private readonly IServiceProvider _services;
         private readonly IUserStore<ApplicationUser> _userStore;
         private readonly IEnumerable<IUserValidator<ApplicationUser>> _userValidators;
-
-
         public ApplicationUserManager(
             ApplicationIdentityErrorDescriber errors,
             ILookupNormalizer keyNormalizer,
@@ -89,17 +86,13 @@ namespace BookShop.Areas.Identity.Data
                 RegisterDate = user.RegisterDate,
                 Roles = user.Roles.Select(u => u.Role.Name),
                 AccessFailedCount = user.AccessFailedCount,
-                EmailConfirmed =user.EmailConfirmed,
+                EmailConfirmed = user.EmailConfirmed,
                 LockoutEnabled = user.LockoutEnabled,
-                LockoutEnd=user.LockoutEnd,
-                PhoneNumberConfirmed =user.PhoneNumberConfirmed,
-                TwoFactorEnabled=user.TwoFactorEnabled,
+                LockoutEnd = user.LockoutEnd,
+                PhoneNumberConfirmed = user.PhoneNumberConfirmed,
+                TwoFactorEnabled = user.TwoFactorEnabled,
 
             }).FirstOrDefaultAsync();
         }
-
-
-
-        
     }
 }

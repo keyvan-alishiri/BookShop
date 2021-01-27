@@ -1,4 +1,5 @@
-﻿using BookShop.Models.ViewModels;
+﻿using BookShop.Areas.Identity.Data;
+using BookShop.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
