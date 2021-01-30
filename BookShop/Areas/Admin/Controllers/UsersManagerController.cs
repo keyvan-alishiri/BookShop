@@ -7,6 +7,7 @@ using BookShop.Areas.Identity.Data;
 using BookShop.Classes;
 using BookShop.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using ReflectionIT.Mvc.Paging;
 
@@ -18,11 +19,14 @@ namespace BookShop.Areas.Admin.Controllers
         private readonly IApplicationUserManager _userManager;
         private readonly IApplicationRoleManager _roleManger;
         private readonly IConvertDate _convertDate;
-        public UsersManagerController(IApplicationUserManager userMnager , IApplicationRoleManager roleManger, IConvertDate convertDate)
+        private readonly IEmailSender _emailSender;
+
+        public UsersManagerController(IApplicationUserManager userMnager , IApplicationRoleManager roleManger, IConvertDate convertDate, IEmailSender emailSender)
         {
             _userManager = userMnager;
             _roleManger = roleManger;
             _convertDate = convertDate;
+            _emailSender = emailSender;
         }
 
 
@@ -34,6 +38,11 @@ namespace BookShop.Areas.Admin.Controllers
             if(Msg== "Succese")
             {
                 ViewBag.Alert = "عضویت با موفقیت انجام شد.";
+            }
+
+            if(Msg == "SendEmailSuccess")
+            {
+                ViewBag.Alert = "ارسال ایمیل به کابران با موفقیت انجام شد.";
             }
 
             var PagingModel = PagingList.Create(await _userManager.GetAllUsersWithRolesAsync(), row, page);
@@ -178,6 +187,20 @@ namespace BookShop.Areas.Admin.Controllers
                 return View(User);
 
             }
+        }
+
+        public async Task<IActionResult> SendEmail(string[] emails,string subject,string message)
+        {
+            if(emails!=null)
+            {
+                for(int i=0;i<emails.Length;i++)
+                {
+                    await _emailSender.SendEmailAsync(emails[i], subject, message);
+
+                }
+            }
+
+            return RedirectToAction("Index",new { Msg = "SendEmailSuccess" });
         }
     }
 }

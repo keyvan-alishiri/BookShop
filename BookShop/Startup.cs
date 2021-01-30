@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BookShop.Areas.Admin.Data;
 using BookShop.Areas.Identity.Data;
+using BookShop.Areas.Identity.Services;
 using BookShop.Classes;
 using BookShop.Models;
 using BookShop.Models.Repository;
@@ -14,6 +15,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Configuration;
@@ -60,6 +62,7 @@ namespace BookShop
             services.AddScoped<IApplicationUserManager, ApplicationUserManager>();
            
             services.AddScoped<ApplicationIdentityErrorDescriber>();
+            services.AddScoped<IEmailSender, EmailSender>();
             services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
             services.AddMvc(options =>
             {
