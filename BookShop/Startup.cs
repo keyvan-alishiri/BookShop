@@ -102,9 +102,14 @@ namespace BookShop
             name: "areas",
             template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
+                //routes.MapRoute(
+                //    name: "default1",
+                //    template: "{Area=Admin}/{controller=Books}/{action=Index}/{id?}");  //before add accountController
+
                 routes.MapRoute(
                     name: "default",
-                    template: "{Area=Admin}/{controller=Books}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");  //change after add accountController
+
             });
         }
     }

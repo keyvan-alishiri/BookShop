@@ -91,7 +91,11 @@ namespace BookShop.Areas.Admin.Controllers
                 else
             {
                 ViewBag.AllRoles = _roleManger.GetAllRoles();
-                User.PersianBirthDate = _convertDate.ConvertMiladiToShamsi(User.BirthDate, "yyyy/MM/dd");
+                if(User.BirthDate != null)
+
+                User.PersianBirthDate = _convertDate.ConvertMiladiToShamsi((DateTime)User.BirthDate, "yyyy/MM/dd");
+
+
                 return View(User);
             }
                        

@@ -518,3 +518,5 @@ C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcore
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\UsersManager\Edit.g.cshtml.cs
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\UsersManager\Delete.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\ConfirmEmail.g.cshtml.cs
