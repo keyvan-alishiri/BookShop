@@ -6,6 +6,7 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace BookShop.Areas.Identity.Data
@@ -94,5 +95,13 @@ namespace BookShop.Areas.Identity.Data
 
             }).FirstOrDefaultAsync();
         }
+
+
+        public async Task<string> GetFullName(ClaimsPrincipal User)
+        {
+            var UserInfo = await GetUserAsync(User);
+            return UserInfo.FirstName + " " + UserInfo.LastName;
+
+         }
     }
 }

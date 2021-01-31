@@ -48,6 +48,9 @@ namespace BookShop.Areas.Identity
                     Options.User.RequireUniqueEmail = true;
 
 
+                    Options.SignIn.RequireConfirmedEmail = true;
+
+
                 });
 
 
