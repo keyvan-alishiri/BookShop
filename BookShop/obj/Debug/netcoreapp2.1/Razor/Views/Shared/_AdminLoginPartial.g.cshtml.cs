@@ -90,7 +90,7 @@ using BookShop.Areas.Identity.Data;
                         ");
             EndContext();
             BeginContext(850, 291, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "00ffc40f894b48a3a20bd28f0c63de15", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5994b20f598f47548d44616ebfb02609", async() => {
                 BeginContext(914, 220, true);
                 WriteLiteral("\r\n                            <button type=\"submit\" class=\" btn btn-link dropdown-item\">\r\n                                <i class=\"fa fa-lock\"></i> خروج\r\n                            </button>\r\n\r\n                        ");
                 EndContext();

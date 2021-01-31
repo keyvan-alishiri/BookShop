@@ -45,6 +45,18 @@ namespace BookShop
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+
+           
+
+
             services.AddPaging(options => {
                 options.ViewName = "Bootstrap4";
                 options.HtmlIndicatorDown = "<i class='fa fa-sort-amount-down'></i>";
@@ -96,6 +108,7 @@ namespace BookShop
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseAuthentication();
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
