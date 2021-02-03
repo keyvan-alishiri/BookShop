@@ -206,5 +206,58 @@ namespace BookShop.Areas.Admin.Controllers
 
             return RedirectToAction("Index",new { Msg = "SendEmailSuccess" });
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ChangeLockoutEnable(string UserId,bool status)
+        {
+            var User = await _userManager.FindByIdAsync(UserId);
+            if (User == null)
+            {
+                return NotFound();
+            }
+               
+            else
+            {
+                await _userManager.SetLockoutEnabledAsync(User, status);
+                return RedirectToAction("Details", new { id = UserId });
+            }
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LockUserAccount(string UserId)
+        {
+            var User = await _userManager.FindByIdAsync(UserId);
+            if (User == null)
+            {
+                return NotFound();
+            }
+
+            else
+            {
+                await _userManager.SetLockoutEndDateAsync(User, DateTimeOffset.UtcNow.AddMinutes(20));
+                return RedirectToAction("Details", new { id = UserId });
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UnLockUserAccount(string UserId)
+        {
+            var User = await _userManager.FindByIdAsync(UserId);
+            if (User == null)
+            {
+                return NotFound();
+            }
+
+            else
+            {
+                await _userManager.SetLockoutEndDateAsync(User, null);
+                return RedirectToAction("Details", new { id = UserId });
+            }
+        }
     }
 }

@@ -48,8 +48,14 @@ namespace BookShop.Areas.Identity
                     Options.User.RequireUniqueEmail = true;
 
 
+                    //Configure RequireConfirmedEmail
                     Options.SignIn.RequireConfirmedEmail = true;
 
+
+
+                    //LockUserAccount
+                    Options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(20);
+                    Options.Lockout.MaxFailedAccessAttempts = 3;
 
                 });
 
