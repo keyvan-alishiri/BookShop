@@ -527,3 +527,4 @@ C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcore
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\ForgetPasswordConfirmation.g.cshtml.cs
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\ResetPassword.g.cshtml.cs
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\ResetPasswordConfirmation.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\UsersManager\ResetPassword.g.cshtml.cs

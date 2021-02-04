@@ -259,5 +259,67 @@ namespace BookShop.Areas.Admin.Controllers
                 return RedirectToAction("Details", new { id = UserId });
             }
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> InActiveOrActiveUser(string UserId,bool Status)
+        {
+            var User = await _userManager.FindByIdAsync(UserId);
+            if (User == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                User.IsActive = Status;
+                await _userManager.UpdateAsync(User);
+                return RedirectToAction("Details", new { id = UserId });
+            }
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> ResetPassword(string UserId)
+        {
+            var User = await _userManager.FindByIdAsync(UserId);
+            if (User == null)
+            {
+                return NotFound();
+            }
+            var ViewModel = new UserResetPasswordViewModel
+            {
+                Id= User.Id,
+                UserName=User.UserName,
+                Email = User.Email,
+            };
+            return View(ViewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(UserResetPasswordViewModel viewModel)
+        {
+            if(ModelState.IsValid)
+            {
+                var User = await _userManager.FindByIdAsync(viewModel.Id);
+                if (User == null)
+                {
+                    return NotFound();
+                }
+
+                await _userManager.RemovePasswordAsync(User);
+                await _userManager.AddPasswordAsync(User, viewModel.NewPassword);
+                ViewBag.AlertSuccess = "بازنشانس کلمه عبور با موفقیت انجام شد";
+                viewModel.UserName = User.UserName;
+                viewModel.Email = User.Email;
+              
+            }
+
+            return View(viewModel);
+
+        }
+
+
     }
 }
