@@ -145,6 +145,9 @@ namespace BookShop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SignOut()
         {
+            var user = await _userManager.GetUserAsync(User);
+            user.LastVisitDateTime = DateTime.Now;
+            await _userManager.UpdateAsync(user);
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
@@ -348,5 +351,55 @@ namespace BookShop.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> ChangePassword()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return NotFound();
+            UserSidebarViewModel Sidebar = new UserSidebarViewModel()
+            {
+                FullName = user.FirstName + " " + user.LastName,
+                LastVisit = user.LastVisitDateTime,
+                RegisterDate = user.RegisterDate,
+                Image = user.Image,
+            };
+            return View(new ChangePasswordViewModel { UserSidebar=Sidebar });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel ViewModel)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return NotFound();
+
+            if (ModelState.IsValid)
+            {
+                var ChangePassResult = await _userManager.ChangePasswordAsync(user, ViewModel.OldPassword, ViewModel.NewPassword);
+                if (ChangePassResult.Succeeded)
+                    ViewBag.Alert = "کلمه عبور شما با موفقیت تغییر یافت.";
+
+                else
+                {
+                    foreach (var item in ChangePassResult.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, item.Description);
+                    }
+                }
+            }
+
+            UserSidebarViewModel Sidebar = new UserSidebarViewModel()
+            {
+                FullName = user.FirstName + " " + user.LastName,
+                LastVisit = user.LastVisitDateTime,
+                RegisterDate = user.RegisterDate,
+                Image = user.Image,
+            };
+
+            ViewModel.UserSidebar = Sidebar;
+            return View(ViewModel);
+        }
     }
 }
