@@ -19,7 +19,6 @@
     <script src="/vendor/popper.js/popper.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="~/js/jquery.md.bootstrap.datetimepicker.js"></script>
-
     <script src="~/js/jquery.inputmask.bundle.js"></script>
 </head>
 <body class="sidebar-fixed header-fixed">
@@ -43,7 +42,7 @@
                     <span>@convertDate.ConvertMiladiToShamsi(DateTime.Now, "dddd d MMMM yyyy")</span>
                 </li>
                 <li class="nav-item dropdown">
-                 <partial name="_AdminLoginPartial"/>
+                    <partial name="_AdminLoginPartial" />
                 </li>
 
             </ul>
@@ -92,7 +91,23 @@
                                 </li>
                             </ul>
                         </li>
-
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="icon icon-user"></i> مدیریت مترجمان <i class="fa fa-caret-left"></i>
+                            </a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="/Admin/Translators/Index" class="nav-link">
+                                        <i class="icon icon-target"></i> مشاهده مترجمان
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Admin/Translators/Create" class="nav-link">
+                                        <i class="icon icon-target"></i> افزودن مترجم جدید
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
                         <li class="nav-item nav-dropdown">
                             <a href="#" class="nav-link nav-dropdown-toggle">
@@ -107,41 +122,6 @@
                                 <li class="nav-item">
                                     <a href="/Admin/Publishers/Create" class="nav-link">
                                         <i class="icon icon-target"></i> افزودن ناشر جدید
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <li class="nav-item nav-dropdown">
-                            <a href="#" class="nav-link nav-dropdown-toggle">
-                                <i class="icon icon-user"></i> مدیریت مترجمان <i class="fa fa-caret-left"></i>
-                            </a>
-                            <ul class="nav-dropdown-items">
-                                <li class="nav-item">
-                                    <a href="/Admin/Translators/Index" class="nav-link">
-                                        <i class="icon icon-target"></i> مشاهده مترجمان
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/Admin/Translators/Create" class="nav-link">
-                                        <i class="icon icon-target"></i> افزودن مترجم جدید
                                     </a>
                                 </li>
                             </ul>
@@ -164,6 +144,55 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="icon icon-list"></i> مدیریت کاربران <i class="fa fa-caret-left"></i>
+                            </a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="/Admin/UsersManager/Index" class="nav-link">
+                                        <i class="fa fa-users"></i> مشاهده کاربران
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Identity/Account/Register" class="nav-link">
+                                        <i class="icon icon-target"></i> عضویت کاربر جدید
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="icon icon-list"></i> مدیریت نقش ها <i class="fa fa-caret-left"></i>
+                            </a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="/Admin/RolesManager/Index" class="nav-link">
+                                        <i class="icon icon-target"></i> مشاهده نقش ها
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Admin/RolesManager/AddRole" class="nav-link">
+                                        <i class="icon icon-target"></i> افزودن نقش جدید
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="fa fa-address-book"></i> تنظیمات حساب کاربری <i class="fa fa-caret-left"></i>
+                            </a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="/Admin/User/TwoFactorAuthentication" class="nav-link">
+                                        <i class="fa fa-mobile-alt"></i> تنظیمات احراز هویت دو مرحله با اپلیکشن
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -173,7 +202,7 @@
         </div>
     </div>
 
-    
+
     <script src="/vendor/chart.js/chart.min.js"></script>
     <script src="/js/carbon.js"></script>
     <script src="/js/demo.js"></script>
