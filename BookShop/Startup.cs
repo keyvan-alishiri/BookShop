@@ -85,6 +85,17 @@ namespace BookShop
                  (x) => L["انتخاب یکی از موارد لیست الزامی است."]);
 
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+
+            services.AddAuthentication()
+                .AddGoogle(Option =>
+                {
+                    Option.ClientId = "268255985709-9j3gng85mpem1p418ac4239oilhemmi3.apps.googleusercontent.com";
+                    Option.ClientSecret = "U6DztW7pNhiTXpwBLhJ4-Uum";
+
+                });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

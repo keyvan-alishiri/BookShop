@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using BookShop.Areas.Admin.Data;
@@ -102,16 +103,16 @@ namespace BookShop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SignIn(SignInViewModel ViewModel)
         {
-           
+
             if (Captcha.ValidateCaptchaCode(ViewModel.CaptchaCode, HttpContext))
             {
                 if (ModelState.IsValid)
                 {
 
                     var user = await _userManager.FindByNameAsync(ViewModel.UserName);
-                    if(user !=null)
+                    if (user != null)
                     {
-                        if(user.IsActive)
+                        if (user.IsActive)
                         {
                             var result = await _signInManager.PasswordSignInAsync(ViewModel.UserName, ViewModel.Password, ViewModel.RememberMe, true);
                             if (result.Succeeded)
@@ -128,7 +129,7 @@ namespace BookShop.Controllers
                                 return RedirectToAction("SendCode", new { RememberMe = ViewModel.RememberMe });
                         }
                     }
-                  
+
                     ModelState.AddModelError(string.Empty, "نام کاربری یا کلمه عبور شما صحیح نمی باشد.");
                 }
             }
@@ -161,7 +162,7 @@ namespace BookShop.Controllers
             var result = Captcha.GenerateCaptchaImage(width, height, captchaCode);
             HttpContext.Session.SetString("CaptchaCode", result.CaptchaCode);
             Stream s = new MemoryStream(result.CaptchaByteData);
-            
+
             return new FileStreamResult(s, "image/png");
 
         }
@@ -269,7 +270,7 @@ namespace BookShop.Controllers
                 return NotFound();
 
             var UserFactors = await _userManager.GetValidTwoFactorProvidersAsync(User);
-          //  UserFactors.Add("Authenticator");
+            //  UserFactors.Add("Authenticator");
             foreach (var item in UserFactors)
             {
                 if (item == "Authenticator")
@@ -284,7 +285,7 @@ namespace BookShop.Controllers
             }
 
 
-          
+
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //Before implementing the authenticator use Code For Disable Authenticator
             // UserFactors.Remove("Authenticator");  
@@ -338,13 +339,13 @@ namespace BookShop.Controllers
         }
 
         [HttpGet]
-        public async    Task<IActionResult> LoginWith2fa(bool RememberMe)
+        public async Task<IActionResult> LoginWith2fa(bool RememberMe)
         {
             var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
             if (user == null)
                 return NotFound();
 
-            return View(new LoginWith2faViewModel { RememberMe= RememberMe });
+            return View(new LoginWith2faViewModel { RememberMe = RememberMe });
         }
 
 
@@ -356,7 +357,7 @@ namespace BookShop.Controllers
             {
                 return NotFound();
             }
-               
+
             else
             {
                 var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
@@ -429,7 +430,7 @@ namespace BookShop.Controllers
                 RegisterDate = user.RegisterDate,
                 Image = user.Image,
             };
-            return View(new ChangePasswordViewModel { UserSidebar=Sidebar });
+            return View(new ChangePasswordViewModel { UserSidebar = Sidebar });
         }
 
         [HttpPost]
@@ -505,5 +506,51 @@ namespace BookShop.Controllers
             return View(ViewModel);
         }
 
+        [HttpPost]
+        public IActionResult GetExternalLoginProvider(string provider)
+        {
+            var RedirectUrl = Url.Action("GetCallBackAsync", "Account");
+            var Properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, RedirectUrl);
+            return Challenge(Properties, provider);
+        }
+
+        public async Task<IActionResult> GetCallBackAsync()
+        {
+            var info = await _signInManager.GetExternalLoginInfoAsync();
+            if (info == null)
+                ModelState.AddModelError(string.Empty, $"در عملیات ورود به سایت از طریق حساب {info.ProviderDisplayName} خطایی رخ داده است. ");
+
+            var UserEmail = info.Principal.FindFirstValue(ClaimTypes.Email);
+            var user = await _userManager.FindByEmailAsync(UserEmail);
+            if (user == null)
+                ModelState.AddModelError(string.Empty, "شما عضو سایت نیستید برای ورود به سایت ابتدا باید عضو سایت شوید.");
+
+            else
+            {
+                var Result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+                if (Result.Succeeded)
+                    return RedirectToAction("Index", "Home");
+
+                else if (Result.IsLockedOut)
+                {
+                    ModelState.AddModelError(string.Empty, "حساب کاربری شما به مدت 20 دقیقه به دلیل تلاش های ناموفق قفل شد.");
+                }
+
+                else if (Result.RequiresTwoFactor)
+                    return RedirectToAction("SendCode");
+
+                else
+                {
+                    var ExternalResult = await _userManager.AddLoginAsync(user, info);
+                    if (ExternalResult.Succeeded)
+                    {
+                        await _signInManager.SignInAsync(user, false);
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+            }
+
+            return View("SignIn");
+        }
     }
 }
