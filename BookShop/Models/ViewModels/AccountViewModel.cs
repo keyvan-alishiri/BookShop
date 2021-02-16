@@ -25,6 +25,10 @@ namespace BookShop.Models.ViewModels
         [Compare("Password", ErrorMessage = "کلمه عبور وارد شده با تکرار کلمه عبور مطابقت ندارد.")]
         public string ConfirmPassword { get; set; }
 
+        [Display(Name = "تاریخ تولد")]
+        [Required(ErrorMessage = "وارد نمودن {0} الزامی است.")]
+        public string BirthDate { get; set; }
+
         [Display(Name = "نام کاربری")]
         [Required(ErrorMessage = "وارد نمودن {0} الزامی است.")]
         public string UserName { get; set; }

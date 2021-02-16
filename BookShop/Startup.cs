@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using BookShop.Areas.Admin.Data;
 using BookShop.Areas.Identity.Data;
@@ -86,6 +87,20 @@ namespace BookShop
 
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+
+            // Authorizatin
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/SignIn";
+                //options.AccessDeniedPath = "/Home/AccessDenied";
+            });
+
+
+            services.AddAuthorization(Option =>
+            {
+                Option.AddPolicy("AccessToUsersManager", policy => policy.RequireRole("مدیر سایت", "کاربر"));
+                Option.AddPolicy("HappyBirthDay", policy => policy.RequireClaim(ClaimTypes.DateOfBirth, DateTime.Now.ToString("MM/dd")));
+            });
 
             services.AddAuthentication()
                 .AddGoogle(Option =>

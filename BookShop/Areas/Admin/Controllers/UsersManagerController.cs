@@ -6,6 +6,7 @@ using BookShop.Areas.Admin.Data;
 using BookShop.Areas.Identity.Data;
 using BookShop.Classes;
 using BookShop.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +15,7 @@ using ReflectionIT.Mvc.Paging;
 namespace BookShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
+   // [Authorize(Roles ="مدیر سایت")]
     public class UsersManagerController : Controller
     {
         private readonly IApplicationUserManager _userManager;
@@ -32,7 +34,9 @@ namespace BookShop.Areas.Admin.Controllers
 
 
 
-        
+       
+        //[Authorize(Roles = "مدیر سایت , کاربر")]
+        [Authorize(Policy = "AccessToUsersManager")]
         public async Task<IActionResult>  Index(string Msg, int page = 1,int row =10)
         {
             if(Msg== "Succese")
