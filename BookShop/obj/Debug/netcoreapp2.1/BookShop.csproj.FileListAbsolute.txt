@@ -542,3 +542,4 @@ C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcore
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\LoginWithRecoveryCode.g.cshtml.cs
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\AccessDenied.g.cshtml.cs
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\HappyBirthDay.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Products\BannedBooks.g.cshtml.cs
