@@ -1,4 +1,5 @@
-﻿using BookShop.Models;
+﻿using BookShop.Areas.Admin.Data;
+using BookShop.Models;
 using BookShop.Models.Repository;
 using BookShop.Models.UnitOfWork;
 using BookShop.Models.ViewModels;
@@ -10,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using ReflectionIT.Mvc.Paging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,6 +19,7 @@ namespace BookShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize]
+    [DisplayName("مدیریت کتاب ها")]
     public class BooksController : Controller
     {
         //private readonly BookShopContext _context;
@@ -55,6 +58,9 @@ namespace BookShop.Areas.Admin.Controllers
 
             return View(Books);
         }
+
+        [Authorize(Policy =ConstantPolicies.DynamicPermission)]
+        [DisplayName("مشاهده کتاب ها")]
         public IActionResult Index(string Msg, int page = 1, int row = 5, string SortExpression = "Title", string title = "")
         {
 
@@ -98,7 +104,8 @@ namespace BookShop.Areas.Admin.Controllers
             return View(PagingModel);
         }
 
-
+        [Authorize(Policy = ConstantPolicies.DynamicPermission)]
+        [DisplayName("افزودن کتاب جدید")]
         public IActionResult Create()
         {
             //ViewBag.LanguageID = new SelectList(_context.Languages, "LanguageID", "LanguageName");
@@ -219,6 +226,9 @@ namespace BookShop.Areas.Admin.Controllers
             }
         }
 
+
+        [Authorize(Policy = ConstantPolicies.DynamicPermission)]
+        [DisplayName("مشاهده جزییات کتاب")]
         public IActionResult Details(int id)
         {
             //var BookInfo = _context.ReadAllBooks.Where(b => b.BookID == id).First();
@@ -228,16 +238,21 @@ namespace BookShop.Areas.Admin.Controllers
             //    .Where(b => b.BookID == id).First();
 
 
+           
 
             //شکل دیگر استفاده از quey type ها  با استفاده از تعریف در متد OnModelCreate
-            //var BookInfo = _context.Query<ReadAllBooks>().Where(b => b.BookID == id).First();
+            //  var BookInfo = _context.Query<ReadAllBooks>().Where(b => b.BookID == id).First();
+
 
 
 
             //////////////////////////////////////////////// استفاده از UnitOfWork /////////////////////////////////
-            var BookInfo = _unitofwork._Context.ReadAllBooks.Where(b => b.BookID == id).First();
+              var BookInfo = _unitofwork._Context.ReadAllBooks.Where(b => b.BookID == id).First();
             return View(BookInfo);
         }
+
+        [Authorize(Policy = ConstantPolicies.DynamicPermission)]
+        [DisplayName(" حذف کتاب")]
 
         public async Task<IActionResult> Delete(int id)
         {
@@ -267,6 +282,8 @@ namespace BookShop.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Policy = ConstantPolicies.DynamicPermission)]
+        [DisplayName("ویرایش اطلاعات کتاب ")]
 
         public async Task<IActionResult> Edit(int? id)
         {

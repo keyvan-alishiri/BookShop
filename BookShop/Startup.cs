@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using BookShop.Areas.Admin.Data;
+using BookShop.Areas.Admin.Services;
 using BookShop.Areas.Identity.Data;
 using BookShop.Areas.Identity.Services;
 using BookShop.Classes;
@@ -80,6 +81,11 @@ namespace BookShop
             services.AddScoped<ISmsSender, SmsSender>();
             services.AddSingleton<IAuthorizationHandler, HappyBirthDayHandler>();
             services.AddSingleton<IAuthorizationHandler, MinimumAgeHandler>();
+            services.AddSingleton<IAuthorizationHandler, DynamicPermissionsAuthorizationHandler>();
+            services.AddSingleton<IMvcActionsDiscoveryService, MvcActionsDiscoveryService>();
+            services.AddSingleton<ISecurityTrimmingService, SecurityTrimmingService>();
+            services.AddHttpContextAccessor();
+            services.AddHttpClient();
 
             services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
             services.AddMvc(options =>
@@ -106,6 +112,7 @@ namespace BookShop
                 //options.AddPolicy("HappyBirthDay", policy => policy.RequireClaim(ClaimTypes.DateOfBirth, DateTime.Now.ToString("MM/dd")));
                 options.AddPolicy("HappyBirthDay", policy => policy.Requirements.Add(new HappyBirthDayRequirement()));
                 options.AddPolicy("Atleast18", policy => policy.Requirements.Add(new MinimumAgeRequirement(18)));
+                options.AddPolicy(ConstantPolicies.DynamicPermission, policy => policy.Requirements.Add(new DynamicPermissionRequirement()));
             });
 
             services.AddAuthentication()

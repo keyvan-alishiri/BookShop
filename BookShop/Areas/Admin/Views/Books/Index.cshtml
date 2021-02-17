@@ -2,6 +2,7 @@
 @inject BookShop.Classes.ConvertDate convertDate
 @using ReflectionIT.Mvc.Paging
 @addTagHelper*,ReflectionIT.Mvc.Paging
+@addTagHelper *,BookShop
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Index";
@@ -79,7 +80,7 @@
                                         <label class="form-control-label">زبان</label>
                                         <select class="select2 js-states form-control" name="Language" asp-items="ViewBag.LanguageID">
                                             <option value="">همه زبان ها</option>
-                                           
+
                                         </select>
                                     </div>
                                 </div>
@@ -98,7 +99,7 @@
                                         <label class="form-control-label">نویسنده</label>
                                         <select class="select2 js-states form-control" name="Author" asp-items="ViewBag.AuthorID">
                                             <option value="">همه نویسندگان</option>
-                                           
+
                                         </select>
                                     </div>
                                 </div>
@@ -107,7 +108,7 @@
                                         <label class="form-control-label">مترجم</label>
                                         <select class="select2 js-states form-control" name="Translator" asp-items="ViewBag.TranslatorID">
                                             <option value="">همه مترجمان</option>
-                                            
+
                                         </select>
                                     </div>
                                 </div>
@@ -128,7 +129,7 @@
                     </div>
                 </div>
                 <div class="table-responsive">
-                    @if(ViewBag.Msg!= null)
+                    @if (ViewBag.Msg != null)
                     {
                         <div class="alert alert-danger alert-dismissable">
                             @ViewBag.Msg
@@ -156,44 +157,55 @@
                             @{int id = ViewBag.NumOfRow; }
                             @foreach (var item in Model)
                             {
-                                <tr>
-                                    <td class="text-center">@id</td>
-                                    <td class="text-nowrap">@item.Title</td>
-                                    <td>@item.Author</td>
-                                    <td>@item.ISBN</td>
-                                    <td>@item.Stock</td>
+                            <tr>
+                                <td class="text-center">@id</td>
+                                <td class="text-nowrap">@item.Title</td>
+                                <td>@item.Author</td>
+                                <td>@item.ISBN</td>
+                                <td>@item.Stock</td>
 
-                                    <td>@item.PublisherName</td>
-                                    <td class="text-center">@item.Price</td>
+                                <td>@item.PublisherName</td>
+                                <td class="text-center">@item.Price</td>
 
-                                    <td class="text-center">
-                                        @if (item.PublishDate != null)
-                                        {
-                                            @convertDate.ConvertMiladiToShamsi((DateTime)item.PublishDate, "yyyy/MM/dd")
-                                        }
-                                        else
-                                        {
-                                            <span>-</span>
-                                        }
+                                <td class="text-center">
+                                    @if (item.PublishDate != null)
+                                    {
+                                        @convertDate.ConvertMiladiToShamsi((DateTime)item.PublishDate, "yyyy/MM/dd")
+                                    }
+                                    else
+                                    {
+                                        <span>-</span>
+                                    }
 
-                                    </td>
-                                    <td class="text-center">
-                                        @if (item.IsPublish == true)
-                                        {
-                                            <label class="badge badge-success btn-block">منتشر شده</label>
-                                        }
-                                        else
-                                        {
-                                            <label class="badge badge-info btn-block">پیش نویس</label>
-                                        }
+                                </td>
+                                <td class="text-center">
+                                    @if (item.IsPublish == true)
+                                    {
+                                        <label class="badge badge-success btn-block">منتشر شده</label>
+                                    }
+                                    else
+                                    {
+                                        <label class="badge badge-info btn-block">پیش نویس</label>
+                                    }
 
-                                    </td>
-                                    <td class="text-center">
-                                        <a href="/Admin/Books/Details/@item.BookID" class="btn btn-info btn-icon"><i class="fa fa-eye text-white"></i></a>
+                                </td>
+                                <td class="text-center">
+
+                                <td class="text-center">
+                                    <a href="/Admin/Books/Details/@item.BookID" class="btn btn-info btn-icon"><i class="fa fa-eye text-white"></i></a>
+                                    <security-trimming asp-action="Edit" asp-controller="Books" asp-area="Admin">
                                         <a href="/Admin/Books/Edit/@item.BookID" class="btn btn-success btn-icon"><i class="fa fa-edit text-white"></i></a>
+                                    </security-trimming>
+
+                                    <security-trimming asp-action="Delete" asp-controller="Books" asp-area="Admin">
                                         <a href="/Admin/Books/Delete/@item.BookID" class="btn btn-danger btn-icon"><i class="fa fa-trash text-white"></i></a>
-                                    </td>
-                                </tr>
+                                    </security-trimming>
+
+                                </td>
+
+
+                                </td>
+                            </tr>
                                 id++;
                             }
                         </tbody>
