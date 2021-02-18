@@ -61,12 +61,12 @@ using BookShop.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(25, 1265, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "42bd96696c8243c196d9905f7d786448", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2c7d094d4e99479f8deb5988bdb3b510", async() => {
                 BeginContext(31, 153, true);
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>فروشگاه کتاب میزفا</title>\r\n    ");
                 EndContext();
                 BeginContext(184, 49, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a27dd4589ed543b79f0eec113fb7108d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5f0b82901fee46e7a321f52f9273dbf0", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -85,7 +85,7 @@ using BookShop.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(239, 83, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3cb2ea050d8e4d9793b3c99f1ec7e21c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d513c42cd7c24b38a1632d1135a9f71f", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -104,7 +104,7 @@ using BookShop.Models;
                 WriteLiteral("\r\n    <script src=\"/vendor/jquery/jquery.min.js\"></script>\r\n    <script src=\"/vendor/popper.js/popper.min.js\"></script>\r\n    <script src=\"/vendor/bootstrap/js/bootstrap.min.js\"></script>\r\n    ");
                 EndContext();
                 BeginContext(514, 66, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f535e612e85b4d018aedb9de64787015", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39b0d48c23b44551b4c90b20a2380b54", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -137,7 +137,7 @@ using BookShop.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1292, 2743, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "967bbd2ae7fd432c94af323c762a5f18", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "52e2cb0f043040458d3405258c5faffd", async() => {
                 BeginContext(1298, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();
@@ -148,7 +148,7 @@ using BookShop.Models;
                 WriteLiteral("\r\n\r\n    <header>\r\n        <nav class=\"navbar navbar-expand navbar-light bg-primary fixed-top\">\r\n            <a class=\"navbar-brand text-white\">فروشگاه کتاب میزفا</a>\r\n            ");
                 EndContext();
                 BeginContext(2620, 30, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6dfb02307b7a4338b0b044b78c10af1a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "997d721c12ca4d40bb5f21cc3aca855c", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

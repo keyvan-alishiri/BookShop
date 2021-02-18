@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
+using BookShop.Classes;
 
 namespace BookShop.Models.UnitOfWork
 {
@@ -12,6 +13,7 @@ namespace BookShop.Models.UnitOfWork
     {
         public BookShopContext  _Context { get; }
         private IBookRepository _IBookRepository;
+        private readonly IConvertDate _convertDate;
 
         public IBookRepository bookRepository
         {
@@ -20,7 +22,7 @@ namespace BookShop.Models.UnitOfWork
             {
                 if(_IBookRepository==null)
                 {
-                    _IBookRepository = new BooksRepository(_Context);
+                    _IBookRepository = new BooksRepository(this ,_convertDate);
                 }
 
                 return _IBookRepository;
@@ -30,10 +32,11 @@ namespace BookShop.Models.UnitOfWork
 
 
 
-        public UnitOfWork(BookShopContext context)
+        public UnitOfWork(BookShopContext context , IConvertDate convertDate)
 
         {
             _Context = context;
+            _convertDate = convertDate;
         }
 
         public  IRepositoryBase<TEntity> BaseRepository<TEntity>() where TEntity :class

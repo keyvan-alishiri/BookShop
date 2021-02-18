@@ -124,9 +124,9 @@ namespace BookShop.Models.ViewModels
         [Display(Name = "ناشر")]
         public string PublisherName { get; set; }
         [Display(Name = "تاریخ انتشار در سایت")]
-        public DateTime? PublishDate  { get; set; }
+        public string PublishDate  { get; set; }
         [Display(Name = "وضعیت")]
-        public bool? IsPublish { get; set; }
+        public string IsPublish { get; set; }
         [Display(Name = "نویسندگان")]
         public string Author { get; set; }
         [Display(Name = "مترجمین")]
