@@ -13,6 +13,7 @@ namespace BookShop.Areas.Admin.Data
     public class ApplicationRoleManager :RoleManager<ApplicationRole> , IApplicationRoleManager
     {
         private readonly IdentityErrorDescriber _errors;
+        private readonly IApplicationUserManager _userManager;
         private readonly ILookupNormalizer _keyNormalizer;
         private readonly ILogger<ApplicationRoleManager> _logger;
         private readonly IEnumerable<IRoleValidator<ApplicationRole>> _rolevalidators;
@@ -22,13 +23,16 @@ namespace BookShop.Areas.Admin.Data
             ILookupNormalizer keyNormalizer ,
             ILogger<ApplicationRoleManager> logger,
             IEnumerable<IRoleValidator<ApplicationRole>> rolevalidators,
-            IdentityErrorDescriber errors) :base (store,rolevalidators,keyNormalizer,errors,logger)
+            IdentityErrorDescriber errors,
+            IApplicationUserManager userManager)
+            :base (store,rolevalidators,keyNormalizer,errors,logger)
         {
             _errors = errors;
             _keyNormalizer = keyNormalizer;
             _logger = logger;
             _store = store;
             _rolevalidators = rolevalidators;
+            _userManager = userManager;
         }
 
 
@@ -92,5 +96,33 @@ namespace BookShop.Areas.Admin.Data
 
             return await UpdateAsync(Role);
         }
+
+        public async Task<List<UsersViewModel>> GetUsersInRoleAsync(string RoleID)
+        {
+            var UserIds = (from r in Roles
+                           where (r.Id == RoleID)
+                           from u in r.Users
+                           select u.UserId).ToList();
+
+            return await _userManager.Users.Where(user => UserIds.Contains(user.Id))
+                .Select(user => new UsersViewModel
+                {
+                    Id = user.Id,
+                    Email = user.Email,
+                    UserName = user.UserName,
+                    PhoneNumber = user.PhoneNumber,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    BirthDate = user.BirthDate,
+                    IsActive = user.IsActive,
+                    LastVisitDateTime = user.LastVisitDateTime,
+                    Image = user.Image,
+                    RegisterDate = user.RegisterDate,
+                    Roles = user.Roles.Select(u => u.Role.Name),
+                }).AsNoTracking().ToListAsync();
+        }
+
+
+
     }
 }

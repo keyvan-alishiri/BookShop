@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookShop.Migrations.IdentityDB
 {
-    [DbContext(typeof(IdentityDBContext))]
+    [DbContext(typeof(BookShopContext))]
     [Migration("20210130123311_UpdateBirthDateInAppUserTB")]
     partial class UpdateBirthDateInAppUserTB
     {

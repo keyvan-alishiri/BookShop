@@ -6,19 +6,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using BookShop.Models;
 using BookShop.Models.ViewModels;
+using BookShop.Areas.Identity.Data;
+using BookShop.Areas.Admin.Data;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace BookShop.Models
 {
-    public class BookShopContext : DbContext
+    public class BookShopContext : IdentityDbContext<ApplicationUser, ApplicationRole, string, IdentityUserClaim<string>, ApplicationUserRole, IdentityUserLogin<string>, ApplicationRoleClaim, IdentityUserToken<string>>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(local);Database=BookShopDB;Trusted_Connection=True");
             //optionsBuilder.UseLazyLoadingProxies().UseSqlServer(@"Server=(local);Database=BookShopDB;Trusted_Connection=True");
+            
+
+            
         }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);   //IdentityDBContext
+
             modelBuilder.ApplyConfiguration(new Author_BookMap());
             modelBuilder.ApplyConfiguration(new CustomerMap());
             modelBuilder.ApplyConfiguration(new Order_BookMap());
@@ -29,7 +40,29 @@ namespace BookShop.Models
             modelBuilder.Entity<Book>().Property(b => b.Delete).HasDefaultValueSql("0");
             modelBuilder.Entity<Book>().Property(b => b.PublishDate).HasDefaultValueSql("convert(datetime,GETDATE())");  //method for insert default field with sqlquery
 
+            ///////////////////////////IdentityDBContext///////////////////////////////////////////////////
+          
+            modelBuilder.Entity<ApplicationRole>().ToTable("AspNetRoles").ToTable("AppRoles");
 
+            modelBuilder.Entity<ApplicationUserRole>().ToTable("AppUserRole");   //change Table Name
+
+
+            modelBuilder.Entity<ApplicationUserRole>()   // one to many
+                .HasOne(userRole => userRole.Role)
+                .WithMany(role => role.Users).HasForeignKey(r => r.RoleId);
+
+
+            modelBuilder.Entity<ApplicationUser>().ToTable("AppUsers");
+
+            modelBuilder.Entity<ApplicationUserRole>()   // one to many
+               .HasOne(userRole => userRole.User)    //NavigationProperty User ( userRole.User)
+               .WithMany(role => role.Roles).HasForeignKey(r => r.UserId);  //NavigationProperty Roles ( role.Roles) and foregnKey(UserId)
+
+
+            modelBuilder.Entity<ApplicationRoleClaim>().ToTable("AppRoleClaim");
+            modelBuilder.Entity<ApplicationRoleClaim>()
+                .HasOne(roleclaim => roleclaim.Role)
+                .WithMany(claim => claim.Claims).HasForeignKey(c => c.RoleId);
 
         }
 

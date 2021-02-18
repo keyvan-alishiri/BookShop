@@ -109,7 +109,7 @@ using BookShop.Models;
             WriteLiteral("                    <div class=\"alert alert-danger\">\r\n                        <strong>شما کد بازیابی معتبر ندارید.</strong>\r\n                        ");
             EndContext();
             BeginContext(1048, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3ab38d318094a2e9a122281e8d6aabc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1bbb5629ecd74cd3be0bb82c716c7013", async() => {
                 BeginContext(1122, 24, true);
                 WriteLiteral("ایجاد کدهای بازیابی جدید");
                 EndContext();
@@ -142,7 +142,7 @@ using BookShop.Models;
             WriteLiteral("                    <div class=\"alert alert-danger\">\r\n                        <strong>شما یک کدبازیابی معتبر دارید.</strong>\r\n                        ");
             EndContext();
             BeginContext(1424, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a583831cf8804425a54ca9e13a039f92", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccdfa2bd044a4e4baea56fb94b247fb7", async() => {
                 BeginContext(1498, 24, true);
                 WriteLiteral("ایجاد کدهای بازیابی جدید");
                 EndContext();
@@ -185,7 +185,7 @@ using BookShop.Models;
             WriteLiteral(" کد بازیابی معتبر دارید.</strong>\r\n                        ");
             EndContext();
             BeginContext(1825, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e78fdfd922a24e53bdf44601ba422526", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca83f4c047b6418899e6e725d9f2e841", async() => {
                 BeginContext(1898, 24, true);
                 WriteLiteral("ایجاد کدهای بازیابی جدید");
                 EndContext();
@@ -226,7 +226,7 @@ using BookShop.Models;
             WriteLiteral("                ");
             EndContext();
             BeginContext(2066, 121, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a2a7bf464334c8a9fc27cb56a479f2f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31bae641215949dfaadd52b1c234b3fc", async() => {
                 BeginContext(2152, 31, true);
                 WriteLiteral("فعال کردن احراز هویت با اپلیکشن");
                 EndContext();
@@ -260,7 +260,7 @@ using BookShop.Models;
             WriteLiteral("                ");
             EndContext();
             BeginContext(2253, 121, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a176be4147e14963b77afadf6f1faf96", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ff67ff7d107435795fda3b6029ddd73", async() => {
                 BeginContext(2339, 31, true);
                 WriteLiteral("فعال کردن احراز هویت با اپلیکشن");
                 EndContext();
@@ -284,7 +284,7 @@ using BookShop.Models;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(2392, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "50ad0e93d6f94f66ad9ae56a521e74bb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2efd5f145f4d452992b91e0d1252fa18", async() => {
                 BeginContext(2476, 32, true);
                 WriteLiteral("تنظیم مجدد احراز هویت با اپلیکشن");
                 EndContext();
@@ -320,7 +320,7 @@ using BookShop.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(2595, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "22cf022c6dd34a6d8949ec49d9964d40", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4f89be9a552144b3b7a21ccf761d9b4c", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

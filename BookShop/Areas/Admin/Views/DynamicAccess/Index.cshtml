@@ -16,11 +16,12 @@
         <div class="card-body">
             <input name="RoleId" value="@Model.RoleIncludeRoleClaims.Id" type="hidden" />
             <div class="row">
+                @{ int j = 0;}
                 @foreach (var controller in Model.SecuredControllerActions.OrderBy(x => x.ControllerDisplayName))
                 {
                     <div class="col-md-4">
                         <div class="card">
-                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#demo">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="@("#demo" + j)">
                                 @{
                                     var displayName = controller.ControllerDisplayName;
                                     if (string.IsNullOrWhiteSpace(displayName))
@@ -31,7 +32,7 @@
                                 @displayName
                             </button>
 
-                            <div id="demo" class="collapse">
+                            <div id="@("demo" + j)" class="collapse">
                                 <ul class="list-group list-group-flush pr-0">
                                     @{int i = 0;}
                                     @foreach (var action in controller.MvcActions.OrderBy(x => x.ActionDisplayName))
@@ -54,6 +55,7 @@
 
                                         </li>
                                         i++;
+                                        
                                     }
                                 </ul>
                             </div>
@@ -61,7 +63,9 @@
                         </div>
                     </div>
 
-                }
+                                            j++;
+
+                                        }
             </div>
 
 

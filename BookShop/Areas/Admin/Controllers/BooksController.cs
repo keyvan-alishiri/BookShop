@@ -493,6 +493,13 @@ namespace BookShop.Areas.Admin.Controllers
                     var RecentCategories = (from c in _unitofwork._Context.Book_Categories
                                             where (c.BookID == viewModel.BookID)
                                             select c.CategoryID).ToArray();
+
+                    if (viewModel.TranslatorID == null)
+                        viewModel.TranslatorID = new int[] { };
+
+                    if (viewModel.CategoryID == null)
+                        viewModel.CategoryID = new int[] { };
+
                     var DeletedAuthors = RecentAuthors.Except(viewModel.AuthorID);
 
                     var DeletedTranslators = RecentTranslators.Except(viewModel.TranslatorID);

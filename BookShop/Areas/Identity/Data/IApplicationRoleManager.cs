@@ -37,7 +37,9 @@ namespace BookShop.Areas.Admin.Data
         List<ApplicationRole> GetAllRoles();
         List<RolesViewModel> GetAllRolesAndUsersCount();
         Task<ApplicationRole> FindClaimsInRole(string RoleID);
+        Task<List<UsersViewModel>> GetUsersInRoleAsync(string RoleID);
         Task<IdentityResult> AddOrUpdateClaimsAsync(string RoleID, string RoleClaimType, IList<string> SelectedRoleClaimValues);
+
         #endregion
 
 

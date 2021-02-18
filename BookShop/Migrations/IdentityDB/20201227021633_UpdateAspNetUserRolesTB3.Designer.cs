@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookShop.Migrations.IdentityDB
 {
-    [DbContext(typeof(IdentityDBContext))]
+    [DbContext(typeof(BookShopContext))]
     [Migration("20201227021633_UpdateAspNetUserRolesTB3")]
     partial class UpdateAspNetUserRolesTB3
     {

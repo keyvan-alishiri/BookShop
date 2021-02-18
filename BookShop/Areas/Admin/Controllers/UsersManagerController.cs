@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using BookShop.Areas.Admin.Data;
@@ -14,19 +15,21 @@ using ReflectionIT.Mvc.Paging;
 
 namespace BookShop.Areas.Admin.Controllers
 {
+   
+    // [Authorize(Roles ="مدیر سایت")]
     [Area("Admin")]
-   // [Authorize(Roles ="مدیر سایت")]
+    [DisplayName("مدیریت کاربران")]
     public class UsersManagerController : Controller
     {
         private readonly IApplicationUserManager _userManager;
-        private readonly IApplicationRoleManager _roleManger;
+        private readonly IApplicationRoleManager _roleManager;
         private readonly IConvertDate _convertDate;
         private readonly IEmailSender _emailSender;
 
-        public UsersManagerController(IApplicationUserManager userMnager , IApplicationRoleManager roleManger, IConvertDate convertDate, IEmailSender emailSender)
+        public UsersManagerController(IApplicationUserManager userMnager , IApplicationRoleManager roleManager, IConvertDate convertDate, IEmailSender emailSender)
         {
             _userManager = userMnager;
-            _roleManger = roleManger;
+            _roleManager = roleManager;
             _convertDate = convertDate;
             _emailSender = emailSender;
         }
@@ -36,7 +39,9 @@ namespace BookShop.Areas.Admin.Controllers
 
        
         //[Authorize(Roles = "مدیر سایت , کاربر")]
-        [Authorize(Policy = "AccessToUsersManager")]
+       // [Authorize(Policy = "AccessToUsersManager")]
+        [Authorize(Policy = ConstantPolicies.DynamicPermission)]
+        [DisplayName("مشاهده کاربران")]
         public async Task<IActionResult>  Index(string Msg, int page = 1,int row =10)
         {
             if(Msg== "Succese")
@@ -56,7 +61,8 @@ namespace BookShop.Areas.Admin.Controllers
             return View(PagingModel);
         }
 
-  
+        [Authorize(Policy = ConstantPolicies.DynamicPermission)]
+        [DisplayName("مدیریت کاربر")]
         public async Task<IActionResult> Details(string id)
         {
             if(id == null)
@@ -81,6 +87,8 @@ namespace BookShop.Areas.Admin.Controllers
 
 
         [HttpGet]
+        [Authorize(Policy = ConstantPolicies.DynamicPermission)]
+        [DisplayName("ویرایش اطلاعات کاربر")]
         public async Task<IActionResult> Edit(string id)
         {
 
@@ -94,7 +102,7 @@ namespace BookShop.Areas.Admin.Controllers
                     return NotFound();
                 else
             {
-                ViewBag.AllRoles = _roleManger.GetAllRoles();
+                ViewBag.AllRoles = _roleManager.GetAllRoles();
                 if(User.BirthDate != null)
 
                 User.PersianBirthDate = _convertDate.ConvertMiladiToShamsi((DateTime)User.BirthDate, "yyyy/MM/dd");
@@ -118,7 +126,11 @@ namespace BookShop.Areas.Admin.Controllers
                 if (User == null)
                     return NotFound();
                 if(ViewModel.Roles == null)
-                    ViewBag.AlertError ="نقش نمی تواند خالی باشد.";
+                {
+                   // ViewBag.AlertError = "نقش نمی تواند خالی باشد.";
+                    ViewModel.Roles = new string[] { };
+                }
+                    
 
                 else
                 {
@@ -159,11 +171,13 @@ namespace BookShop.Areas.Admin.Controllers
                 }
             }
 
-            ViewBag.AllRoles = _roleManger.GetAllRoles();
+            ViewBag.AllRoles = _roleManager.GetAllRoles();
             return View(ViewModel);
         }
 
         [HttpGet]
+        [Authorize(Policy = ConstantPolicies.DynamicPermission)]
+        [DisplayName("حذف کاربر")]
         public   async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -403,6 +417,12 @@ namespace BookShop.Areas.Admin.Controllers
             return RedirectToAction("Details", new { id = UserId });
 
 
+        }
+
+        public async Task<IActionResult> GetUsersInRole(string id, int page = 1, int row = 10)
+        {
+            var PagingModel = PagingList.Create(await _roleManager.GetUsersInRoleAsync(id), row, page);
+            return View("Index", PagingModel);
         }
 
     }
