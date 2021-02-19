@@ -19,7 +19,7 @@ namespace BookShop.Services
         {
 
 
-
+            services.AddTransient<IUsersRepository, UsersRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ConvertDate>();
             services.AddTransient<IConvertDate, ConvertDate>();

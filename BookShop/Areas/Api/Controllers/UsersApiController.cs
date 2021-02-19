@@ -1,0 +1,76 @@
+﻿using BookShop.Areas.Identity.Data;
+using BookShop.Models.Repository;
+using BookShop.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace BookShop.Areas.Api.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UsersApiController : ControllerBase
+    {
+        private readonly IApplicationUserManager _userManager;
+       
+       
+        private readonly IUsersRepository _usersRpository;
+
+        public UsersApiController(IApplicationUserManager userManager,  IUsersRepository usersRpository)
+        {
+            _userManager = userManager;
+          
+          
+            _usersRpository = usersRpository;
+        }
+
+        [HttpGet]
+        public async Task<List<UsersViewModel>> Get()
+        {
+            return await _userManager.GetAllUsersWithRolesAsync();
+        }
+
+        [HttpGet("{id}")]
+        //[HttpGet("[action]")]
+        public async Task<IActionResult> Get(string id)
+        {
+            var User = await _userManager.FindUserWithRolesByIdAsync(id);
+            if (User == null)
+                return NotFound();
+            else
+                return new JsonResult(User);
+        }
+
+        [HttpPost("[Action]")]
+        public async Task<JsonResult> Register(RegisterBaseViewModel viewModel)
+        {
+            var result = await _usersRpository.RegisterAsync(viewModel);
+
+            if (result.Succeeded)
+            {
+                
+                return new JsonResult("عضویت با موفقیت انجام شد");
+
+            }
+            else
+                return new JsonResult(result.Errors);
+         }
+
+        [HttpPost("[Action]")]
+        public async Task<string> SignIn(SignInBaseViewModel viewModel)
+        {
+            var User = await _userManager.FindByNameAsync(viewModel.UserName);
+            if (User == null)
+                return "کاربری با این ایمیل یافت نشد";
+            else
+            {
+                var result = await _userManager.CheckPasswordAsync(User, viewModel.Password);
+                if (result)
+                    return "اهراز هویت با موفقیت انجام شد";
+                else
+                    return "نام کاربری یا کبمه عبور شما صحیح نمی باشد";
+            }
+           
+        }
+    }
+}
