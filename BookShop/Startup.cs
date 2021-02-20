@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using BookShop.Areas.Admin.Data;
 using BookShop.Areas.Admin.Services;
+using BookShop.Areas.Api.Controllers;
 using BookShop.Areas.Identity.Data;
 using BookShop.Areas.Identity.Services;
 using BookShop.Classes;
@@ -22,6 +23,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -78,8 +80,22 @@ namespace BookShop
             //     };
 
             //});
-           
 
+            services.AddApiVersioning(options =>
+            {
+
+                options.ReportApiVersions = true;
+                options.AssumeDefaultVersionWhenUnspecified = true;
+                options.DefaultApiVersion = new ApiVersion(1, 0);
+                // options.ApiVersionReader = new HeaderApiVersionReader("api-version");
+                options.ApiVersionReader = ApiVersionReader.Combine(new QueryStringApiVersionReader(),
+                    new HeaderApiVersionReader("api-version"));
+
+
+                //options.Conventions.Controller<SampleV1Controller>().HasApiVersion(new ApiVersion(1, 0));  //If the attribute is removed from the controller, it can be set by default
+
+
+            });
 
             services.AddPaging(options => {
                 options.ViewName = "Bootstrap4";

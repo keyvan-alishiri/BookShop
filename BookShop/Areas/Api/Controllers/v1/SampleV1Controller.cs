@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace BookShop.Areas.Api.Controllers.v1
+{
+    [Route("api/[controller]")]
+    // [Route("api/{v:apiVersion}/[controller]")]
+    //[Route("api/v{v:apiVersion}/[controller]")]
+    [ApiController]
+    [ApiVersion("1.0" , Deprecated =true)]
+    [ApiVersion("3.0")]
+    public class SampleV1Controller : ControllerBase
+    {
+    
+
+        [HttpGet]
+        public virtual IEnumerable<String> Get()
+        {
+            var apiVersion = HttpContext.GetRequestedApiVersion().ToString();
+            return new string[] { $"value1 from version{apiVersion}", $"value2 from version{apiVersion}", apiVersion };
+        }
+
+
+
+        [HttpGet("{name}"),MapToApiVersion("3.0")]
+        public string Get(string name)
+        {
+            return name;
+        }
+    }
+}
