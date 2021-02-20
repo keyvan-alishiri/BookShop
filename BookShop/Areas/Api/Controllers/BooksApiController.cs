@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookShop.Areas.Api.Classes;
 using BookShop.Models;
 using BookShop.Models.UnitOfWork;
 using BookShop.Models.ViewModels;
@@ -20,34 +21,65 @@ namespace BookShop.Areas.Api.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        [HttpGet]
-        public List<BookIndexViewModel> GetBooks()
+        //[HttpGet]
+        //public List<BookIndexViewModel> GetBooks()
+        //{
+        //    return _unitOfWork.bookRepository.GetAllBooks("", "", "", "", "", "", "");
+        //}
+
+
+        /// <summary>
+        /// Before change ApiResult (Add ApiResult - assert - enumExtentions - ApiResultStatusCode)
+        /// </summary>
+        /// <param name="ViewModel"></param>
+        /// <returns></returns>
+        //[HttpGet]
+        //public ApiResult GetBooks()
+        //{
+        //    return new ApiResult
+        //    {
+        //        IsSuccess = true,
+        //        Message = new List<string> { "عملیات با موفقیت انجام شد" },
+        //        Data = _unitOfWork.bookRepository.GetAllBooks("", "", "", "", "", "", "")
+        //    };
+        //}
+
+            [HttpGet]
+        public ApiResult<List<BookIndexViewModel>> GetBooks()
         {
-            return _unitOfWork.bookRepository.GetAllBooks("", "", "", "", "", "", "");
+            // return _unitOfWork.bookRepository.GetAllBooks("", "", "", "", "", "", "");
+            return Ok(_unitOfWork.bookRepository.GetAllBooks("", "", "", "", "", "", ""));
+
         }
 
 
         [HttpPost]
-        public async Task<string> CreateBook(BooksCreateEditViewModel ViewModel)
+        public async Task<ApiResult> CreateBook(BooksCreateEditViewModel ViewModel)
         {
             if (await _unitOfWork.bookRepository.CreateBookAsync(ViewModel))
+            {
 
+                return Ok();
+            }
 
-                return "عملیات با موفقیت انجام شد.";
             else
-                return "در انجام عملیات خطایی رخ داده است.";
+            {
+
+                return BadRequest("در انجام عملیات خطایی رخ داده است");
+            }
+
 
         }
 
         [HttpPut]
-        public async Task<string> EditBookAsync(BooksCreateEditViewModel ViewModel)
+        public async Task<ApiResult> EditBookAsync(BooksCreateEditViewModel ViewModel)
         {
             if (await _unitOfWork.bookRepository.EditBookAsync(ViewModel))
 
-                return "ذخیره تغییرات با موفقیت انجام شد";
+                return Ok();
             else
 
-                return "در انجام عملیات خطایی زخ داده است";
+                return BadRequest("در انجام عملیات خطایی زخ داده است");
         }
 
         [HttpDelete("{id}")]
@@ -58,7 +90,8 @@ namespace BookShop.Areas.Api.Controllers
             {
                 Book.Delete = true;
                 await _unitOfWork.Commit();
-                return Content("حذف کتاب با موفقیت انجام شد.");
+                // return Content("حذف کتاب با موفقیت انجام شد.");
+                return Ok();
             }
 
             else
