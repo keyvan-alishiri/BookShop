@@ -10,6 +10,7 @@ namespace BookShop.Areas.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiResultFilter]
     public class UsersApiController : ControllerBase
     {
         private readonly IApplicationUserManager _userManager;
@@ -127,7 +128,7 @@ namespace BookShop.Areas.Api.Controllers
                 if (result)
                     return Ok("اهراز هویت با موفقیت انجام شد");
                 else
-                    return BadRequest("نام کاربری یا کبمه عبور شما صحیح نمی باشد");
+                    return BadRequest("نام کاربری یا کلمه عبور شما صحیح نمی باشد");
             }
 
         }

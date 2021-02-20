@@ -64,6 +64,20 @@ namespace BookShop
             });
 
 
+
+            // Don't Show PropertyName In Json Output (PostMan Test)
+            //services.Configure<ApiBehaviorOptions>(options =>
+            //{
+            //    options.InvalidModelStateResponseFactory = ActionContext =>
+            //     {
+            //         var errors = ActionContext.ModelState
+            //         .Where(e => e.Value.Errors.Count() != 0)
+            //         .Select(e => e.Value.Errors.First().ErrorMessage).ToList();
+
+            //         return new BadRequestObjectResult(errors);
+            //     };
+
+            //});
            
 
 
