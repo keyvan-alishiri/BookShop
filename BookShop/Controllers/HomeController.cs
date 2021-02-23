@@ -30,5 +30,20 @@ namespace BookShop.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
+
+        /// <summary>
+        /// Test Error Handle Json OutPut and  Middleware(Development & Production)
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult test()
+        {
+            int i = 0;
+            int num = 78 / i;
+
+            return View();
+        }
     }
 }

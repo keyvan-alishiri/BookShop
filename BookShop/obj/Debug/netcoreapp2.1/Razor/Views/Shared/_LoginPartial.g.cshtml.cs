@@ -83,7 +83,7 @@ using BookShop.Areas.Identity.Data;
             WriteLiteral("    ");
             EndContext();
             BeginContext(226, 925, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f07863cc84b7424c98b00f7856318cc3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a9a25f9cbf4a470e8cb573cf8d5019de", async() => {
                 BeginContext(330, 152, true);
                 WriteLiteral("\r\n        <ul class=\"navbar-nav mt-2 mt-lg-0\" >\r\n            <li class=\"nav-item\">\r\n                <a  title=\"Manage\" class=\"nav-link text-white\">سلام ");
                 EndContext();
@@ -107,7 +107,7 @@ using BookShop.Areas.Identity.Data;
                 WriteLiteral("                    ");
                 EndContext();
                 BeginContext(812, 107, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "067a97ad65fe4650b099dd84453654bd", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d59226a3ab24c14ac5661f605034c18", async() => {
                     BeginContext(896, 19, true);
                     WriteLiteral(" ورود به پنل کاربری");
                     EndContext();
@@ -185,7 +185,7 @@ else
             WriteLiteral("    <ul class=\"navbar-nav mt-2 mt-lg-0\">\r\n        <li class=\"nav-item\">");
             EndContext();
             BeginContext(1236, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "52134dc18903429fb1f543f9578315c0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "401917e4959d4a7da3e18ddc02a2e9b9", async() => {
                 BeginContext(1314, 5, true);
                 WriteLiteral("عضویت");
                 EndContext();
@@ -210,7 +210,7 @@ else
             WriteLiteral("</li>\r\n        <li class=\"nav-item\">");
             EndContext();
             BeginContext(1359, 94, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "579b703dcd874585b9e8337e69a8116a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc9d41d45052424c8765e6ba2d65cabc", async() => {
                 BeginContext(1437, 12, true);
                 WriteLiteral("ورود به سایت");
                 EndContext();

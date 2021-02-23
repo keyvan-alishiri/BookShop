@@ -1,9 +1,15 @@
-﻿using BookShop.Areas.Api.Classes;
+﻿using BookShop.Areas.Admin.Data;
+using BookShop.Areas.Api.Attributes;
+using BookShop.Areas.Api.Classes;
+using BookShop.Areas.Api.Services;
 using BookShop.Areas.Identity.Data;
 using BookShop.Models.Repository;
 using BookShop.Models.ViewModels;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace BookShop.Areas.Api.Controllers.v1
@@ -15,16 +21,14 @@ namespace BookShop.Areas.Api.Controllers.v1
     public class UsersApiController : ControllerBase
     {
         private readonly IApplicationUserManager _userManager;
-       
-       
         private readonly IUsersRepository _usersRpository;
+        private readonly IjwtService _jwtService;
 
-        public UsersApiController(IApplicationUserManager userManager,  IUsersRepository usersRpository)
+        public UsersApiController(IApplicationUserManager userManager,  IUsersRepository usersRpository, IjwtService jwtService)
         {
             _userManager = userManager;
-          
-          
             _usersRpository = usersRpository;
+            _jwtService = jwtService;
         }
 
         //[HttpGet]
@@ -34,8 +38,15 @@ namespace BookShop.Areas.Api.Controllers.v1
         //}
 
         [HttpGet]
+        // [Authorize]
+        // [Authorize(Roles ="مدیر سایت")]
+       // [Authorize(Policy = (ConstantPolicies.DynamicPermission), AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+
+        [JwtAuthentication(Policy = ConstantPolicies.DynamicPermission)]    //After create JwtAuthenticationAttribute class for one Customize Attribute
         public virtual async Task<ApiResult<List<UsersViewModel>>> Get()
         {
+            //string UserName = HttpContext.User.Identity.Name;
+            //string PhoneNumber = HttpContext.User.FindFirstValue(ClaimTypes.MobilePhone);
             return Ok( await _userManager.GetAllUsersWithRolesAsync());
         }
 
@@ -127,7 +138,7 @@ namespace BookShop.Areas.Api.Controllers.v1
             {
                 var result = await _userManager.CheckPasswordAsync(User, viewModel.Password);
                 if (result)
-                    return Ok("اهراز هویت با موفقیت انجام شد");
+                    return Ok(await _jwtService.GenerateTokenAsync(User));
                 else
                     return BadRequest("نام کاربری یا کلمه عبور شما صحیح نمی باشد");
             }

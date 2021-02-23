@@ -31,5 +31,21 @@ namespace BookShop.Areas.Api.Controllers.v1
         {
             return name;
         }
+
+
+
+        /// <summary>
+        /// Test Error Handle Json OutPut and  Middleware(Development & Production)
+        /// </summary>
+        /// <returns></returns>
+        /// 
+        [HttpGet("[action]")]
+        public int test()
+        {
+            int  i = 0;
+            int num = 78 / i;
+
+            return num;
+        }
     }
 }

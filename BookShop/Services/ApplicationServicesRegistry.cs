@@ -1,4 +1,5 @@
-﻿using BookShop.Areas.Identity.Services;
+﻿using BookShop.Areas.Api.Services;
+using BookShop.Areas.Identity.Services;
 using BookShop.Classes;
 using BookShop.Models;
 using BookShop.Models.Repository;
@@ -18,7 +19,7 @@ namespace BookShop.Services
         public static void AddCustomApplicationServices(this IServiceCollection services)
         {
 
-
+            services.AddTransient<IjwtService, jwtService>();
             services.AddTransient<IUsersRepository, UsersRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ConvertDate>();

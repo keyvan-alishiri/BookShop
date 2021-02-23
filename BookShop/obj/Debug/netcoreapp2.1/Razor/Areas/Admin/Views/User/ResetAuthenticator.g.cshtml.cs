@@ -73,7 +73,7 @@ using BookShop.Models;
     ");
             EndContext();
             BeginContext(410, 206, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "060dbdaca93d4662a33e3dab82e46e07", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12ff5c20c85c49d3ad92a873b0d453c6", async() => {
                 BeginContext(481, 128, true);
                 WriteLiteral("\r\n        <button id=\"reset-authenticator-button\" class=\"btn btn-danger\" type=\"submit\">تنظیم مجدد کلید تأیید هویت</button>\r\n    ");
                 EndContext();

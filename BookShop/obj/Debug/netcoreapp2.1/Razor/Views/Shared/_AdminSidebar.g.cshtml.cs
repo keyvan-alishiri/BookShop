@@ -69,7 +69,7 @@ using BookShop.Models;
                 ");
             EndContext();
             BeginContext(421, 329, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("security-trimming", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5cd555f0f4ea49b9b59ed21f67ca5d57", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("security-trimming", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67700d2b94254beeabe0fee8d4b6dddb", async() => {
                 BeginContext(506, 224, true);
                 WriteLiteral("\r\n                    <a href=\"#\" class=\"nav-link nav-dropdown-toggle\">\r\n                        <i class=\"icon icon-book-open\"></i> مدیریت کتاب ها <i class=\"fa fa-caret-left\"></i>\r\n                    </a>\r\n                ");
                 EndContext();
@@ -95,7 +95,7 @@ using BookShop.Models;
             WriteLiteral("\r\n               \r\n                <ul class=\"nav-dropdown-items\">\r\n                    ");
             EndContext();
             BeginContext(838, 389, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("security-trimming", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2350ad73cd2b4d75b365969ccf245d43", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("security-trimming", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "589b54238bfc481eab52afb118137449", async() => {
                 BeginContext(916, 291, true);
                 WriteLiteral(@"
                         <li class=""nav-item"">
@@ -127,7 +127,7 @@ using BookShop.Models;
             WriteLiteral("\r\n                    \r\n                    ");
             EndContext();
             BeginContext(1271, 393, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("security-trimming", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ca18d52813442f2aafa3785d38ad4ab", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("security-trimming", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6b01035c2194344a9cc87c6e086bc73", async() => {
                 BeginContext(1350, 294, true);
                 WriteLiteral(@"
                         <li class=""nav-item"">

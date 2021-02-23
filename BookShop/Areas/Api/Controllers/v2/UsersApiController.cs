@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BookShop.Areas.Api.Classes;
+using BookShop.Areas.Api.Services;
 using BookShop.Areas.Identity.Data;
 using BookShop.Models.Repository;
 using BookShop.Models.ViewModels;
@@ -18,7 +19,7 @@ namespace BookShop.Areas.Api.Controllers.v2
    
     public class UsersApiController : v1.UsersApiController
     {
-        public UsersApiController(IApplicationUserManager userManager, IUsersRepository usersRpository) :base(userManager, usersRpository)
+        public UsersApiController(IApplicationUserManager userManager, IUsersRepository usersRpository , IjwtService jwtService) :base(userManager, usersRpository , jwtService)
         {
 
         }
