@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 
 namespace BookShop.Controllers
 {
-    
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class AccountController : Controller
     {
         private readonly IApplicationRoleManager _roleManager;

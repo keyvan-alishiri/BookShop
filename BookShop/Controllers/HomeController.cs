@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace BookShop.Controllers
 {
     [AllowAnonymous]
+  
     public class HomeController : Controller
     {
         public IActionResult Index(string id)

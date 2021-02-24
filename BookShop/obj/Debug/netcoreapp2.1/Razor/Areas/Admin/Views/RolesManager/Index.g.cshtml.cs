@@ -71,7 +71,7 @@ using ReflectionIT.Mvc.Paging;
             WriteLiteral("\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"card\">\r\n            <div class=\"card-header bg-light\">\r\n                نقش ها\r\n            </div>\r\n            <div class=\"card-body\">\r\n                <p>\r\n                    ");
             EndContext();
             BeginContext(495, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09acbdf74fed4aa0b22e009770e334ea", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6061217c807f43be9d69bcd3df56a1e7", async() => {
                 BeginContext(543, 15, true);
                 WriteLiteral("افزودن نقش جدید");
                 EndContext();
@@ -204,7 +204,7 @@ WriteAttributeValue("", 2641, item.RoleID, 2641, 12, false);
             WriteLiteral(" class=\"btn btn-primary\">مشاهده و تغییر لیست دسترسی های پویا</a>\r\n                                </td>\r\n                                <td class=\"text-center\">\r\n                                    ");
             EndContext();
             BeginContext(2853, 196, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b38bded06cfe489d95fa191135f40922", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4940429bb5a64256ba29685253c32816", async() => {
                 BeginContext(2939, 106, true);
                 WriteLiteral("\r\n                                        <i class=\"fa fa-edit\"></i>\r\n                                    ");
                 EndContext();
@@ -240,7 +240,7 @@ WriteAttributeValue("", 2641, item.RoleID, 2641, 12, false);
             WriteLiteral("\r\n                                    ");
             EndContext();
             BeginContext(3087, 198, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b5328460c3f42e0a46163473dd38f92", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4f99e24dfd4e67a7b3ab426268aceb", async() => {
                 BeginContext(3174, 107, true);
                 WriteLiteral("\r\n                                        <i class=\"fa fa-trash\"></i>\r\n                                    ");
                 EndContext();

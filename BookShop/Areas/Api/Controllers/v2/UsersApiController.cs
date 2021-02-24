@@ -12,9 +12,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookShop.Areas.Api.Controllers.v2
 {
-    [Route("api/[controller]")]
+    // [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    [ApiVersion("2.0")]
+    [ApiVersion("2")]
 
    
     public class UsersApiController : v1.UsersApiController

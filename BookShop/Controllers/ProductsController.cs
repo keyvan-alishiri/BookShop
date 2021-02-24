@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookShop.Controllers
 {
+  
     public class ProductsController : Controller
     {
         [Authorize(Policy = "Atleast18")]

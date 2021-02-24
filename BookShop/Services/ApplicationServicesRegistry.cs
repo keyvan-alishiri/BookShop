@@ -36,7 +36,14 @@ namespace BookShop.Services
                 options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
                  (x) => L["انتخاب یکی از موارد لیست الزامی است."]);
 
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1).
+            AddJsonOptions(options =>
+            {
+                options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+                options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+            });
+
+            
         }
     }
 }

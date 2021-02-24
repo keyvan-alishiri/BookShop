@@ -1,4 +1,5 @@
 ﻿using BookShop.Areas.Api.Middlewares;
+using BookShop.Areas.Api.Swagger;
 using BookShop.Areas.Identity.Services;
 using BookShop.Classes;
 using BookShop.Services;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using Newtonsoft.Json.Converters;
 using ReflectionIT.Mvc.Paging;
 using System;
 using System.IO;
@@ -38,6 +40,7 @@ namespace BookShop
             //    options.MinimumSameSitePolicy = SameSiteMode.None;
             //});
 
+         
 
             services.Configure<SiteSettings>(Configuration.GetSection(nameof(SiteSettings)));
             services.AddCustomPolicies();
@@ -104,6 +107,8 @@ namespace BookShop
 
 
 
+            services.AddSwagger();
+           
 
 
 
@@ -155,6 +160,7 @@ namespace BookShop
             app.UseCustomIdentityServices();
 
             app.UseSession();
+            app.UseSwaggerAndUI();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookShop.Areas.Api.Controllers.v2
 {
-    [Route("api/[controller]")]
-    // [Route("api/{v:apiVersion}/[controller]")]
+    // [Route("api/[controller]")]
+    //[Route("api/{v:apiVersion}/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    [ApiVersion("2.0")]
+    [ApiVersion("2")]
     public class SampleV2Controller : ControllerBase
     {
         [HttpGet]
