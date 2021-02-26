@@ -1,4 +1,5 @@
 ﻿using BookShop.Areas.Admin.Data;
+using BookShop.Classes;
 using BookShop.Models;
 using BookShop.Models.Repository;
 using BookShop.Models.UnitOfWork;
@@ -417,6 +418,22 @@ namespace BookShop.Areas.Admin.Controllers
                 return View();
             }
            
+        }
+
+       public async Task<IActionResult>  Download(int id)
+        {
+            var book =await _unitofwork.BaseRepository<Book>().FindByIDAsync(id);
+           
+            if (book == null)
+                return NotFound();
+            var Path = $"{_environment.WebRootPath}/BookFiles/{book.File}";
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(Path, FileMode.Open))
+            {
+                await stream.CopyToAsync(memory);
+            }
+            memory.Position = 0;
+            return File(memory, FileExtentions.GetContentType(Path), book.File);
         }
 
     }
