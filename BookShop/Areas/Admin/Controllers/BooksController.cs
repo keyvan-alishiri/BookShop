@@ -4,6 +4,7 @@ using BookShop.Models.Repository;
 using BookShop.Models.UnitOfWork;
 using BookShop.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Routing;
@@ -12,6 +13,7 @@ using ReflectionIT.Mvc.Paging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -24,7 +26,8 @@ namespace BookShop.Areas.Admin.Controllers
     {
         //private readonly BookShopContext _context;
         private readonly IUnitOfWork _unitofwork;
-        //private readonly BooksRepository _repository;    Placed in INterface UnitOfWork
+        private readonly IHostingEnvironment _environment;
+        //private readonly BooksRepository _repository;    Placed into Interface UnitOfWork
 
 
 
@@ -38,9 +41,10 @@ namespace BookShop.Areas.Admin.Controllers
         //    _repository = repository;
         //}
 
-        public BooksController(IUnitOfWork unitOfWork)
+        public BooksController(IUnitOfWork unitOfWork , IHostingEnvironment environment)
         {
             _unitofwork = unitOfWork;
+            _environment = environment;
            
         }
         public IActionResult AdvancedSearch(BooksAdvancedSearch viewModel)
@@ -135,6 +139,20 @@ namespace BookShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                if(ViewModel.File!=null)
+                {
+                    
+                    string FileExtension = Path.GetExtension(ViewModel.File.FileName);
+                    string NewFileName = string.Concat(Guid.NewGuid().ToString(), FileExtension);
+                    var path = $"{_environment.WebRootPath}/BookFiles/{NewFileName}";
+                    using (var streem = new FileStream(path, FileMode.Create))
+                    {
+                        await ViewModel.File.CopyToAsync(streem);
+                    }
+                    ViewModel.FileName = NewFileName;
+                }
+
+
                 if (await _unitofwork.bookRepository.CreateBookAsync(ViewModel))
                     return RedirectToAction("Index");
                 else
@@ -270,6 +288,7 @@ namespace BookShop.Areas.Admin.Controllers
                                          Weight = b.Weight,
                                          RecentIsPublish = (bool)b.IsPublish,
                                          PublishDate = b.PublishDate,
+                                        
 
                                      }).FirstAsync();
 

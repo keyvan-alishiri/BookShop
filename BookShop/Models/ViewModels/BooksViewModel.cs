@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -85,6 +86,11 @@ namespace BookShop.Models.ViewModels
         public int[] TranslatorID { get; set; }
 
         public int[] CategoryID { get; set; }
+
+        [Required(ErrorMessage = "بارگزاری فایل کتاب الزامی است")]
+        public IFormFile File { get; set; }
+
+        public string FileName  { get; set; }
     }
 
 
