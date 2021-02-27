@@ -76,7 +76,7 @@ using BookShop.Models;
             WriteLiteral("\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"card\">\r\n            <div class=\"card-header bg-light\">نویسندگان</div>\r\n            <div class=\"card-body\">\r\n                \r\n                <p>\r\n                    ");
             EndContext();
             BeginContext(577, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "001a1948e94b435893edf4fcff423beb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7a1a3ba7544b58ad36f3c27d45c8f3", async() => {
                 BeginContext(624, 19, true);
                 WriteLiteral("افزودن نویسنده جدید");
                 EndContext();
@@ -148,7 +148,7 @@ using BookShop.Models;
             WriteLiteral("\r\n                            </td>\r\n                            <td>\r\n                                ");
             EndContext();
             BeginContext(1722, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aed94aff165242ca913176471a76ef53", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "00768687abb44ebcbf72f19e27773d27", async() => {
                 BeginContext(1801, 14, true);
                 WriteLiteral("مشاهده کتاب ها");
                 EndContext();
@@ -184,7 +184,7 @@ using BookShop.Models;
             WriteLiteral("\r\n\r\n                            </td>\r\n                            \r\n                            \r\n                            \r\n                            \r\n\r\n                            <td>\r\n                                ");
             EndContext();
             BeginContext(2046, 114, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d1dfeb75034a4560b6a85d1ab00f462c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1930d48e05ff4153b6dd478df9e40cfb", async() => {
                 BeginContext(2130, 26, true);
                 WriteLiteral("<i class=\"fa fa-edit\"></i>");
                 EndContext();
@@ -220,7 +220,7 @@ using BookShop.Models;
             WriteLiteral(" \r\n                                ");
             EndContext();
             BeginContext(2195, 113, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "64f698069aef48548cbc178efbeabeb5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04a051aa59a74e8b8b61fe53fe15c1f9", async() => {
                 BeginContext(2279, 25, true);
                 WriteLiteral("<i class=\"fa fa-eye\"></i>");
                 EndContext();
@@ -256,7 +256,7 @@ using BookShop.Models;
             WriteLiteral(" \r\n                                ");
             EndContext();
             BeginContext(2343, 116, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "526b9cde57c945bb936933a3c342df30", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d56cda52f054d549b062737b889c8b4", async() => {
                 BeginContext(2428, 27, true);
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
                 EndContext();

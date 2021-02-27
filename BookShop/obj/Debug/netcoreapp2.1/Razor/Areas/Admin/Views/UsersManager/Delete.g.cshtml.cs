@@ -85,7 +85,7 @@ using BookShop.Models;
             WriteLiteral(" را از لیست کاربران حذف کنید؟ (با حذف کاربر تمام اطلاعات این کاربر از قبیل سفارشات کاربر حذف خواهد شد)\r\n                </p>\r\n            </div>\r\n\r\n            <div class=\"card-footer bg-light text-right clearfix\">\r\n                ");
             EndContext();
             BeginContext(659, 303, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d048cbe62a0d48fc901111e92c344d78", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e009f9f2288b4c72a7b1c7795269cd9d", async() => {
                 BeginContext(685, 42, true);
                 WriteLiteral("\r\n                    <input type=\"hidden\"");
                 EndContext();
@@ -100,7 +100,7 @@ WriteAttributeValue("", 735, Model.Id, 735, 9, false);
                 WriteLiteral(" name=\"id\" />\r\n                    <input type=\"submit\" value=\"بله\" class=\"btn btn-danger mr-2 float-left\" />\r\n                    ");
                 EndContext();
                 BeginContext(876, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4912984c43e34df4b8bb6580c9495a07", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68420bb1377143cca5d92252892de45e", async() => {
                     BeginContext(930, 3, true);
                     WriteLiteral("خیر");
                     EndContext();

@@ -102,7 +102,7 @@ WriteAttributeValue("", 620, Model.BookID, 620, 13, false);
             WriteLiteral("                            ");
             EndContext();
             BeginContext(763, 44, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6e67f52bf2bb4ec6a7da0ce24de07c18", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f86886a63eaf465b9ded8d0c708ae85f", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
