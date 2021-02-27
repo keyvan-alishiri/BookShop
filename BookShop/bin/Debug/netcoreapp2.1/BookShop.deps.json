@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "87df0902d3baa458a12b12c192d4d80976a54f6e"
+    "signature": "6efa3796abeaf2361b97d6abf527c6284a826651"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "BookShop/1.0.0": {
         "dependencies": {
           "MD.PersianDateTime.Core": "2.3.5",
+          "Magick.NET-Q16-AnyCPU": "7.23.2",
           "Microsoft.AspNetCore": "2.1.7",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Authentication.Google": "2.1.8",
@@ -72,6 +73,83 @@
         },
         "compile": {
           "lib/netstandard1.3/Castle.Core.dll": {}
+        }
+      },
+      "Magick.NET-Q16-AnyCPU/7.23.2": {
+        "dependencies": {
+          "Magick.NET.Core": "6.1.1"
+        },
+        "runtime": {
+          "lib/netstandard20/Magick.NET-Q16-AnyCPU.dll": {
+            "assemblyVersion": "7.23.2.0",
+            "fileVersion": "7.23.2.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-musl-x64/native/Magick.Native-Q16-x64.dll.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/Notice.txt": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/Magick.Native-Q16-x64.dll.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/Notice.txt": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/Magick.Native-Q16-x64.dll.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/Notice.txt": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/Magick.Native-Q16-x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "7.0.10.62"
+          },
+          "runtimes/win-x64/native/Notice.txt": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/Magick.Native-Q16-x86.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "7.0.10.62"
+          },
+          "runtimes/win-x86/native/Notice.txt": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard20/Magick.NET-Q16-AnyCPU.dll": {}
+        }
+      },
+      "Magick.NET.Core/6.1.1": {
+        "runtime": {
+          "lib/netstandard20/Magick.NET.Core.dll": {
+            "assemblyVersion": "6.1.1.0",
+            "fileVersion": "6.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard20/Magick.NET.Core.dll": {}
         }
       },
       "MD.PersianDateTime.Core/2.3.5": {
@@ -3874,6 +3952,20 @@
       "sha512": "sha512-tLlM4XU+aj0n8TdkiHHmV/48GpTuFEPQimFjHTZGD9XTWRCSLQcnB6rOftqaUSCXeBSbmWWEGeLPTLG3siTrcw==",
       "path": "castle.core/4.2.1",
       "hashPath": "castle.core.4.2.1.nupkg.sha512"
+    },
+    "Magick.NET-Q16-AnyCPU/7.23.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0A85S9SKPgOel+bTQ0TO8IGIEN2l1ITMF6HsFeXzc/H7eSzQqgT6c3k7Dpx0TUvM6WX2RfnKh6T5OIkQfpNdGA==",
+      "path": "magick.net-q16-anycpu/7.23.2",
+      "hashPath": "magick.net-q16-anycpu.7.23.2.nupkg.sha512"
+    },
+    "Magick.NET.Core/6.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9UH50RJjcZXKPIuu+dbBrQCKwrXO/rI/U8cD4q+ifrzAIxKm86hSlNwIzEso0MarQ5PSpu1FOP5qQyqddDvCzw==",
+      "path": "magick.net.core/6.1.1",
+      "hashPath": "magick.net.core.6.1.1.nupkg.sha512"
     },
     "MD.PersianDateTime.Core/2.3.5": {
       "type": "package",

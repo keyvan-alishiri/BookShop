@@ -23,6 +23,69 @@
           "lib/netstandard1.3/Castle.Core.dll": {}
         }
       },
+      "Magick.NET-Q16-AnyCPU/7.23.2": {
+        "type": "package",
+        "dependencies": {
+          "Magick.NET.Core": "6.1.1"
+        },
+        "compile": {
+          "lib/netstandard20/Magick.NET-Q16-AnyCPU.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard20/Magick.NET-Q16-AnyCPU.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-musl-x64/native/Magick.Native-Q16-x64.dll.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-musl-x64/native/Notice.txt": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/Magick.Native-Q16-x64.dll.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/Notice.txt": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/Magick.Native-Q16-x64.dll.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/Notice.txt": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/Magick.Native-Q16-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/Notice.txt": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/Magick.Native-Q16-x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/Notice.txt": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Magick.NET.Core/6.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard20/Magick.NET.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard20/Magick.NET.Core.dll": {}
+        }
+      },
       "MD.PersianDateTime.Core/2.3.5": {
         "type": "package",
         "compile": {
@@ -4767,6 +4830,53 @@
         "lib/netstandard1.3/Castle.Core.dll",
         "lib/netstandard1.3/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "Magick.NET-Q16-AnyCPU/7.23.2": {
+      "sha512": "0A85S9SKPgOel+bTQ0TO8IGIEN2l1ITMF6HsFeXzc/H7eSzQqgT6c3k7Dpx0TUvM6WX2RfnKh6T5OIkQfpNdGA==",
+      "type": "package",
+      "path": "magick.net-q16-anycpu/7.23.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Magick.NET.icon.png",
+        "lib/net20/Magick.NET-Q16-AnyCPU.dll",
+        "lib/net20/Magick.NET-Q16-AnyCPU.xml",
+        "lib/net40/Magick.NET-Q16-AnyCPU.dll",
+        "lib/net40/Magick.NET-Q16-AnyCPU.xml",
+        "lib/netstandard20/Magick.NET-Q16-AnyCPU.dll",
+        "lib/netstandard20/Magick.NET-Q16-AnyCPU.xml",
+        "magick.net-q16-anycpu.7.23.2.nupkg.sha512",
+        "magick.net-q16-anycpu.nuspec",
+        "runtimes/linux-musl-x64/native/Magick.Native-Q16-x64.dll.so",
+        "runtimes/linux-musl-x64/native/Notice.txt",
+        "runtimes/linux-x64/native/Magick.Native-Q16-x64.dll.so",
+        "runtimes/linux-x64/native/Notice.txt",
+        "runtimes/osx-x64/native/Magick.Native-Q16-x64.dll.dylib",
+        "runtimes/osx-x64/native/Notice.txt",
+        "runtimes/win-x64/native/Magick.Native-Q16-x64.dll",
+        "runtimes/win-x64/native/Notice.txt",
+        "runtimes/win-x86/native/Magick.Native-Q16-x86.dll",
+        "runtimes/win-x86/native/Notice.txt"
+      ]
+    },
+    "Magick.NET.Core/6.1.1": {
+      "sha512": "9UH50RJjcZXKPIuu+dbBrQCKwrXO/rI/U8cD4q+ifrzAIxKm86hSlNwIzEso0MarQ5PSpu1FOP5qQyqddDvCzw==",
+      "type": "package",
+      "path": "magick.net.core/6.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Copyright.txt",
+        "Magick.NET.icon.png",
+        "lib/net20/Magick.NET.Core.dll",
+        "lib/net20/Magick.NET.Core.xml",
+        "lib/net40/Magick.NET.Core.dll",
+        "lib/net40/Magick.NET.Core.xml",
+        "lib/netstandard20/Magick.NET.Core.dll",
+        "lib/netstandard20/Magick.NET.Core.xml",
+        "magick.net.core.6.1.1.nupkg.sha512",
+        "magick.net.core.nuspec"
       ]
     },
     "MD.PersianDateTime.Core/2.3.5": {
@@ -12653,6 +12763,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "MD.PersianDateTime.Core >= 2.3.5",
+      "Magick.NET-Q16-AnyCPU >= 7.23.2",
       "Microsoft.AspNetCore >= 2.1.7",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Authentication.Google >= 2.1.8",
@@ -12717,6 +12828,10 @@
           "MD.PersianDateTime.Core": {
             "target": "Package",
             "version": "[2.3.5, )"
+          },
+          "Magick.NET-Q16-AnyCPU": {
+            "target": "Package",
+            "version": "[7.23.2, )"
           },
           "Microsoft.AspNetCore": {
             "target": "Package",
