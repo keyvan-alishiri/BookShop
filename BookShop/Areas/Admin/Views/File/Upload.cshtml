@@ -15,6 +15,7 @@
 <script src="~/lib/fileUpload/js/plugins/piexif.js" type="text/javascript"></script>
 <script src="~/lib/fileUpload/js/plugins/sortable.js" type="text/javascript"></script>
 <script src="~/lib/fileUpload/js/fileinput.js" type="text/javascript"></script>
+
 <script src="~/lib/fileUpload/js/locales/fr.js" type="text/javascript"></script>
 <script src="~/lib/fileUpload/js/locales/es.js" type="text/javascript"></script>
 <script src="~/lib/fileUpload/themes/fas/theme.js" type="text/javascript"></script>
@@ -32,6 +33,7 @@
         }
 
         <form asp-action="Upload" enctype="multipart/form-data">
+            @*<input  type="hidden" value="8" id="GalleryID" >*@ 
             <div class="file-loading">
                 <input id="kv-explorer" name="files" type="file" multiple>
             </div>
@@ -75,6 +77,13 @@
             //uploadExtraData: {
             //    img_key: "1000",
             //    img_keywords: "happy, places",
+            //}
+
+
+            //uploadExtraData: function () {
+            //    return {
+            //        GalleryID: $("#GalleryID").val(),
+            //    };
             //}
         });
     });

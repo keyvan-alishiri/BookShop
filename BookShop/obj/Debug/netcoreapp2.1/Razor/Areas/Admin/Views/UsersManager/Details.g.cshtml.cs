@@ -117,7 +117,7 @@ WriteAttributeValue("", 928, Model.Id, 928, 9, false);
             WriteLiteral(" class=\"btn btn-success btn-block follow\">ویرایش اطلاعات کاربر </a>\r\n                    ");
             EndContext();
             BeginContext(1027, 152, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "74b221bcefa44491a5785ec0259b838c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67a1a3e6f71744ba8ca77730c7bb478b", async() => {
                 BeginContext(1155, 20, true);
                 WriteLiteral("تنظیم مجدد کلمه عبور");
                 EndContext();
@@ -229,7 +229,7 @@ WriteAttributeValue("", 928, Model.Id, 928, 9, false);
                                 ");
             EndContext();
             BeginContext(2883, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4f873d484b14701b71c13464e37f945", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc5312c742e344bea63f4bc2dfd2335b", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
@@ -482,7 +482,7 @@ WriteAttributeValue(" ", 9275, Model.IsActive==true?"badge-success":"badge-dange
             WriteLiteral("\r\n                                                        </label>\r\n                                                    </td>\r\n                                                    <td>\r\n                                                        ");
             EndContext();
             BeginContext(9681, 713, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "059d0bb13f8d4445976c74371c574c0d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb936f2c7cf6484eb2370516202c5c8b", async() => {
                 BeginContext(9721, 82, true);
                 WriteLiteral("\r\n                                                            <input type=\"hidden\"");
                 EndContext();
@@ -577,7 +577,7 @@ WriteAttributeValue(" ", 10883, Model.EmailConfirmed==true?"badge-success":"badg
             WriteLiteral("\r\n                                                        </label>\r\n                                                    </td>\r\n                                                    <td>\r\n                                                        ");
             EndContext();
             BeginContext(11309, 574, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ea65c48a0044b579d8f35e04adb4242", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9e85c033e264ef08aa06544f8deb469", async() => {
                 BeginContext(11349, 82, true);
                 WriteLiteral("\r\n                                                            <input type=\"hidden\"");
                 EndContext();
@@ -665,7 +665,7 @@ WriteAttributeValue(" ", 12385, Model.PhoneNumberConfirmed==true?"badge-success"
             WriteLiteral("\r\n                                                        </label>\r\n                                                    </td>\r\n                                                    <td>\r\n\r\n                                                        ");
             EndContext();
             BeginContext(12825, 592, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ed51a267339424ebecd0d1672730bd5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6d9973f2902943a5a97769c116f30730", async() => {
                 BeginContext(12871, 82, true);
                 WriteLiteral("\r\n                                                            <input type=\"hidden\"");
                 EndContext();
@@ -751,7 +751,7 @@ WriteAttributeValue(" ", 13922, Model.LockoutEnabled==true?"badge-success":"badg
             WriteLiteral("\r\n                                                        </label>\r\n                                                    </td>\r\n                                                    <td>\r\n                                                        ");
             EndContext();
             BeginContext(14340, 744, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8949ca9742ad42e2aaad5c74f2393a5b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21509e1470864d2b9cd3d0ef8e98056d", async() => {
                 BeginContext(14393, 82, true);
                 WriteLiteral("\r\n                                                            <input type=\"hidden\"");
                 EndContext();
@@ -848,7 +848,7 @@ WriteAttributeValue(" ", 15579, Model.TwoFactorEnabled==true?"badge-success":"ba
             WriteLiteral("\r\n                                                        </label>\r\n                                                    </td>\r\n                                                    <td>\r\n                                                        ");
             EndContext();
             BeginContext(16001, 585, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54cba6ebf50d42a08b50fa19e26c11f5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f7cc4f3b8d1144d791e4e3c185ee16ce", async() => {
                 BeginContext(16043, 82, true);
                 WriteLiteral("\r\n                                                            <input type=\"hidden\"");
                 EndContext();
@@ -990,7 +990,7 @@ WriteAttributeValue(" ", 17791, LockoutEnd>DateTime.Now? "fa-lock" : "fa-lock-op
             WriteLiteral("                                                            ");
             EndContext();
             BeginContext(18756, 655, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "795729cda40047248a85dff986f36a53", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b6542bab44f4e318ce7b2e60e6f9ddf", async() => {
                 BeginContext(18854, 86, true);
                 WriteLiteral("\r\n                                                                <input type=\"hidden\"");
                 EndContext();
@@ -1066,7 +1066,7 @@ WriteAttributeValue(" ", 19080, LockoutEnd>DateTime.Now?"btn-success":"btn-dange
             WriteLiteral("                                                            ");
             EndContext();
             BeginContext(19655, 509, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bfa221046aa9444ba75639b71226f45e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "411595d12cb740c69a4810c6725f6ddd", async() => {
                 BeginContext(19704, 86, true);
                 WriteLiteral("\r\n                                                                <input type=\"hidden\"");
                 EndContext();

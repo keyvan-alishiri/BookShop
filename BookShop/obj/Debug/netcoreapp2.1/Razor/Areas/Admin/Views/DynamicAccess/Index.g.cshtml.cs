@@ -80,12 +80,12 @@ using BookShop.Areas.Admin.Data;
             WriteLiteral("»</h5>\r\n    </div>\r\n    ");
             EndContext();
             BeginContext(358, 3679, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2f0101ef528441e99dea3097736ce493", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e787d185ad84fc0b79fcedbdc2edcf1", async() => {
                 BeginContext(450, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(460, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94b77b272d2a4194bb1901875685e0b6", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6737da4b2fba4aeaa46870de01c365ef", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();

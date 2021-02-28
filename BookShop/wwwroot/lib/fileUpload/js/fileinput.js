@@ -3246,7 +3246,7 @@
                 }, self.processDelay);
             };
             fnError = function (jqXHR, textStatus, errorThrown) {
-                errMsg = self._parseError(op, jqXHR, errorThrown, self.fileManager.getFileName(id));
+                //errMsg = self._parseError(op, jqXHR, errorThrown, self.fileManager.getFileName(id));
                 uploadFailed = true;
                 setTimeout(function () {
                     if (isBatch) {
@@ -3260,7 +3260,7 @@
                     $.extend(true, params, self._getOutData(formdata, jqXHR));
                     self._setProgress(101, $prog, self.msgAjaxProgressError.replace('{operation}', op));
                     self._setProgress(101, $thumb.find('.file-thumb-progress'), self.msgUploadError);
-                    self._showFileError(errMsg, params);
+                    //self._showFileError(errMsg, params);
                 }, self.processDelay);
             };
             formdata.append(self.uploadFileAttr, fileObj.file, fileName);
@@ -5544,12 +5544,12 @@
             'object': 'object'
         },
         msgUploadAborted: 'The file upload was aborted',
-        msgUploadThreshold: 'در حال پردازش...',
+        msgUploadThreshold: 'در حال پردازش ...',
         msgUploadBegin: 'Initializing...',
         msgUploadEnd: 'عملیات انجام شد.',
         msgUploadResume: 'Resuming upload...',
-        msgUploadEmpty: 'داده معتبری برای بارگذاری در دسترس نیست.',
-        msgUploadError: 'خطا درآپلود فایل',
+        msgUploadEmpty: 'No valid data available for upload.',
+        msgUploadError: 'در آپلود فایل خطایی رخ داده است.',
         msgDeleteError: 'Delete Error',
         msgProgressError: 'Error',
         msgValidationError: 'Validation Error',

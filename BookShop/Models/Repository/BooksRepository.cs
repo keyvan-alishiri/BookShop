@@ -201,8 +201,15 @@ namespace BookShop.Models.Repository
                 {
                     using (var memoryStream = new MemoryStream())
                     {
+                        string FileExtension = Path.GetExtension(ViewModel.Image.FileName);
                         await ViewModel.Image.CopyToAsync(memoryStream);
-                        book.Image = memoryStream.ToArray();
+                        var types = FileExtentions.FileType.Image;
+                       bool result = FileExtentions.IsValidFile(memoryStream.ToArray(), types, FileExtension.Replace('.', ' '));
+                        if(result)
+                        {
+                            book.Image = memoryStream.ToArray();
+                        }
+                      
                     }
                 }
 

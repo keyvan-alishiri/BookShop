@@ -30,7 +30,7 @@ namespace BookShop.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("Upload")]
-        public async Task<IActionResult> Upload(IEnumerable<IFormFile> files)
+        public async Task<IActionResult> Upload(IEnumerable<IFormFile> files )
         {
 
 

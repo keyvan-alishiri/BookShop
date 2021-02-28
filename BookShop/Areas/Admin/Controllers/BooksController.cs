@@ -140,24 +140,49 @@ namespace BookShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                bool result = true;
                 if(ViewModel.File!=null)
                 {
                     
                     string FileExtension = Path.GetExtension(ViewModel.File.FileName);
-                    string NewFileName = string.Concat(Guid.NewGuid().ToString(), FileExtension);
-                    var path = $"{_environment.WebRootPath}/BookFiles/{NewFileName}";
-                    using (var streem = new FileStream(path, FileMode.Create))
+
+                    var type = FileExtentions.FileType.PDF;
+                    using (var memory = new MemoryStream())
                     {
-                        await ViewModel.File.CopyToAsync(streem);
+                       await ViewModel.File.CopyToAsync(memory);
+                        result = FileExtentions.IsValidFile(memory.ToArray(),type, FileExtension.Replace('.',' '));
+                        if(result)
+                        {
+                            string NewFileName = string.Concat(Guid.NewGuid().ToString());
+                            var path = $"{_environment.WebRootPath}/BookFiles/{NewFileName}";
+                            using (var streem = new FileStream(path, FileMode.Create))
+                            {
+                                await ViewModel.File.CopyToAsync(streem);
+                            }
+                            ViewModel.FileName = NewFileName;
+                        }
+                        else
+                        {
+                            ModelState.AddModelError(string.Empty, "فایل انتخاب شده معتبر نمی باشد.");
+                        }
+
+                       
+
                     }
-                    ViewModel.FileName = NewFileName;
+
+
+
+                   
                 }
 
-
-                if (await _unitofwork.bookRepository.CreateBookAsync(ViewModel))
-                    return RedirectToAction("Index");
-                else
-                    ViewBag.Error = "در انجام عملیات خطایی رخ داده است";
+                if (result)
+                {
+                    if (await _unitofwork.bookRepository.CreateBookAsync(ViewModel))
+                        return RedirectToAction("Index");
+                    else
+                        ViewBag.Error = "در انجام عملیات خطایی رخ داده است";
+                }
+               
 
             }
 
