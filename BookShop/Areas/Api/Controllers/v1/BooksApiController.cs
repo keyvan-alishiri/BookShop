@@ -51,7 +51,7 @@ namespace BookShop.Areas.Api.Controllers.v1
         public ApiResult<List<BookIndexViewModel>> GetBooks()
         {
             // return _unitOfWork.bookRepository.GetAllBooks("", "", "", "", "", "", "");
-            return Ok(_unitOfWork.bookRepository.GetAllBooks("", "", "", "", "", "", ""));
+            return Ok(_unitOfWork.BooksRepository.GetAllBooks("", "", "", "", "", "", ""));
 
         }
 
@@ -59,7 +59,7 @@ namespace BookShop.Areas.Api.Controllers.v1
         [HttpPost]
         public async Task<ApiResult> CreateBook(BooksCreateEditViewModel ViewModel)
         {
-            if (await _unitOfWork.bookRepository.CreateBookAsync(ViewModel))
+            if (await _unitOfWork.BooksRepository.CreateBookAsync(ViewModel))
             {
 
                 return Ok();
@@ -77,7 +77,8 @@ namespace BookShop.Areas.Api.Controllers.v1
         [HttpPut]
         public async Task<ApiResult> EditBookAsync(BooksCreateEditViewModel ViewModel)
         {
-            if (await _unitOfWork.bookRepository.EditBookAsync(ViewModel))
+            var result = await _unitOfWork.BooksRepository.EditBookAsync(ViewModel);
+            if (result.IsSuccess ==true)
 
                 return Ok();
             else

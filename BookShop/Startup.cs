@@ -5,6 +5,7 @@ using BookShop.Classes;
 using BookShop.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
@@ -84,6 +85,12 @@ namespace BookShop
                 //options.Conventions.Controller<SampleV1Controller>().HasApiVersion(new ApiVersion(1, 0));  //If the attribute is removed from the controller, it can be set by default
 
 
+            });
+
+            services.Configure<FormOptions>(options =>
+            {
+                options.ValueLengthLimit = int.MaxValue;
+                options.MultipartBodyLengthLimit = long.MaxValue;
             });
 
             services.AddPaging(options =>

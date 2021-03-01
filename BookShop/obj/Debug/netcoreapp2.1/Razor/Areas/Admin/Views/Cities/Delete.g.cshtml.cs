@@ -78,7 +78,7 @@ using BookShop.Models;
             WriteLiteral("  را از لیست شهرها حذف کنید ؟ </span> </p>\r\n            </div>\r\n\r\n            <div class=\"card-footer bg-light text-right clearfix\">\r\n                ");
             EndContext();
             BeginContext(574, 307, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "986dcf9b0f5a4214994eec7c7624d3e4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc4be045e0fb441e9bbd8f8cc07ad663", async() => {
                 BeginContext(600, 42, true);
                 WriteLiteral("\r\n                    <input type=\"hidden\"");
                 EndContext();
@@ -93,7 +93,7 @@ WriteAttributeValue("", 650, Model.CityID, 650, 13, false);
                 WriteLiteral(" name=\"id\" />\r\n                    <input type=\"submit\" value=\"بله\" class=\"btn btn-danger mr-2 float-left\" />\r\n                    ");
                 EndContext();
                 BeginContext(795, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5d4b7f0d0108449e846d9179f90ab538", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4cf6d99bcba4dbe922cef4d20e9c255", async() => {
                     BeginContext(849, 3, true);
                     WriteLiteral("خیر");
                     EndContext();

@@ -59,7 +59,7 @@ namespace BookShop.Areas.Admin.Controllers
             viewModel.Category = string.IsNullOrEmpty(viewModel.Category) ? "" : viewModel.Category;
 
          //   var Books = _repository.GetAllBooks(viewModel.Title, viewModel.ISBN, viewModel.Language, viewModel.Publisher, viewModel.Author, viewModel.Translator, viewModel.Category);
-            var Books = _unitofwork.bookRepository.GetAllBooks(viewModel.Title, viewModel.ISBN, viewModel.Language, viewModel.Publisher, viewModel.Author, viewModel.Translator, viewModel.Category);
+            var Books = _unitofwork.BooksRepository.GetAllBooks(viewModel.Title, viewModel.ISBN, viewModel.Language, viewModel.Publisher, viewModel.Author, viewModel.Translator, viewModel.Category);
 
             return View(Books);
         }
@@ -83,7 +83,7 @@ namespace BookShop.Areas.Admin.Controllers
             ViewBag.Search = title;
 
             //var PagingModel = PagingList.Create(_repository.GetAllBooks(title, "", "", "", "", "", ""), row, page, SortExpression, "Title");
-            var PagingModel = PagingList.Create(_unitofwork.bookRepository.GetAllBooks(title, "", "", "", "", "", ""), row, page, SortExpression, "Title");
+            var PagingModel = PagingList.Create(_unitofwork.BooksRepository.GetAllBooks(title, "", "", "", "", "", ""), row, page, SortExpression, "Title");
 
 
 
@@ -101,7 +101,7 @@ namespace BookShop.Areas.Admin.Controllers
 
             ///////////////////////////UnitOfWork//////////////////////
             //ViewBag.Categories = _repository.GetAllCategories();
-            ViewBag.Categories = _unitofwork.bookRepository.GetAllCategories();
+            ViewBag.Categories = _unitofwork.BooksRepository.GetAllCategories();
             ViewBag.LanguageID = new SelectList(_unitofwork.BaseRepository<Language>().FindAll(), "LanguageName", "LanguageName");
             ViewBag.PublisherID = new SelectList(_unitofwork.BaseRepository<Publisher>().FindAll(), "PublisherName", "PublisherName");
             ViewBag.AuthorID = new SelectList(_unitofwork.BaseRepository<Author>().FindAll().Select(t => new AuthorList { AuthorID = t.AuthorID, NameFamily = t.FirstName + " " + t.LastName }), "NameFamily", "NameFamily");
@@ -126,7 +126,7 @@ namespace BookShop.Areas.Admin.Controllers
             ViewBag.TranslatorID = new SelectList(_unitofwork.BaseRepository<Translator>().FindAll().Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
 
             //BooksSubcategoriesViewModel SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), null);
-            BooksSubcategoriesViewModel SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.bookRepository.GetAllCategories(), null);
+            BooksSubcategoriesViewModel SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.BooksRepository.GetAllCategories(), null);
             BooksCreateEditViewModel ViewModel = new BooksCreateEditViewModel(SubCategoriesVM);
             return View(ViewModel);
         }
@@ -140,50 +140,31 @@ namespace BookShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                bool result = true;
-                if(ViewModel.File!=null)
+                UploadFileResult result = new UploadFileResult();
+                string NewFileName = null;
+                if (ViewModel.File != null)
                 {
-                    
-                    string FileExtension = Path.GetExtension(ViewModel.File.FileName);
-
-                    var type = FileExtentions.FileType.PDF;
-                    using (var memory = new MemoryStream())
-                    {
-                       await ViewModel.File.CopyToAsync(memory);
-                        result = FileExtentions.IsValidFile(memory.ToArray(),type, FileExtension.Replace('.',' '));
-                        if(result)
-                        {
-                            string NewFileName = string.Concat(Guid.NewGuid().ToString());
-                            var path = $"{_environment.WebRootPath}/BookFiles/{NewFileName}";
-                            using (var streem = new FileStream(path, FileMode.Create))
-                            {
-                                await ViewModel.File.CopyToAsync(streem);
-                            }
-                            ViewModel.FileName = NewFileName;
-                        }
-                        else
-                        {
-                            ModelState.AddModelError(string.Empty, "فایل انتخاب شده معتبر نمی باشد.");
-                        }
-
-                       
-
-                    }
-
-
-
-                   
+                    NewFileName = _unitofwork.BooksRepository.CheckFileName(ViewModel.File.FileName);
+                    var path = $"{_environment.WebRootPath}/BookFiles/{NewFileName}";
+                    result = await _unitofwork.BooksRepository.UploadFileAsync(ViewModel.File, path);
                 }
 
-                if (result)
+                if (result.IsSuccess == true || result.IsSuccess == null)
                 {
-                    if (await _unitofwork.bookRepository.CreateBookAsync(ViewModel))
+                    ViewModel.FileName = NewFileName;
+                    if (await _unitofwork.BooksRepository.CreateBookAsync(ViewModel))
                         return RedirectToAction("Index");
                     else
-                        ViewBag.Error = "در انجام عملیات خطایی رخ داده است";
+                        ViewBag.Error = "در انجام عملیات خطایی رخ داده است.";
                 }
-               
 
+                else
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item);
+                    }
+                }
             }
 
             ViewBag.LanguageID = new SelectList(_unitofwork.BaseRepository<Language>().FindAll(), "LanguageID", "LanguageName");
@@ -192,7 +173,7 @@ namespace BookShop.Areas.Admin.Controllers
             ViewBag.TranslatorID = new SelectList(_unitofwork.BaseRepository<Translator>().FindAll().Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
 
             //ViewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), ViewModel.CategoryID);
-            ViewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.bookRepository.GetAllCategories(), ViewModel.CategoryID);
+            ViewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.BooksRepository.GetAllCategories(), ViewModel.CategoryID);
             return View(ViewModel);
 
         }
@@ -234,6 +215,15 @@ namespace BookShop.Areas.Admin.Controllers
             if (Book != null)
             {
                 Book.Delete = true;
+                var path = $"{_environment.WebRootPath}/BookFiles/{Book.File}";
+                if(System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                    Book.File = null;
+                }
+
+
+
                 //Book.Title = ""; //میتوان با این روش نیز اطلاعات دیتابیس را آپدیت نمود
                 /*await _context.SaveChangesAsync();*/ //قبل از اضافه نمودن uNITpFwORK
 
@@ -312,10 +302,10 @@ namespace BookShop.Areas.Admin.Controllers
                                          PublishYear = b.PublishYear,
                                          Summary = b.Summary,
                                          Weight = b.Weight,
-                                         RecentIsPublish = (bool)b.IsPublish,
+                                     
                                          PublishDate = b.PublishDate,
-                                         ImageByte =b.Image
-                                        
+                                         ImageByte =b.Image,
+                                        FileName = b.File,
 
                                      }).FirstAsync();
 
@@ -355,7 +345,7 @@ namespace BookShop.Areas.Admin.Controllers
 
                     //viewmodel.Result.SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), CategoriesArray);
 
-                    viewmodel.Result.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.bookRepository.GetAllCategories(), CategoriesArray);
+                    viewmodel.Result.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.BooksRepository.GetAllCategories(), CategoriesArray);
 
 
 
@@ -386,29 +376,63 @@ namespace BookShop.Areas.Admin.Controllers
             ViewBag.TranslatorID = new SelectList(_unitofwork.BaseRepository<Translator>().FindAll().Select(t => new TranslatorList { TranslatorID = t.TranslatorID, NameFamily = t.Name + " " + t.Family }), "TranslatorID", "NameFamily");
 
             //viewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_repository.GetAllCategories(), viewModel.CategoryID);
-            viewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.bookRepository.GetAllCategories(), viewModel.CategoryID);
+            viewModel.SubCategoriesVM = new BooksSubcategoriesViewModel(_unitofwork.BooksRepository.GetAllCategories(), viewModel.CategoryID);
 
 
 
             if (ModelState.IsValid)
             {
-                if (await _unitofwork.bookRepository.EditBookAsync(viewModel))
+                UploadFileResult result = new UploadFileResult();
+                string NewFileName = viewModel.FileName;
+                string path;
+                if (viewModel.File != null)
                 {
-                    ViewBag.MsgSuccess = "دخیره تغییرات با موفقیت انجام شد";
-                    return View(viewModel);
-
+                    NewFileName = _unitofwork.BooksRepository.CheckFileName(viewModel.File.FileName);
+                    path = $"{_environment.WebRootPath}/BookFiles/{NewFileName}";
+                    result = await _unitofwork.BooksRepository.UploadFileAsync(viewModel.File, path);
                 }
+
+                if (result.IsSuccess == true || result.IsSuccess == null)
+                {
+                    if (result.IsSuccess == true)
+                    {
+                        path = $"{_environment.WebRootPath}/BookFiles/{viewModel.FileName}";
+                        if (System.IO.File.Exists(path))
+                        {
+                            System.IO.File.Delete(path);
+                        }
+                    }
+
+                    viewModel.FileName = NewFileName;
+                    var operationResult = await _unitofwork.BooksRepository.EditBookAsync(viewModel);
+                    if (operationResult.IsSuccess == true)
+                    {
+                        ViewBag.MsgSuccess = "ذخیره تغییرات با موفقیت انجام شد.";
+                        return View(viewModel);
+                    }
+                    else
+                    {
+                        foreach (var item in operationResult.Errors)
+                            ModelState.AddModelError("", item);
+                        return View(viewModel);
+                    }
+                }
+
                 else
                 {
-                    ViewBag.MsgFaild = "در ذخیره تغییرات خطایی رخ داده است";
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item);
+                    }
+
                     return View(viewModel);
                 }
 
-              
             }
+
             else
             {
-                ViewBag.MsgFaild = "اطلاعات فرم نامعتبر است";
+                ViewBag.MsgFailed = "اطلاعات فرم نامعتبر است.";
                 return View(viewModel);
             }
         }

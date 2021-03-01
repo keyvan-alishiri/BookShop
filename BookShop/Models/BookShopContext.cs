@@ -36,7 +36,7 @@ namespace BookShop.Models
             modelBuilder.ApplyConfiguration(new Book_TranslatorMap());
             modelBuilder.ApplyConfiguration(new Book_CategoryMap());
             modelBuilder.Query<ReadAllBooks>().ToView("ReadAllBooks");
-            // modelBuilder.Entity<Book>().HasQueryFilter(b => (bool)!b.Delete);
+            modelBuilder.Entity<Book>().HasQueryFilter(b => (bool)!b.Delete);
             modelBuilder.Entity<Book>().Property(b => b.Delete).HasDefaultValueSql("0");
             modelBuilder.Entity<Book>().Property(b => b.PublishDate).HasDefaultValueSql("convert(datetime,GETDATE())");  //method for insert default field with sqlquery
 

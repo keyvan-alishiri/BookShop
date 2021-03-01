@@ -1,4 +1,5 @@
 ﻿using BookShop.Models.ViewModels;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,9 @@ namespace BookShop.Models.Repository
         List<TreeViewCategory> GetAllCategories();
        void  BindSubCategories(TreeViewCategory category);
         Task<bool> CreateBookAsync(BooksCreateEditViewModel ViewModel);
-        Task<bool> EditBookAsync(BooksCreateEditViewModel ViewModel);
+        Task<EntityOperationResult> EditBookAsync(BooksCreateEditViewModel ViewModel);
         List<BookIndexViewModel> GetAllBooks(string title, string ISBN, string Language, string Publisher, string Author, string Translator, string Category);
-
+        Task<UploadFileResult> UploadFileAsync(IFormFile file, string path);
+        string CheckFileName(string fileName);
     }
 }

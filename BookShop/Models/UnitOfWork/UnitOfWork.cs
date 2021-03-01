@@ -15,7 +15,7 @@ namespace BookShop.Models.UnitOfWork
         private IBookRepository _IBookRepository;
         private readonly IConvertDate _convertDate;
 
-        public IBookRepository bookRepository
+        public IBookRepository BooksRepository
         {
 
             get
