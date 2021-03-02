@@ -2,6 +2,8 @@
 using BookShop.Areas.Identity.Data;
 using BookShop.Areas.Identity.Services;
 using BookShop.Classes;
+using BookShop.Models;
+using BookShop.Models.UnitOfWork;
 using BookShop.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -34,8 +36,9 @@ namespace BookShop.Controllers
 
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ConvertDate _convertDate;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public AccountController(IApplicationRoleManager roleManager, IApplicationUserManager userManager, IEmailSender emailSender, SignInManager<ApplicationUser> signInManager, ISmsSender smsSender, IConfiguration configuration, ConvertDate convertDate)
+        public AccountController(IApplicationRoleManager roleManager, IApplicationUserManager userManager, IEmailSender emailSender, SignInManager<ApplicationUser> signInManager, ISmsSender smsSender, IConfiguration configuration, ConvertDate convertDate, IUnitOfWork unitOfWork)
         {
             _roleManager = roleManager;
             _userManager = userManager;
@@ -44,6 +47,7 @@ namespace BookShop.Controllers
             _smsSender = smsSender;
             _configuration = configuration;
             _convertDate = convertDate;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
@@ -656,5 +660,33 @@ namespace BookShop.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Profile()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return NotFound();
+
+            UserSidebarViewModel Sidebar = new UserSidebarViewModel()
+            {
+                FullName = user.FirstName + " " + user.LastName,
+                LastVisit = user.LastVisitDateTime,
+                RegisterDate = user.RegisterDate,
+                Image = user.Image,
+            };
+
+            ViewBag.CityID = new SelectList( _unitOfWork.BaseRepository<City>().FindAll(), "CityID", "CityName");
+            ViewBag.ProvinceID = new SelectList(_unitOfWork.BaseRepository<Provice>().FindAll(), "ProvinceID", "ProvinceName");
+            return View(new ProfileViewModel { UserSidebar = Sidebar });
+        }
+
+
+        public async Task<IActionResult> UpdateCity(int id)
+        {
+            var Cities = await _unitOfWork.BaseRepository<City>().FindByConditionAsync(p => p.ProvinceID == id);
+            return Json(JsonConvert.SerializeObject(Cities));
+        }
+
     }
 }

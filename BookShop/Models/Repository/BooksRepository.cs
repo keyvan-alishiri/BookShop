@@ -316,7 +316,7 @@ namespace BookShop.Models.Repository
                     return new EntityOperationResult(false, new List<string>() { "کتابی یافت نشد !!!" });
             }
 
-            catch (Exception exp)
+            catch /*(Exception exp)*/
             {
                 //return new EntityOperationResult(false, new List<string>() { exp.Message });
                 return new EntityOperationResult(false, new List<string>() { "در انجام عملیات خطایی رخ داده است." });
