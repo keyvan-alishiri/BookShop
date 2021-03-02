@@ -5293,9 +5293,11 @@ button.close {
 }
 
     .modal-header .close {
-        padding: 1rem;
-        margin: -1rem -1rem -1rem auto;
+        padding: 0.5rem;
+        margin: 0px;
     }
+
+ 
 
 .modal-title {
     margin-bottom: 0;

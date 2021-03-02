@@ -200,7 +200,8 @@ namespace BookShop.Areas.Admin.Controllers
 
             //////////////////////////////////////////////// استفاده از UnitOfWork /////////////////////////////////
               var BookInfo = _unitofwork._Context.ReadAllBooks.Where(b => b.BookID == id).First();
-            return View(BookInfo);
+            // return View(BookInfo); Before Add Ajax
+            return PartialView(BookInfo);
         }
 
         [Authorize(Policy = ConstantPolicies.DynamicPermission)]

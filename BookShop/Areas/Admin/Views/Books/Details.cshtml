@@ -2,21 +2,31 @@
 @inject BookShop.Classes.ConvertDate convertDate
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Admin.cshtml";
+    Layout = null;
 }
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header bg-light">
-                اطلاعات کتاب ها 
+<style>
+    .modal-dialog {
+        max-width: 60% !important;
+    }
+</style>
+
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">جزئیات کتاب</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div class="card-body">
+            <div class="modal-body">
+
                 <div class="row">
+
                     <div class="col-md-3">
                         @if (Model.Image != null)
                         {
-                            <img src="/Admin/Books/ViewImage/@Model.BookID" height="250"/>
+                            <img src="/Admin/Books/ViewImage/@Model.BookID" height="250" />
                         }
                         else
                         {
@@ -26,7 +36,7 @@
 
 
                     </div>
-                    
+
                     <div class="col-md-9">
                         <div class="row">
                             <div class="col-md-6">
@@ -44,27 +54,25 @@
                                 <p>ناشر: @Model.PublisherName</p>
                                 <p>
                                     نویسندگان: @Model.Authors
-                                   
 
-                                    
+
+
                                 </p>
                                 <p>
                                     مترجمان: @Model.Translators
-                                   
+
 
 
 
                                 </p>
                                 <p>
                                     دسته بندی: @Model.Categories
-                                   
+
 
 
 
 
                                 </p>
-
-
 
 
 
@@ -78,9 +86,6 @@
                                     {
                                         <span>-</span>
                                     }
-
-
-
 
 
                                 </p>
@@ -104,14 +109,14 @@
                                 <p>
                                     وزن:@Model.Weight
                                 </p>
-                                
+
                             </div>
 
 
                         </div>
                     </div>
 
-                   
+
                     <div class="col-md-12">
                         <hr />
                         <p>خلاصه کتاب: @Model.Summary</p>
@@ -121,6 +126,13 @@
                 </div>
 
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+            </div>
         </div>
     </div>
 </div>
+
+
+
+
