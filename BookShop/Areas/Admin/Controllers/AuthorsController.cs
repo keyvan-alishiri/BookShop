@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BookShop.Models;
 using BookShop.Models.UnitOfWork;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using ReflectionIT.Mvc.Paging;
 
 namespace BookShop.Areas.Admin.Controllers
 {
@@ -16,19 +17,28 @@ namespace BookShop.Areas.Admin.Controllers
     {
         private readonly    IUnitOfWork _unitOfWork;
         //private readonly BookShopContext _context;
-
+        private readonly string NotFoundAuthor = "نویسنده ای با این مشخصات یافت نشد.";
         public AuthorsController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
         // GET: Admin/Authors
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int row =10)
         {
+            // ViewBag.EntityStates = DisplayState(_context.ChangeTracker.Entries());
             var Authors = _unitOfWork.BaseRepository<Author>().FindAllAsync();
+            var PagingModel = PagingList.Create(await Authors, row, page);
+            PagingModel.RouteValue = new Microsoft.AspNetCore.Routing.RouteValueDictionary
+            {
+                {"row" , row },
+            };
 
-          // ViewBag.EntityStates = DisplayState(_context.ChangeTracker.Entries());
-            return View(await Authors);
+            var isAjax = Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+            if (isAjax)
+                return PartialView("_AuthorsTable", PagingModel);
+
+            return View("Index", PagingModel);
         }
 
         // GET: Admin/Authors/Details/5
@@ -41,6 +51,7 @@ namespace BookShop.Areas.Admin.Controllers
 
             //var author = await _context.Authors
             //    .FirstOrDefaultAsync(m => m.AuthorID == id);
+
 
             var author = await _unitOfWork.BaseRepository<Author>().FindByIDAsync(id);
 
@@ -59,10 +70,10 @@ namespace BookShop.Areas.Admin.Controllers
         // GET: Admin/Authors/Create
         public IActionResult Create()
         {
-            var DisconnectedEntity = new Author() { FirstName = "Keyvan", LastName = "Alishiri", AuthorID = 3 };
-          //  var EntityState = _context.Entry(DisconnectedEntity).State;
-      
-            return View();
+            // var DisconnectedEntity = new Author() { FirstName = "Keyvan", LastName = "Alishiri", AuthorID = 3 };
+            //  var EntityState = _context.Entry(DisconnectedEntity).State;
+
+            return PartialView("_Create");
         }
 
         // POST: Admin/Authors/Create
@@ -74,7 +85,7 @@ namespace BookShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-
+               
                 //_context.Add(author);
                 //_context.Update(author).State = Microsoft.EntityFrameworkCore.EntityState.Added;
                 //_context.Entry(author).State = Microsoft.EntityFrameworkCore.EntityState.Added;
@@ -82,18 +93,39 @@ namespace BookShop.Areas.Admin.Controllers
                 // await _context.SaveChangesAsync();
                 await  _unitOfWork.BaseRepository<Author>().CreateAsync(author);
                 await _unitOfWork.Commit();
+                TempData["notification"] = "درج اطلاعات با موفقست انجام شد.";
                
-                return RedirectToAction(nameof(Index));
+               // return RedirectToAction(nameof(Index));
             }
-            return View(author);
+
+            //return View(author);
+            return PartialView("_Create", author);
         }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // GET: Admin/Authors/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                //return NotFound();
+                ModelState.AddModelError(string.Empty, NotFoundAuthor);
             }
 
             //var author = await _context.Authors.FindAsync(id);
@@ -102,9 +134,11 @@ namespace BookShop.Areas.Admin.Controllers
 
             if (author == null)
             {
-                return NotFound();
+                //return NotFound();
+                ModelState.AddModelError(string.Empty, NotFoundAuthor);
             }
-            return View(author);
+            return PartialView("_Edit",author);
+            //return View(author);
         }
 
         // POST: Admin/Authors/Edit/5
@@ -166,9 +200,11 @@ namespace BookShop.Areas.Admin.Controllers
 
 
                 }
-                return RedirectToAction(nameof(Index));
+                // return RedirectToAction(nameof(Index));
+                TempData["notification"] = "ویرایش اطلاعات با موفقیت انجام شد.";
             }
-            return View(author);
+            // return View(author);
+            return PartialView("_Edit", author);
         }
 
         // GET: Admin/Authors/Delete/5
@@ -191,7 +227,8 @@ namespace BookShop.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            return View(author);
+            // return View(author);
+            return PartialView("_Delete",author);
         }
 
         // POST: Admin/Authors/Delete/5
@@ -216,9 +253,11 @@ namespace BookShop.Areas.Admin.Controllers
             {
                 _unitOfWork.BaseRepository<Author>().Delete(author);
                 await _unitOfWork.Commit();
+                TempData["notification"] = "حذف اطلاعات با موفقیت انجام شد.";
             }
-           
-            return RedirectToAction(nameof(Index));
+
+            //return RedirectToAction(nameof(Index));
+            return PartialView("_Delete", author);
         }
 
         //private bool AuthorExists(int id)
@@ -272,7 +311,15 @@ namespace BookShop.Areas.Admin.Controllers
             
         }
 
+        public IActionResult Notification()
+        {
 
+            
+            return PartialView("_Notification" , TempData["notification"]);
+        }
+
+
+        
     }
 
 

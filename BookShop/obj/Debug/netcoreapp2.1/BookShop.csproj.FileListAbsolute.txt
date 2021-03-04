@@ -437,7 +437,6 @@ C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcore
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
-C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
@@ -549,3 +548,10 @@ C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcore
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\File\ImageProcess.g.cshtml.cs
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\File\UploadLargeFile.g.cshtml.cs
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Account\Profile.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\_Create.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Notification.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\_AuthorsTable.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\_Delete.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Authors\_Edit.g.cshtml.cs
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Books\_InsertOrUpdateBookImage.g.cshtml.cs

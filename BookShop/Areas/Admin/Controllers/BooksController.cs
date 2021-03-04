@@ -140,6 +140,9 @@ namespace BookShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+               
+
+
                 UploadFileResult result = new UploadFileResult();
                 string NewFileName = null;
                 if (ViewModel.File != null)
@@ -495,6 +498,45 @@ namespace BookShop.Areas.Admin.Controllers
                 return NotFound();
             var memoryStream = new MemoryStream(Book.Image);
             return new FileStreamResult(memoryStream, "image/png");
+        }
+
+      
+
+
+        [HttpGet]
+        public IActionResult InsertOrUpdateBookImage(int id)
+        {
+            var Book = _unitofwork._Context.Books.Where(b => b.BookID == id).Select(b => new ImageBookViewModel { BookID = b.BookID, ImageByte = b.Image }).FirstOrDefault();
+            if (Book == null)
+                ModelState.AddModelError("", "کتاب با این مشخصات یافت نشد.");
+
+            return PartialView("_InsertOrUpdateBookImage", Book);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> InsertOrUpdateBookImage(ImageBookViewModel ViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var Book = await _unitofwork.BaseRepository<Book>().FindByIDAsync(ViewModel.BookID);
+                using (var memorySteam = new MemoryStream())
+                {
+                    string FileExtension = Path.GetExtension(ViewModel.Image.FileName);
+                    await ViewModel.Image.CopyToAsync(memorySteam);
+                    var types = FileExtentions.FileType.Image;
+                    bool result = FileExtentions.IsValidFile(memorySteam.ToArray(), types, FileExtension.Replace('.', ' '));
+                    if (result)
+                    {
+                        Book.Image = memorySteam.ToArray();
+                        await _unitofwork.Commit();
+                        ViewModel.ImageByte = memorySteam.ToArray();
+                        TempData["Notifications"] = "آپلود فایل با موفقیت انجام شد.";
+                    }
+                    else
+                        ModelState.AddModelError("", "فایل تصویر کتاب نامعتبر است.");
+                }
+            }
+            return PartialView("_InsertOrUpdateBookImage", ViewModel);
         }
 
     }
