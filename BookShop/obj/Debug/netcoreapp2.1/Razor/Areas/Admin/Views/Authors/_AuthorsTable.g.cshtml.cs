@@ -119,7 +119,7 @@ using ReflectionIT.Mvc.Paging;
             WriteLiteral("\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    ");
             EndContext();
             BeginContext(961, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2189dc83af5e4fbbb1a8c56c7cc544f7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a382ffd2d73e4dae8b571048f7a0c8a5", async() => {
                 BeginContext(1047, 14, true);
                 WriteLiteral("مشاهده کتاب ها");
                 EndContext();

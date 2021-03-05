@@ -86,7 +86,7 @@ using BookShop.Models;
             WriteLiteral(" را از لیست نویسندگان حذف کنید ؟ </span> </p>\r\n                ");
             EndContext();
             BeginContext(529, 203, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b710ffc78a14a42ad5837ab82b8393d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f664e9363952479e874c9e77edbe0782", async() => {
                 BeginContext(555, 42, true);
                 WriteLiteral("\r\n                    <input type=\"hidden\"");
                 EndContext();

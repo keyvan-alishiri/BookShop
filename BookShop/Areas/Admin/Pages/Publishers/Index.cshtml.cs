@@ -6,6 +6,7 @@ using BookShop.Models;
 using BookShop.Models.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace BookShop.Areas.Admin.Pages.Publishers
 {
@@ -25,6 +26,9 @@ namespace BookShop.Areas.Admin.Pages.Publishers
         public bool ShowPrevious => CurrentPage > 1;
         public bool ShowNext => CurrentPage < TotalPages; 
         public IEnumerable<Publisher> publishers { get; set; }
+
+
+
         public async Task<IActionResult>  OnGet()
         {
             Count = _unitOfWork.BaseRepository<Publisher>().GetCount();
@@ -33,7 +37,15 @@ namespace BookShop.Areas.Admin.Pages.Publishers
             return Page();
         }
 
-       
+
+        public async Task<IActionResult> OnPostInsertAsync([FromBody] Publisher model)
+        {
+            await _unitOfWork.BaseRepository<Publisher>().CreateAsync(model);
+            await _unitOfWork.Commit();
+            Count = _unitOfWork.BaseRepository<Publisher>().GetCount();
+            return new JsonResult(new { publishers = JsonConvert.SerializeObject(await _unitOfWork.BaseRepository<Publisher>().GetPaginateResultAsync(CurrentPage, PageSize)), totalPage = TotalPages, currentPage = CurrentPage });
+        }
+
 
         public async Task<IActionResult> OnPostDeleteAsync(int? id)
         {

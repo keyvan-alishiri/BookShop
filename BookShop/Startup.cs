@@ -102,7 +102,7 @@ namespace BookShop
 
 
 
-
+            services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
 
 
             // Authorizatin
