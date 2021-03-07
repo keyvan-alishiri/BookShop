@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="Areas\Api\Controllers\v2\**" />
+    <Compile Remove="wwwroot\lib\Loading\پلاگین لودر قبلی\**" />
     <Content Remove="Areas\Api\Controllers\v2\**" />
+    <Content Remove="wwwroot\lib\Loading\پلاگین لودر قبلی\**" />
     <EmbeddedResource Remove="Areas\Api\Controllers\v2\**" />
+    <EmbeddedResource Remove="wwwroot\lib\Loading\پلاگین لودر قبلی\**" />
     <None Remove="Areas\Api\Controllers\v2\**" />
+    <None Remove="wwwroot\lib\Loading\پلاگین لودر قبلی\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +46,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
     <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="7.23.2" />
     <PackageReference Include="MD.PersianDateTime.Core" Version="2.3.5" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />

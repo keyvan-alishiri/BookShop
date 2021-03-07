@@ -55,7 +55,7 @@ using BookShop.Models;
             WriteLiteral("\r\n<div class=\"mt-5\">\r\n    <p class=\"alert alert-success\">\r\n        کلمه عبور شما با موفقیت بازنشانی شد ");
             EndContext();
             BeginContext(103, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca87747b007448f6ac249cfe7ede2a1c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9048b762c743416a87f118c68296470b", async() => {
                 BeginContext(150, 21, true);
                 WriteLiteral("(برای ورود کلیک کنید)");
                 EndContext();

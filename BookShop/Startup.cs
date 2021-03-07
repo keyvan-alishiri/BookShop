@@ -29,7 +29,7 @@ namespace BookShop
             _siteSettings = configuration.GetSection(nameof(SiteSettings)).Get<SiteSettings>();
         }
 
-       
+
 
 
         public void ConfigureServices(IServiceCollection services)
@@ -41,7 +41,7 @@ namespace BookShop
             //    options.MinimumSameSitePolicy = SameSiteMode.None;
             //});
 
-         
+
 
             services.Configure<SiteSettings>(Configuration.GetSection(nameof(SiteSettings)));
             services.AddCustomPolicies();
@@ -115,7 +115,7 @@ namespace BookShop
 
 
             services.AddSwagger();
-           
+
 
 
 
@@ -130,10 +130,10 @@ namespace BookShop
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
+            var cachePeriod = env.IsDevelopment() ? "600" : "605800";
             app.UseWhen(context => context.Request.Path.StartsWithSegments("/api"), appBuilder =>
             {
-                  appBuilder.UseCustomExceptionHandler();
+                appBuilder.UseCustomExceptionHandler();
 
 
             });
@@ -143,7 +143,7 @@ namespace BookShop
                 if (env.IsDevelopment())
                 {
                     appBuilder.UseDeveloperExceptionPage();
-                   
+
                 }
                 else
                 {
@@ -162,7 +162,38 @@ namespace BookShop
             });
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "CacheFiles")),
+            //    OnPrepareResponse = ctx =>
+            //    {
+            //        ctx.Context.Response.Headers.Add("Cache-Control", $"public,max-age={cachePeriod}");
+            //    },
+            //    RequestPath = "/CacheFiles" ,
+            //});
+
+
+
+
+
+
+
+
+            //Todo : Use Path for open File in Browser
+            // app.UseStaticFiles( new StaticFileOptions { RequestPath="/" + "node_modules" }); 
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                OnPrepareResponse = ctx =>
+                 {
+                     ctx.Context.Response.Headers.Add("Cache-Control", $"public,max-age={cachePeriod}");
+                 },
+                // RequestPath = "/" + "MyStaticFiles",
+            });
+
+
+
+            // app.UseStaticFiles();
             app.UseNodeModules(env.ContentRootPath);
             app.UseCookiePolicy();
             app.UseCustomIdentityServices();

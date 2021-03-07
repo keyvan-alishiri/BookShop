@@ -142,5 +142,12 @@ namespace BookShop.Areas.Admin.Controllers
             return View();
         }
 
+        [Route("FileName")]
+        public IActionResult Video(string FileName)
+        {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "Videos", FileName);
+            return PhysicalFile(path, "applictaion/octet-stream");
+        }
+
     }
 }

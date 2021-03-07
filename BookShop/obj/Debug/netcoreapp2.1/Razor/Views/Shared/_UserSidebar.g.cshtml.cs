@@ -75,7 +75,7 @@ using Microsoft.AspNetCore.Authorization;
             WriteLiteral("            ");
             EndContext();
             BeginContext(325, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f087212710fd436485fcd6f586b1f1d1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "ac0221de34844ca0954fbf18401c4d97", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -159,7 +159,7 @@ using Microsoft.AspNetCore.Authorization;
             WriteLiteral("            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"profile-userbuttons\">\r\n        ");
             EndContext();
             BeginContext(1212, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dfcc049848864f208860b8f5cba33ed5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84bee8dc578d4d75a4a351eed229f4f9", async() => {
                 BeginContext(1299, 15, true);
                 WriteLiteral("تغییر کلمه عبور");
                 EndContext();
@@ -184,7 +184,7 @@ using Microsoft.AspNetCore.Authorization;
             WriteLiteral("\r\n        <button type=\"button\" class=\"btn btn-danger btn-sm\">مشاهده سایت</button>\r\n    </div>\r\n    <div class=\"profile-usermenu sidebar-sticky\">\r\n        <ul class=\"nav flex-column\">\r\n            <li class=\"nav-item\">\r\n                ");
             EndContext();
             BeginContext(1554, 180, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac3f763a47f9426da7c1f580c0ffec50", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8467398095642a0a9d2e38a13867eab", async() => {
                 BeginContext(1627, 103, true);
                 WriteLiteral("\r\n                    <i class=\"fa fa-user\"></i>\r\n                    تغییر کلمه عبور\r\n                ");
                 EndContext();
