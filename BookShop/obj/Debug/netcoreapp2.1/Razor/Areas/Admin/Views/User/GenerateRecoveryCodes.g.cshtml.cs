@@ -78,7 +78,7 @@ using BookShop.Models;
         ");
             EndContext();
             BeginContext(604, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "14c8504a11524e9f8687807c17faac44", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "98d74b2f4b2d4110b60435fdce183258", async() => {
                 BeginContext(639, 23, true);
                 WriteLiteral("روی این لینک کلیک کنید.");
                 EndContext();
@@ -100,7 +100,7 @@ using BookShop.Models;
             WriteLiteral("\r\n    </p>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(697, 170, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "264767a712b84088bf8b342234d1457c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a430b76a80ca4a94b79891032b957f9a", async() => {
                 BeginContext(771, 89, true);
                 WriteLiteral("\r\n        <button class=\"btn btn-danger\" type=\"submit\">تولید کدهای بازیابی</button>\r\n    ");
                 EndContext();

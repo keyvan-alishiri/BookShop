@@ -62,7 +62,7 @@ using BookShop.Models;
             WriteLiteral("\r\n<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"card\">\r\n            <div class=\"bg-light card-header\">\r\n                استان ها\r\n            </div>\r\n            <div class=\"card-body\">\r\n                <p>\r\n                    ");
             EndContext();
             BeginContext(366, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab872e738b4149309671c7701b54c217", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4290548cbbf84700ad5fc6687a2c41a2", async() => {
                 BeginContext(413, 17, true);
                 WriteLiteral("افزودن استان جدید");
                 EndContext();

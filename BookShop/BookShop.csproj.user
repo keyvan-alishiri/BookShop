@@ -20,5 +20,9 @@
     <WebStackScaffolding_DbContextDialogWidth>600</WebStackScaffolding_DbContextDialogWidth>
     <WebStackScaffolding_UserClassDialogWidth>600</WebStackScaffolding_UserClassDialogWidth>
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_Layout.cshtml</WebStackScaffolding_LayoutPageFile>
+    <ActiveDebugProfile>BookShop</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

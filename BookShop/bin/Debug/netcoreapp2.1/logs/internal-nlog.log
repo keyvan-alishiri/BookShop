@@ -1,0 +1,30 @@
+2021-03-07 17:38:39.0496 Info Message Template Auto Format enabled
+2021-03-07 17:38:39.5188 Info Loading assembly: NLog.Web.AspNetCore
+2021-03-07 17:38:40.2744 Info Adding target AsyncTargetWrapper(Name=LogFile)
+2021-03-07 17:38:40.2744 Info Adding target AsyncTargetWrapper(Name=MailLogger)
+2021-03-07 17:38:40.3002 Info Adding target AsyncTargetWrapper(Name=ColorConsole)
+2021-03-07 17:38:40.6767 Info Validating config: TargetNames=ColorConsole, LogFile, MailLogger, ConfigItems=59, FilePath=C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\nlog.config
+2021-03-07 17:40:42.7895 Error MailTarget(Name=MailLogger_wrapped): Error sending mail. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NLog.Targets.MailTarget.ProcessSingleMailMessage(IList`1 events)
+2021-03-07 17:40:44.8064 Error MailTarget(Name=MailLogger_wrapped): Error sending mail. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NLog.Targets.MailTarget.ProcessSingleMailMessage(IList`1 events)
+2021-03-07 17:46:44.1221 Info Message Template Auto Format enabled
+2021-03-07 17:46:44.1607 Info Loading assembly: NLog.Web.AspNetCore
+2021-03-07 17:46:44.7162 Info Adding target AsyncTargetWrapper(Name=LogFile)
+2021-03-07 17:46:44.7271 Info Adding target AsyncTargetWrapper(Name=MailLogger)
+2021-03-07 17:46:44.7583 Info Adding target AsyncTargetWrapper(Name=ColorConsole)
+2021-03-07 17:46:44.8481 Info Validating config: TargetNames=ColorConsole, LogFile, MailLogger, ConfigItems=59, FilePath=C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\nlog.config
+2021-03-07 17:47:32.5540 Info Message Template Auto Format enabled
+2021-03-07 17:47:32.6718 Info Loading assembly: NLog.Web.AspNetCore
+2021-03-07 17:47:33.2461 Info Adding target AsyncTargetWrapper(Name=LogFile)
+2021-03-07 17:47:33.2595 Info Adding target AsyncTargetWrapper(Name=MailLogger)
+2021-03-07 17:47:33.2941 Info Adding target AsyncTargetWrapper(Name=ColorConsole)
+2021-03-07 17:47:33.4022 Info Validating config: TargetNames=ColorConsole, LogFile, MailLogger, ConfigItems=59, FilePath=C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\nlog.config

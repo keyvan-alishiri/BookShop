@@ -5,6 +5,7 @@ using BookShop.Classes;
 using BookShop.Models;
 using BookShop.Models.UnitOfWork;
 using BookShop.Models.ViewModels;
+using Castle.Core.Logging;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -12,6 +13,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -37,8 +39,10 @@ namespace BookShop.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ConvertDate _convertDate;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ILogger<AccountController> _Logger;
+        private readonly IHttpContextAccessor _Accessor;
 
-        public AccountController(IApplicationRoleManager roleManager, IApplicationUserManager userManager, IEmailSender emailSender, SignInManager<ApplicationUser> signInManager, ISmsSender smsSender, IConfiguration configuration, ConvertDate convertDate, IUnitOfWork unitOfWork)
+        public AccountController(IApplicationRoleManager roleManager, IApplicationUserManager userManager, IEmailSender emailSender, SignInManager<ApplicationUser> signInManager, ISmsSender smsSender, IConfiguration configuration, ConvertDate convertDate, IUnitOfWork unitOfWork , ILogger<AccountController> Logger, IHttpContextAccessor Accessor)
         {
             _roleManager = roleManager;
             _userManager = userManager;
@@ -48,6 +52,8 @@ namespace BookShop.Controllers
             _configuration = configuration;
             _convertDate = convertDate;
             _unitOfWork = unitOfWork;
+            _Logger = Logger;
+            _Accessor = Accessor;
         }
 
         [HttpGet]
@@ -147,6 +153,8 @@ namespace BookShop.Controllers
                                 return RedirectToAction("SendCode", new { RememberMe = ViewModel.RememberMe });
                         }
                     }
+
+                    _Logger.LogWarning($"The user attempts to login with the IP address({_Accessor.HttpContext?.Connection?.RemoteIpAddress.ToString()}) and username ({ViewModel.UserName}) and password ({ViewModel.Password}).");
 
                     ModelState.AddModelError(string.Empty, "نام کاربری یا کلمه عبور شما صحیح نمی باشد.");
                 }

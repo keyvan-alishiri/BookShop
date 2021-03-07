@@ -85,7 +85,7 @@ using BookShop.Models;
             WriteLiteral(" را از لیست مترجمان حذف کنید ؟ </span> </p>\r\n            </div>\r\n\r\n            <div class=\"card-footer bg-light text-right clearfix\">\r\n                ");
             EndContext();
             BeginContext(590, 313, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb8f6e77a57143148b96eba1e863e076", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be312c4bdea946739c9322f0161aba63", async() => {
                 BeginContext(616, 42, true);
                 WriteLiteral("\r\n                    <input type=\"hidden\"");
                 EndContext();
@@ -100,7 +100,7 @@ WriteAttributeValue("", 666, Model.TranslatorID, 666, 19, false);
                 WriteLiteral(" name=\"id\" />\r\n                    <input type=\"submit\" value=\"بله\" class=\"btn btn-danger mr-2 float-left\" />\r\n                    ");
                 EndContext();
                 BeginContext(817, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2a01c4112df46019081fdcef9fc91d0", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c27b67054384930806b9b326949b6db", async() => {
                     BeginContext(871, 3, true);
                     WriteLiteral("خیر");
                     EndContext();
