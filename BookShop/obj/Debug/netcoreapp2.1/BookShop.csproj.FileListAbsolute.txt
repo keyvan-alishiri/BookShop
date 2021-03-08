@@ -556,3 +556,4 @@ C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcore
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
 C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CopyComplete
+C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Error404.g.cshtml.cs

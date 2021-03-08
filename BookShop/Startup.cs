@@ -142,6 +142,7 @@ namespace BookShop
             {
                 if (env.IsDevelopment())
                 {
+                    //appBuilder.UseStatusCodePages();
                     appBuilder.UseDeveloperExceptionPage();
 
                 }
@@ -155,13 +156,21 @@ namespace BookShop
             });
 
 
-            app.UseStaticFiles(new StaticFileOptions
+            app.Use(async (context, next) =>
             {
-                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "node_modules")),
-                RequestPath = "/" + "node_modules",
+                await next();
+                if (context.Response.StatusCode == 404)
+                {
+                    context.Request.Path = "/home/error404";
+                    await next();
+                }
             });
 
-            app.UseHttpsRedirection();
+
+
+
+
+            //app.UseHttpsRedirection();
 
             //app.UseStaticFiles(new StaticFileOptions
             //{
@@ -170,7 +179,7 @@ namespace BookShop
             //    {
             //        ctx.Context.Response.Headers.Add("Cache-Control", $"public,max-age={cachePeriod}");
             //    },
-            //    RequestPath = "/CacheFiles" ,
+            //    RequestPath = "/CacheFiles",
             //});
 
 

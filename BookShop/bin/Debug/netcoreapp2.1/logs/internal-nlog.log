@@ -28,3 +28,21 @@
 2021-03-07 17:47:33.2595 Info Adding target AsyncTargetWrapper(Name=MailLogger)
 2021-03-07 17:47:33.2941 Info Adding target AsyncTargetWrapper(Name=ColorConsole)
 2021-03-07 17:47:33.4022 Info Validating config: TargetNames=ColorConsole, LogFile, MailLogger, ConfigItems=59, FilePath=C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\nlog.config
+2021-03-08 03:42:41.0175 Info Message Template Auto Format enabled
+2021-03-08 03:42:41.1618 Info Loading assembly: NLog.Web.AspNetCore
+2021-03-08 03:42:41.9894 Info Adding target AsyncTargetWrapper(Name=LogFile)
+2021-03-08 03:42:42.0232 Info Adding target AsyncTargetWrapper(Name=MailLogger)
+2021-03-08 03:42:42.0481 Info Adding target AsyncTargetWrapper(Name=ColorConsole)
+2021-03-08 03:42:42.1559 Info Validating config: TargetNames=ColorConsole, LogFile, MailLogger, ConfigItems=59, FilePath=C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\nlog.config
+2021-03-08 03:49:55.1529 Info Message Template Auto Format enabled
+2021-03-08 03:49:55.2084 Info Loading assembly: NLog.Web.AspNetCore
+2021-03-08 03:49:55.9581 Info Adding target AsyncTargetWrapper(Name=LogFile)
+2021-03-08 03:49:55.9752 Info Adding target AsyncTargetWrapper(Name=MailLogger)
+2021-03-08 03:49:56.0115 Info Adding target AsyncTargetWrapper(Name=ColorConsole)
+2021-03-08 03:49:56.0915 Info Validating config: TargetNames=ColorConsole, LogFile, MailLogger, ConfigItems=59, FilePath=C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\nlog.config
+2021-03-08 03:51:11.3967 Info Message Template Auto Format enabled
+2021-03-08 03:51:11.3967 Info Loading assembly: NLog.Web.AspNetCore
+2021-03-08 03:51:11.5023 Info Adding target AsyncTargetWrapper(Name=LogFile)
+2021-03-08 03:51:11.5058 Info Adding target AsyncTargetWrapper(Name=MailLogger)
+2021-03-08 03:51:11.5272 Info Adding target AsyncTargetWrapper(Name=ColorConsole)
+2021-03-08 03:51:11.5777 Info Validating config: TargetNames=ColorConsole, LogFile, MailLogger, ConfigItems=59, FilePath=C:\Users\keyvan\source\repos\keyvan-alishiri\BookShop\BookShop\bin\Debug\netcoreapp2.1\nlog.config
