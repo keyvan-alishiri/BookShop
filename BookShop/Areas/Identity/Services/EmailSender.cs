@@ -16,8 +16,8 @@ namespace BookShop.Areas.Identity.Services
             {
                 var Credential = new NetworkCredential
                 {
-                    UserName = "k.alishiri",
-                    Password = "z4x3c2v1",
+                    UserName = "",
+                    Password = "",
                 };
 
                 Client.Credentials = Credential;
@@ -28,7 +28,7 @@ namespace BookShop.Areas.Identity.Services
                 using (var emailMessage = new MailMessage())
                 {
                     emailMessage.To.Add(new MailAddress(email));
-                    emailMessage.From = new MailAddress("k.alishiri@gmail.com");
+                    emailMessage.From = new MailAddress("");
                     emailMessage.Subject = subject;
                     emailMessage.IsBodyHtml = true;
                     emailMessage.Body = message;
